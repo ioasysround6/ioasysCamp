@@ -1,16 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Round6" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Round6" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/brand_primary_default</item>
-        <item name="colorPrimaryVariant">@color/brand_primary_dark</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/primary_default</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/lighter</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/brand_secondary_default</item>
-        <item name="colorSecondaryVariant">@color/brand_secondary_darker</item>
-        <item name="colorOnSecondary">@color/ui_neutral_darker</item>
+        <item name="colorSecondary">@color/secondary_default</item>
+        <item name="colorSecondaryVariant">@color/secondary_darker</item>
+        <item name="colorOnSecondary">@color/neutral_darker</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="SplashScreenStyle" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
 </resources>
