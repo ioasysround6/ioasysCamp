@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="brand_primary_default">#F86624</color>
-    <color name="brand_primary_dark">#E15D21</color>
-    <color name="brand_secondary_default">#EA3546</color>
-    <color name="brand_secondary_darker">#A41623</color>
-    <color name="ui_neutral_medium">#D1D2D1</color>
-    <color name="ui_neutral_light">#F5F5F5</color>
-    <color name="ui_neutral_lighter">#FCFCFC</color>
-    <color name="ui_neutral_dark">#545956</color>
-    <color name="ui_neutral_darker">#252A27</color>
-    <color name="black">#000000</color>
-    <color name="white">#FFFFFF</color>
+    <color name="primary_dark">#E15D21</color>
+    <color name="primary_default">#F86624</color>
+    <color name="primary_light">#FA844E</color>
+
+    <color name="secondary_darker">#A41623</color>
+    <color name="secondary_dark">#C72635</color>
+    <color name="secondary_default">#EA3546</color>
+    <color name="secondary_light">#EE5866</color>
+
+    <color name="neutral_darker">#252A27</color>
+    <color name="neutral_dark">#545956</color>
+    <color name="medium_dark">#ACAEAD</color>
+    <color name="medium_light">#D1D2D1</color>
+    <color name="light">#F5F5F5</color>
+    <color name="lighter">#FCFCFC</color>
+    
+    <color name="alert">#F9C80E</color>
+    <color name="success">#169873</color>
+    <color name="error">#F72C25</color>
 </resources>
