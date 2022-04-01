@@ -8,6 +8,8 @@ import { Communities } from '../screens/Communities';
 import { Diary } from '../screens/Diary';
 import { MyTravels } from '../screens/MyTravels';
 
+import { StackRoutes } from './stack.routes';
+
 import HomeActiveIcon from '../assets/HomeActiveIcon.svg';
 import HomeInactiveIcon from '../assets/HomeInactiveIcon.svg';
 import CommunitiesActiveIcon from '../assets/CommunitiesActiveIcon.svg';
@@ -16,6 +18,7 @@ import DiaryActiveIcon from '../assets/DiaryActiveIcon.svg';
 import DiaryInactiveIcon from '../assets/DiaryInactiveIcon.svg';
 import MyTravelsActiveIcon from '../assets/MyTravelsActiveIcon.svg';
 import MyTravelsInactiveIcon from '../assets/MyTravelsInactiveIcon.svg';
+import Login from '../screens/Login';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -38,6 +41,24 @@ export function TabRoutes(){
         }
       }}
     >
+      <Screen 
+        name="Login"
+        component={StackRoutes}
+        options={{
+          tabBarIcon: (({ focused }) =>
+            focused ?
+            <>
+              <View style={styles.icone}>
+                <View style={styles.posicaoCirculoHome}/>
+              </View>
+
+              <HomeActiveIcon/>
+            </>
+
+              : <HomeInactiveIcon/>
+          )
+        }}
+      />
       <Screen 
         name="Home"
         component={Home}

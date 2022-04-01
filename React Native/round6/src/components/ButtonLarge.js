@@ -13,15 +13,15 @@ const ButtonLarge = ({titulo, backColor}) =>{
 
 const styles = StyleSheet.create({
     botao:{
-        width: 296,
-        height: 54,
+        width: '100%',
+        height: 52,
         justifyContent:'center',
         alignItems: 'center',
         // backgroundColor: colors.primaryDefault,
-        borderRadius:15,
+        borderRadius:12,
     },
     tituloBotao:{
-        fontSize: 16,
+        fontSize: 14,
         color: '#FCFCFC'
 
     }
