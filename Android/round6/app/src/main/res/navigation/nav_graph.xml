@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="br.com.ioasys.round6.presentation.ui.fragments.LoginFragment"
+        android:name="br.com.ioasys.round6.presentation.ui.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
 </navigation>
