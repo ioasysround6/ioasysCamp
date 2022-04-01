@@ -19,4 +19,7 @@
     <color name="alert">#F9C80E</color>
     <color name="success">#169873</color>
     <color name="error">#F72C25</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
 </resources>
