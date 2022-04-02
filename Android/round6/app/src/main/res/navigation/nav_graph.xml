@@ -6,12 +6,6 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="br.com.ioasys.round6.presentation.ui.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
-
-    <fragment
         android:id="@+id/homeFragment"
         android:name="br.com.ioasys.round6.presentation.ui.home.HomeFragment"
         android:label="fragment_home"

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="head_32">32sp</dimen>
+    <dimen name="headline_24">24sp</dimen>
+    <dimen name="headline_20">20sp</dimen>
+    <dimen name="body_14">14sp</dimen>
+    <dimen name="body_12">12sp</dimen>
+    <dimen name="button_16">16sp</dimen>
+    <dimen name="button_14">14sp</dimen>
+    <dimen name="mini_label">10sp</dimen>
+
+    <dimen name="app_margin">32dp</dimen>
+</resources>

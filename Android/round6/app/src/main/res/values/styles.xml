@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="InputStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:paddingBottom">17dp</item>
+        <item name="android:paddingTop">17dp</item>
+        <item name="android:textSize">@dimen/body_14</item>
+        <item name="fontFamily">@font/outfit_regular</item>
+        <item name="singleLine">true</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+
+    <style name="InputLabel">
+        <item name="android:fontFamily">@font/outfit_regular</item>
+        <item name="android:textColor">@color/neutral_darker</item>
+        <item name="android:textSize">@dimen/body_12</item>
+    </style>
+</resources>
