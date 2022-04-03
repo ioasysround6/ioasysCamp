@@ -12,4 +12,6 @@
     <string name="sing_in">Entrar na minha conta</string>
     <string name="sing_in_with">Acessar com:</string>
     <string name="name">Nome</string>
+    <string name="invalid_password">Senha inválida</string>
+    <string name="invalid_user">Usuário inválido</string>
 </resources>
