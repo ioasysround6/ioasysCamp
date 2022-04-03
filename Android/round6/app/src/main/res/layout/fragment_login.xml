@@ -116,6 +116,7 @@
         android:background="@drawable/input_background"
         android:hint="@string/password_hint"
         android:inputType="textPassword"
+        android:maxLength="15"
         android:paddingStart="12dp"
         android:paddingEnd="31dp"
         android:textColorHint="@drawable/input_hint"
@@ -156,7 +157,7 @@
         android:clickable="true"
         android:focusable="true"
         android:scaleType="center"
-        android:src="@drawable/view"
+        android:src="@drawable/show_password"
         app:layout_constraintBottom_toBottomOf="@+id/inputPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/inputPassword" />
