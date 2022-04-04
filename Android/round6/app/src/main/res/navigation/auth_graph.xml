@@ -11,9 +11,21 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
             android:id="@+id/action_loginFragment_to_nav_graph"
             app:destination="@id/nav_graph" />
     </fragment>
 
     <include app:graph="@navigation/nav_graph" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="br.com.ioasys.round6.presentation.ui.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_nav_graph"
+            app:destination="@id/nav_graph" />
+    </fragment>
 </navigation>

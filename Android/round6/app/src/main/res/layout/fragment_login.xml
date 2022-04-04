@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:src="@drawable/mail"
+        android:src="@drawable/ic_mail"
         app:layout_constraintBottom_toBottomOf="@+id/inputEmail"
         app:layout_constraintStart_toStartOf="@+id/inputEmail"
         app:layout_constraintTop_toTopOf="@+id/inputEmail" />
@@ -85,7 +85,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/erro" />
+            app:srcCompat="@drawable/ic_erro" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
@@ -124,6 +124,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/passwordToggle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="center"
+        android:src="@drawable/show_password"
+        app:layout_constraintBottom_toBottomOf="@+id/inputPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputPassword" />
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/messageErrorPassword"
         android:layout_width="wrap_content"
@@ -138,7 +150,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/erro" />
+            app:srcCompat="@drawable/ic_erro" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
@@ -149,18 +161,6 @@
             android:textColor="@color/neutral_dark" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/passwordToggle"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:scaleType="center"
-        android:src="@drawable/show_password"
-        app:layout_constraintBottom_toBottomOf="@+id/inputPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/inputPassword" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvError"
