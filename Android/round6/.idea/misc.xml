@@ -3,27 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/back_arrow.xml" value="0.1295" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/button_background.xml" value="0.1465" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/button_background_clicked.xml" value="0.177" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/button_background_error.xml" value="0.177" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/button_hover.xml" value="0.177" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/checkbox.xml" value="0.116" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/ic_communities.xml" value="0.196" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/input_background.xml" value="0.196" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/input_hint.xml" value="0.177" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/logo.xml" value="0.196" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/splash.xml" value="0.2475" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/underline.xml" value="0.2" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/view.xml" value="0.196" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/whatsapp.xml" value="0.196" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/layout/activity_main.xml" value="0.18659420289855072" />
-        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/layout/fragment_login.xml" value="0.176" />
-        <entry key="app/src/main/res/drawable/ic_communities.xml" value="0.2465" />
-        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.2465" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3375" />
-        <entry key="app/src/main/res/layout/fragment_communities.xml" value="0.3375" />
-        <entry key="app/src/main/res/layout/fragment_diary.xml" value="0.3375" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3375" />
-        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.3375" />
-        <entry key="app/src/main/res/layout/fragment_trips.xml" value="0.3375" />
-        <entry key="app/src/main/res/menu/menu_nav.xml" value="0.3375" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/layout/fragment_login.xml" value="0.4" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/layout/fragment_register.xml" value="0.4412296564195298" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/menu/menu.xml" value="0.4" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/menu/menu_nav.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17572463768115942" />
       </map>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.3375" />
-      </ProjectState>
-    </option>
-  </component>
 </project>

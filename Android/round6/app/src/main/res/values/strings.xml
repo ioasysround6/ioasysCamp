@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">round6</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Pular</string>
+    <string name="email">E-mail</string>
+    <string name="email_hint">exemplo@email.com</string>
+    <string name="password">Senha</string>
+    <string name="password_hint">senha</string>
+    <string name="error_text">Esqueci a minha senha</string>
+    <string name="create_account">Criar conta</string>
+    <string name="create_acc_message">Não possui uma conta ainda?</string>
+    <string name="sing_in">Entrar na minha conta</string>
+    <string name="sing_in_with">Acessar com:</string>
+    <string name="name">Nome</string>
+    <string name="invalid_password">Senha inválida</string>
+    <string name="invalid_user">Usuário inválido</string>
 </resources>
