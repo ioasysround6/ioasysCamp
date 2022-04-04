@@ -257,14 +257,14 @@
             android:id="@+id/ivFacebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/facebook" />
+            app:srcCompat="@drawable/ic_facebook" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivGoogle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            app:srcCompat="@drawable/google" />
+            app:srcCompat="@drawable/ic_google" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

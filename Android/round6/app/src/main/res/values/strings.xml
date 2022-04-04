@@ -15,9 +15,9 @@
     <string name="invalid_password">Senha inválida</string>
     <string name="invalid_user">Usuário inválido</string>
     <string name="home">Home</string>
-    <string name="communities">Communities</string>
-    <string name="diary">Diary</string>
-    <string name="trips">Trips</string>
+    <string name="communities">Comunidades</string>
+    <string name="diary">Diário</string>
+    <string name="trips">Minhas viagens</string>
     <string name="register">Cadastro:</string>
     <string name="name_hint">Maria Fernanda</string>
     <string name="last_name">Sobrenome</string>
