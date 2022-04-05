@@ -1,14 +1,26 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import TabRoutes from './tab.routes';
 
 import Login from '../screens/Login';
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 export function StackRoutes() {
   return (
-    <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="Login" component={Login} />
+    <Stack.Navigator 
+      screenOptions={{headerShown: false}}
+      initialRouteName="LoginScreen"
+    >
+      <Stack.Screen 
+        name="LoginScreen" 
+        component={Login}
+      />
+      <Stack.Screen 
+        name="HomeScreen" 
+        component={TabRoutes}
+      />
     </Stack.Navigator>
   );
 }
