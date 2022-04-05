@@ -232,7 +232,7 @@
             android:fontFamily="@font/outfit_regular"
             android:paddingStart="@dimen/padding_checkbox"
             android:text="@string/agreed_terms"
-            android:textColor="@color/medium_dark"
+            android:textColor="@color/neutral_dark"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputPassword"
             app:useMaterialThemeColors="false" />
@@ -272,7 +272,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/outfit_regular"
         android:text="@string/register_message"
-        android:textColor="@color/medium_dark"
+        android:textColor="@color/neutral_dark"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnRegister" />
@@ -296,6 +296,6 @@
         app:layout_constraintBottom_toBottomOf="@id/tvContact"
         app:layout_constraintStart_toEndOf="@id/tvContact"
         app:layout_constraintTop_toTopOf="@id/tvContact"
-        app:srcCompat="@drawable/whatsapp" />
+        app:srcCompat="@drawable/ic_whatsapp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
