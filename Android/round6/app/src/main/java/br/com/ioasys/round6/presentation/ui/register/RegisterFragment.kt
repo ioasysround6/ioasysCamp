@@ -6,10 +6,12 @@ import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.FragmentRegisterBinding
+import br.com.ioasys.round6.presentation.components.ConfirmationDialog
 
 class RegisterFragment : Fragment() {
     private var _binding: FragmentRegisterBinding? = null
@@ -39,6 +41,14 @@ class RegisterFragment : Fragment() {
             passwordToggle.setOnClickListener {
                 isShowPass = !isShowPass
                 showPassword(isShowPass)
+            }
+
+            btnRegister.setOnClickListener {
+                ConfirmationDialog(
+                    onSubmitClickListener = {
+                        Toast.makeText(requireContext(), "Testando Dialog", Toast.LENGTH_SHORT).show()
+                    }
+                ).show(parentFragmentManager, "dialog")
             }
         }
     }

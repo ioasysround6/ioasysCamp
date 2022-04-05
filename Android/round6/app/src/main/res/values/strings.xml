@@ -29,4 +29,7 @@
     <string name="register_message">Está com dificuldades para realizar o cadastro?</string>
     <string name="contact">Entre em contato</string>
     <string name="agreed_terms">Concordo com os</string>
+    <string name="confirmation_message">Agora, para concluir o pagamento e confirmar a sua viagem, você será redirecionado para o nosso Whats App.</string>
+    <string name="booking_message">Sua reserva foi efetuada com sucesso!</string>
+    <string name="button_whatsapp_message">Recirecionar para WhatsApp</string>
 </resources>
