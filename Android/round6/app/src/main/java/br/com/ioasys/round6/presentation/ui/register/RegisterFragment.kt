@@ -1,34 +1,26 @@
-package br.com.ioasys.round6.presentation.ui.login
+package br.com.ioasys.round6.presentation.ui.register
 
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
 import android.text.method.HideReturnsTransformationMethod
-import android.text.method.LinkMovementMethod
 import android.text.method.PasswordTransformationMethod
-import android.text.style.ClickableSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.round6.R
-import br.com.ioasys.round6.databinding.FragmentLoginBinding
+import br.com.ioasys.round6.databinding.FragmentRegisterBinding
 
-class LoginFragment : Fragment() {
-    private var _binding: FragmentLoginBinding? = null
-    private val binding: FragmentLoginBinding get() = _binding!!
+class RegisterFragment : Fragment() {
+    private var _binding: FragmentRegisterBinding? = null
+    private val binding: FragmentRegisterBinding get() = _binding!!
 
     private var isShowPass = false
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = FragmentLoginBinding.inflate(inflater, container, false).apply {
+    ): View = FragmentRegisterBinding.inflate(inflater, container, false).apply {
         _binding = this
     }.root
 
@@ -40,17 +32,13 @@ class LoginFragment : Fragment() {
 
     private fun setOnClickListener() {
         binding.apply {
-            btnSingIn.setOnClickListener {
-                findNavController().navigate(R.id.action_loginFragment_to_nav_graph)
+            btnBack.setOnClickListener {
+                findNavController().navigateUp()
             }
 
             passwordToggle.setOnClickListener {
                 isShowPass = !isShowPass
                 showPassword(isShowPass)
-            }
-
-            tvAccount.setOnClickListener {
-                findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
             }
         }
     }
@@ -69,10 +57,5 @@ class LoginFragment : Fragment() {
             }
         }
         binding.inputPassword.setSelection(binding.inputPassword.text.toString().length)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

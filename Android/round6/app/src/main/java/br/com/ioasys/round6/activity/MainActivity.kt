@@ -3,12 +3,10 @@ package br.com.ioasys.round6.activity
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.Theme_Round6)
         setContentView(binding.root)
         initViews(binding)
-        //setUpNav()
+
+        binding.bottomNavigation.itemIconTintList = null
     }
 
     private fun initViews(binding: ActivityMainBinding) {

@@ -10,4 +10,6 @@
     <dimen name="mini_label">10sp</dimen>
 
     <dimen name="app_margin">32dp</dimen>
+
+    <dimen name="padding_checkbox">8dp</dimen>
 </resources>

@@ -14,4 +14,19 @@
     <string name="name">Nome</string>
     <string name="invalid_password">Senha inválida</string>
     <string name="invalid_user">Usuário inválido</string>
+    <string name="home">Home</string>
+    <string name="communities">Comunidades</string>
+    <string name="diary">Diário</string>
+    <string name="trips">Minhas viagens</string>
+    <string name="register">Cadastro:</string>
+    <string name="name_hint">Maria Fernanda</string>
+    <string name="last_name">Sobrenome</string>
+    <string name="birth">Data de Nascimento</string>
+    <string name="birth_hint">01/01/1999</string>
+    <string name="lastName_hint">Sales Souza</string>
+    <string name="terms_of_use">Termos de uso</string>
+    <string name="confirm_registration">Confirmar cadastro</string>
+    <string name="register_message">Está com dificuldades para realizar o cadastro?</string>
+    <string name="contact">Entre em contato</string>
+    <string name="agreed_terms">Concordo com os</string>
 </resources>
