@@ -8,7 +8,7 @@ export default function CardPackages({ title, subtitle }) {
             <View style={styles.card}>
                 <ImageBackground>
                     <View style={{ alignItems: 'stretch' }}>
-                        <View style={{ paddingLeft: 12, paddingRight: 14, backgroundColor: '#163' }}>
+                        <View style={{ paddingLeft: 12, paddingRight: 14, paddingBottom: 16 }}>
                             <Text style={styles.title}>{title}</Text>
                             <Text style={styles.subtitle}>{subtitle}</Text>
                         </View>
@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#131313',
         borderRadius: 20,
         marginRight: 16,
+        justifyContent: 'flex-end'
     },
     title: {
         fontSize: 16,
