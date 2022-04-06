@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { StatusBar, View, Text, Button } from 'react-native';
 
 import ScreenView from '../components/ScreenView';
 import ButtonLarge from '../components/ButtonLarge';
