@@ -5,7 +5,7 @@ import ButtonSmall from './ButtonSmall';
 import { colors } from '../styles/colors';
 import BackImage from '../../src/assets/backgroundImage.png'
 
-export default function Banner({ image, title, subtitle }) {
+export default function Banner({ image, title, subtitle}) {
     return (
         <View style={styles.Banner}>
             <ImageBackground style={styles.image} source={image} resizeMode='cover'>

@@ -17,23 +17,35 @@ export function Home() {
   const navigation = useNavigation();
 
   return (
-    <ScreenView>
-      <StatusBar backgroundColor="#FFF" barStyle='dark-content' />
-      <Header isInside={true} icon={PersonIcon} />
-      <View style={styles.AreaBanner}>
-        <Banner image={BackImage} title="Turismo comunitário" />
-      </View>
-      <Text style={styles.titleAreaPackages}>Pacotes de Turismo</Text>
-      <View style={{ flexDirection: 'row'}}>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" />
-          <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" />
-          <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" />
-          <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" />
-          <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" />
-        </ScrollView>
-      </View>
-    </ScreenView>
+    <ScrollView>
+      <ScreenView>
+        <StatusBar backgroundColor="#FFF" barStyle='dark-content' />
+        <Header isInside={true} icon={PersonIcon} />
+        <View style={styles.AreaBanner}>
+          <Banner image={BackImage} title="Turismo comunitário" />
+        </View>
+        <Text style={styles.titleAreaPackages}>Pacotes de turismo</Text>
+        <View style={{ flexDirection: 'row' }}>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" altura={200} />
+            <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" altura={200} />
+            <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" altura={200} />
+            <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" altura={200} />
+            <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" altura={200} />
+          </ScrollView>
+        </View>
+        <Text style={[styles.titleAreaPackages, { marginTop: 40, marginBottom: 20 }]}>Comunidades parceiras</Text>
+        <View style={{ flexDirection: 'row', marginBottom:20 }}>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <CardPackages title="Moita Redonda" altura={180} />
+            <CardPackages title="Moita Redonda" altura={180} />
+            <CardPackages title="Moita Redonda" altura={180} />
+            <CardPackages title="Moita Redonda" altura={180} />
+            <CardPackages title="Moita Redonda" altura={180} />
+          </ScrollView>
+        </View>
+      </ScreenView>
+    </ScrollView>
   );
 }
 

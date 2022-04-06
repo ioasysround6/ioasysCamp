@@ -2,16 +2,16 @@ import React from 'react';
 import { View, Text, ImageBackground, StyleSheet, TouchableOpacity } from 'react-native';
 import { colors } from '../styles/colors';
 
-export default function CardPackages({ title, subtitle }) {
+import ImageBack from '../../src/assets/backgroundImage.png';
+
+export default function CardPackages({ title, subtitle, altura }) {
     return (
         <TouchableOpacity>
-            <View style={styles.card}>
-                <ImageBackground>
-                    <View style={{ alignItems: 'stretch' }}>
-                        <View style={{ paddingLeft: 12, paddingRight: 14, paddingBottom: 16 }}>
-                            <Text style={styles.title}>{title}</Text>
-                            <Text style={styles.subtitle}>{subtitle}</Text>
-                        </View>
+            <View style={[styles.card, { height: altura }]}>
+                <ImageBackground style={styles.ImageBackground} source={ImageBack} resizeMode='cover'>
+                    <View style={styles.viewTitleAndSubtitle}>
+                        <Text style={styles.title}>{title}</Text>
+                        <Text style={styles.subtitle}>{subtitle}</Text>
                     </View>
                 </ImageBackground>
             </View>
@@ -22,11 +22,12 @@ export default function CardPackages({ title, subtitle }) {
 const styles = StyleSheet.create({
     card: {
         width: 140,
-        height: 200,
+        // height: 200,
         backgroundColor: '#131313',
         borderRadius: 20,
         marginRight: 16,
-        justifyContent: 'flex-end'
+        justifyContent: 'center',
+        overflow: 'hidden',
     },
     title: {
         fontSize: 16,
@@ -37,5 +38,15 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontWeight: '400',
         color: colors.neutralLighter
+    },
+    ImageBackground: {
+        flex: 1,
+        borderRadius: 20,
+        justifyContent: 'flex-end'
+    },
+    viewTitleAndSubtitle: {
+        paddingLeft: 12,
+        paddingRight: 14,
+        paddingBottom: 16
     }
 })
