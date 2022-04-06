@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Shadow } from 'react-native-shadow-2';
 import { useNavigation } from '@react-navigation/core';
 
 import { colors } from '../styles/colors';
@@ -63,10 +64,15 @@ export function TravelPackage(){
           <ArrowBackButton style={{ width: 24, height: 24}}/>
         </RectButton>
 
-        <Image 
-          style={styles.imagem} 
-          source={{uri: 'https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'}} 
-        />
+        <Shadow 
+          distance={20} 
+          startColor={'#252A2733'} 
+          offset={[0, 2]}>
+          <Image 
+            style={styles.imagem} 
+            source={{uri: 'https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'}} 
+          />
+        </Shadow>
       </View>
 
       <View style={styles.descricao}>
