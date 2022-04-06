@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: colors.primaryDark,
     },
     title: {
         color: colors.neutralLight,
@@ -46,5 +47,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.primaryDark,
         width: '100%',
         height: 300,
+        overflow: 'hidden',
+        borderRadius:20,
     }
 })
