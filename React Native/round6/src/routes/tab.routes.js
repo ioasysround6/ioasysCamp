@@ -5,8 +5,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { Home } from '../screens/Home';
 import { Communities } from '../screens/Communities';
-import { TravelPackage } from '../screens/TravelPackage';
+import { Diary } from '../screens/Diary';
 import { MyTravels } from '../screens/MyTravels';
+
+import { StackRoutes } from './stack.routes';
 
 import HomeActiveIcon from '../assets/HomeActiveIcon.svg';
 import HomeInactiveIcon from '../assets/HomeInactiveIcon.svg';
@@ -16,10 +18,11 @@ import DiaryActiveIcon from '../assets/DiaryActiveIcon.svg';
 import DiaryInactiveIcon from '../assets/DiaryInactiveIcon.svg';
 import MyTravelsActiveIcon from '../assets/MyTravelsActiveIcon.svg';
 import MyTravelsInactiveIcon from '../assets/MyTravelsInactiveIcon.svg';
+import Login from '../screens/Login';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
-export default function TabRoutes(){
+export function TabRoutes(){
   return (
     <Navigator
       screenOptions={{
@@ -38,6 +41,24 @@ export default function TabRoutes(){
         }
       }}
     >
+      <Screen 
+        name="Login"
+        component={StackRoutes}
+        options={{
+          tabBarIcon: (({ focused }) =>
+            focused ?
+            <>
+              <View style={styles.icone}>
+                <View style={styles.posicaoCirculoHome}/>
+              </View>
+
+              <HomeActiveIcon/>
+            </>
+
+              : <HomeInactiveIcon/>
+          )
+        }}
+      />
       <Screen 
         name="Home"
         component={Home}
@@ -76,7 +97,7 @@ export default function TabRoutes(){
       />
       <Screen 
         name="Diário"
-        component={TravelPackage}
+        component={Diary}
         options={{
           tabBarIcon: (({ focused }) =>
             focused ?
