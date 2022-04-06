@@ -16,7 +16,7 @@ import ButtonLarge from '../components/ButtonLarge';
 export default function Login() {
     return (
         <ScreenView>
-            <Header TextButtonHeaderRight='Pular' icon={BackButton} />
+            <Header TextButtonHeaderRight='Pular' icon={BackButton} isInside={false}/>
             <View style={{ justifyContent: 'center', alignItems: 'center', marginBottom: 64, marginTop: 30 }}>
                 <Image style={{ width: 72, height: 72 }} source={Logo} />
             </View>

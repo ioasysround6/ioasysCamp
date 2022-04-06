@@ -4,15 +4,28 @@ import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
 import HomeActiveIcon from '../assets/HomeActiveIcon.svg';
 import { colors } from '../styles/colors';
 
-export default function Header({ TextButtonHeaderRight, icon }) {
+export default function Header({ TextButtonHeaderRight, icon, isInside, }) {
     return (
         <View style={styles.viewHeader}>
-            <Image source={icon} />
-            {/* <>{icon}</> */}
-            {/* <HomeActiveIcon/> */}
-            <TouchableOpacity>
-                <Text style={styles.textButtonHeader}>{TextButtonHeaderRight}</Text>
-            </TouchableOpacity>
+            {isInside === true ? (
+                <>
+                    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={styles.textButtonHeader}>LOGOAQUI</Text>
+                    </View>
+                    <TouchableOpacity>
+                        <Image source={icon} />
+                    </TouchableOpacity>
+                </>
+            ) :
+                (
+                    <>
+                        <Image source={icon} />
+                        <TouchableOpacity>
+                            <Text style={styles.textButtonHeader}>{TextButtonHeaderRight}</Text>
+                        </TouchableOpacity>
+                    </>
+                )}
+
         </View>
     );
 }

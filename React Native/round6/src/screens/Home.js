@@ -1,15 +1,15 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, ImageBackground, StyleSheet, StatusBar, ScrollView } from 'react-native';
+
+import PersonIcon from '../../src/assets/PersonIcon.png';
 
 import ScreenView from '../components/ScreenView';
-import ButtonLarge from '../components/ButtonLarge';
-import ButtonSmall from '../components/ButtonSmall';
-import ButtonSwitch from '../components/ButtonSwitch';
-import FloatButton from '../components/FloatButton';
-import InputArea from '../components/InputArea';
-import Tag from '../components/Tag';
-import { colors } from '../styles/colors';
 import { useNavigation } from '@react-navigation/native';
+import Banner from '../components/Banner';
+import BackImage from '../../src/assets/backgroundImage.png'
+import Header from '../components/Header';
+import { colors } from '../styles/colors';
+import CardPackages from '../components/CardPackages';
 
 
 export function Home() {
@@ -18,15 +18,38 @@ export function Home() {
 
   return (
     <ScreenView>
-      <ButtonLarge titulo='Ir pra Login' backColor={colors.primaryDefault} onPress={() => navigation.navigate('Login')}/>
-      <Button title='Navegar' onPress={() => navigation.navigate('Login')}/>
-      <ButtonLarge titulo='Botão' backColor={colors.secondaryDefault} />
-      <ButtonLarge titulo='Botão' backColor={colors.primaryDark} />
-      <ButtonSmall titulo='Botão Menor' backColor={colors.primaryDefault} />
-      <FloatButton titulo='+' backColor={colors.primaryDefault} />
-      <InputArea titulo='Place Holder' corBorda={colors.primaryDark} />
-      <Tag texto='Tag aqui' backColor={colors.primaryDark} />
-      <ButtonSwitch falseColor={colors.primaryDefault} trueColor={colors.primaryDefault} enabledColor={colors.neutralLighter} disabledColor={colors.neutralLighter} />
+      <StatusBar backgroundColor="#FFF" barStyle='dark-content' />
+      <Header isInside={true} icon={PersonIcon} />
+      <View style={styles.AreaBanner}>
+        <Banner image={BackImage} title="Turismo comunitário" />
+      </View>
+      <Text style={styles.titleAreaPackages}>Pacotes de Turismo</Text>
+      <View style={{ flexDirection: 'row'}}>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" />
+          <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" />
+          <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" />
+          <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" />
+          <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" />
+        </ScrollView>
+      </View>
     </ScreenView>
   );
 }
+
+const styles = StyleSheet.create({
+  AreaBanner: {
+    marginTop: 32,
+    marginBottom: 40,
+  },
+  titleAreaPackages: {
+    fontSize: 20,
+    color: colors.neutralDarker,
+    fontWeight: '600',
+    marginBottom: 20,
+  },
+  scroll: {
+    backgroundColor: '#1dd',
+    // flexDirection: 'row',
+  }
+})
