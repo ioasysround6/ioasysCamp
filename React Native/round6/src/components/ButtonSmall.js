@@ -13,7 +13,7 @@ const ButtonSmall = ({titulo, backColor}) =>{
 
 const styles = StyleSheet.create({
     botao:{
-        width: 140,
+        width: 186,
         height: 48,
         justifyContent:'center',
         alignItems: 'center',
