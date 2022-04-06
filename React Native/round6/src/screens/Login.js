@@ -16,9 +16,9 @@ import ButtonLarge from '../components/ButtonLarge';
 export default function Login() {
 	return (
 		<ScreenView>
-      <StatusBar 
-        barStyle="dark-content"
-        backgroundColor='#FCFCFC'
+      <StatusBar
+        backgroundColor='transparent'
+				translucent
       />
 			<Header TextButtonHeaderRight='Pular' icon={BackButton} />
 			<View style={{ justifyContent: 'center', alignItems: 'center', marginBottom: 64, marginTop: 30 }}>

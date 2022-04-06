@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-between',
 		flexDirection: 'row',
 		alignItems: 'center',
-		marginTop: 10,
+		marginTop: 40,
 	},
 	textButtonHeader: {
 		fontSize: 14,
