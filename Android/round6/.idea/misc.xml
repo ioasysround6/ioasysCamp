@@ -10,8 +10,11 @@
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/button_background_clicked.xml" value="0.177" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/button_background_error.xml" value="0.177" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/button_hover.xml" value="0.177" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/card_view_bg.xml" value="0.149" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/checkbox.xml" value="0.116" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/custom_checkbox.xml" value="0.1455" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/custom_ic_minus.xml" value="0.115" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/custom_ic_plus.xml" value="0.115" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/erro.xml" value="0.1455" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/facebook.xml" value="0.102" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/drawable/hide_password.xml" value="0.102" />
@@ -45,7 +48,8 @@
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/layout/dialog_confirmation.xml" value="0.264" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/layout/fragment_communities.xml" value="0.2269021739130435" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/layout/fragment_login.xml" value="0.4" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/layout/fragment_login.xml" value="0.264" />
+        <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/layout/fragment_packages_details.xml" value="0.35777126099706746" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/layout/fragment_register.xml" value="0.4" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/menu/menu.xml" value="0.4" />
         <entry key="..\:/Users/Sara/Documents/Estudos/Camp Ioasys 2022/round6/Android/round6/app/src/main/res/menu/menu_nav.xml" value="0.25416666666666665" />
