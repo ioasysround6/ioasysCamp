@@ -12,7 +12,7 @@
     <string name="sing_in">Entrar na minha conta</string>
     <string name="sing_in_with">Acessar com:</string>
     <string name="name">Nome</string>
-    <string name="invalid_password">Senha inválida</string>
+    <string name="invalid_password">Usuário e/ou senha inválidos.</string>
     <string name="invalid_user">Usuário inválido</string>
     <string name="home">Home</string>
     <string name="communities">Comunidades</string>
@@ -32,4 +32,9 @@
     <string name="confirmation_message">Agora, para concluir o pagamento e confirmar a sua viagem, você será redirecionado para o nosso Whats App.</string>
     <string name="booking_message">Sua reserva foi efetuada com sucesso!</string>
     <string name="button_whatsapp_message">Recirecionar para WhatsApp</string>
+    <string name="message_error_password">Essa senha não atende ao critério de segurança</string>
+    <string name="message_error_email">Esse não é um formato válido de e-mail</string>
+    <string name="message_error_birth_date">Esse não é um formato válido de data</string>
+    <string name="message_error_last_name">Esse campo é obrigatório</string>
+    <string name="message_error_name">Esse campo é obrigatório</string>
 </resources>
