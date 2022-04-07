@@ -1,12 +1,8 @@
 package br.com.ioasys.round6.presentation.ui.login
 
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
 import android.text.method.HideReturnsTransformationMethod
-import android.text.method.LinkMovementMethod
 import android.text.method.PasswordTransformationMethod
-import android.text.style.ClickableSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,7 +37,7 @@ class LoginFragment : Fragment() {
     private fun setOnClickListener() {
         binding.apply {
             btnSingIn.setOnClickListener {
-                findNavController().navigate(R.id.action_loginFragment_to_nav_graph)
+                findNavController().navigate(R.id.action_loginFragment_to_packagesDetailsFragment)
             }
 
             passwordToggle.setOnClickListener {

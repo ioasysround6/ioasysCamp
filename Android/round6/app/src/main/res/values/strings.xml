@@ -32,4 +32,15 @@
     <string name="confirmation_message">Agora, para concluir o pagamento e confirmar a sua viagem, você será redirecionado para o nosso Whats App.</string>
     <string name="booking_message">Sua reserva foi efetuada com sucesso!</string>
     <string name="button_whatsapp_message">Recirecionar para WhatsApp</string>
+    <string name="package_price">R$ 600,00</string>
+    <string name="package_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor</string>
+    <string name="buy_package">Comprar pacote</string>
+    <string name="accommodation">Hospedagem</string>
+    <string name="activities">Atividades</string>
+    <string name="dates">Datas</string>
+    <string name="travel_tips">Dicas de viagem</string>
+    <string name="people_amount">Quantidade de pessoas</string>
+    <string name="available_vacancies">5 vagas disponíveis</string>
+    <string name="community_name">Pacote 1</string>
+    <string name="people_amount_num">0</string>
 </resources>

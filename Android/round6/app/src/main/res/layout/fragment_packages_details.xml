@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.packages.PackagesDetailsFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            app:iss_auto_cycle="false"
+            app:iss_delay="0"
+            app:iss_period="2500">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/pressed_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:scaleType="center"
+                app:layout_constraintStart_toStartOf="@id/imageSlider"
+                app:layout_constraintTop_toTopOf="@id/imageSlider"
+                app:srcCompat="@drawable/back_arrow" />
+
+        </com.denzcoskun.imageslider.ImageSlider>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/app_margin"
+        android:layout_marginEnd="@dimen/app_margin"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPackageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/outfit_semibold"
+                android:text="@string/community_name"
+                android:textColor="@color/neutral_darker"
+                android:textSize="@dimen/headline_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPackagePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_semibold"
+                android:text="@string/package_price"
+                android:textColor="@color/neutral_darker"
+                android:textSize="@dimen/headline_24"
+                app:layout_constraintBottom_toBottomOf="@id/tvPackageTitle"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPackageDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/outfit_regular"
+                android:text="@string/package_description"
+                android:textColor="@color/neutral_dark"
+                android:textSize="@dimen/body_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPackageTitle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPackageVacancy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/outfit_semibold"
+                android:text="@string/available_vacancies"
+                android:textColor="@color/neutral_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPackageDescription" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPeopleAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:text="@string/people_amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPackageVacancy" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@id/tvPeopleAmount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvPeopleAmount">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/minusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:scaleType="center"
+                    android:src="@drawable/custom_ic_minus" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPeopleAmountNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="@string/people_amount_num" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/plusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:src="@drawable/custom_ic_plus" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBuyPackage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_hover"
+                android:padding="17.5dp"
+                android:text="@string/buy_package"
+                android:textAllCaps="false"
+                android:textColor="@color/lighter"
+                android:textSize="@dimen/button_14"
+                app:layout_constraintTop_toBottomOf="@id/tvPeopleAmount" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/accommodationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnBuyPackage"
+                app:srcCompat="@drawable/ic_accommodation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAccommodation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12.71dp"
+                android:fontFamily="@font/outfit_semibold"
+                android:text="@string/accommodation"
+                android:textColor="@color/neutral_darker"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/accommodationIcon"
+                app:layout_constraintStart_toEndOf="@id/accommodationIcon"
+                app:layout_constraintTop_toTopOf="@id/accommodationIcon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAccommodationDesc"
+                android:layout_width="264dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="@id/tvAccommodation"
+                app:layout_constraintTop_toBottomOf="@id/tvAccommodation"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/activitiesIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41.71dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAccommodationDesc"
+                app:srcCompat="@drawable/ic_activities" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvActivities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12.71dp"
+                android:fontFamily="@font/outfit_semibold"
+                android:text="@string/activities"
+                android:textColor="@color/neutral_darker"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/activitiesIcon"
+                app:layout_constraintStart_toEndOf="@id/activitiesIcon"
+                app:layout_constraintTop_toTopOf="@id/activitiesIcon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvActivitiesDesc"
+                android:layout_width="264dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="@id/tvActivities"
+                app:layout_constraintTop_toBottomOf="@id/tvActivities"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/datesIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41.71dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvActivitiesDesc"
+                app:srcCompat="@drawable/ic_datas" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12.71dp"
+                android:fontFamily="@font/outfit_semibold"
+                android:text="@string/dates"
+                android:textColor="@color/neutral_darker"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/datesIcon"
+                app:layout_constraintStart_toEndOf="@id/datesIcon"
+                app:layout_constraintTop_toTopOf="@id/datesIcon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDatesDesc"
+                android:layout_width="264dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="@id/tvDates"
+                app:layout_constraintTop_toBottomOf="@id/tvDates"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/mapIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41.71dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDatesDesc"
+                app:srcCompat="@drawable/ic_map" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12.71dp"
+                android:fontFamily="@font/outfit_semibold"
+                android:text="@string/travel_tips"
+                android:textColor="@color/neutral_darker"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/mapIcon"
+                app:layout_constraintStart_toEndOf="@id/mapIcon"
+                app:layout_constraintTop_toTopOf="@id/mapIcon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMapDesc"
+                android:layout_width="264dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="52dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvMap"
+                app:layout_constraintTop_toBottomOf="@id/tvMap"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
