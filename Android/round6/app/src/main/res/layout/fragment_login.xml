@@ -69,43 +69,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/messageErrorEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputEmail">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_erro" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:fontFamily="@font/outfit_regular"
-            android:text="@string/invalid_user"
-            android:textColor="@color/neutral_dark" />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvPassword"
         style="@style/InputLabel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:text="@string/password"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/messageErrorEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/inputPassword"
@@ -137,15 +109,15 @@
         app:layout_constraintTop_toTopOf="@+id/inputPassword" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/messageErrorPassword"
+        android:id="@+id/messageErrorName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="21dp"
         android:gravity="center"
         android:orientation="horizontal"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputPassword">
+        app:layout_constraintTop_toBottomOf="@id/tvError">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
@@ -156,9 +128,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:fontFamily="@font/outfit_regular"
+            android:fontFamily="@font/outfit_semibold"
             android:text="@string/invalid_password"
-            android:textColor="@color/neutral_dark" />
+            android:textColor="@color/error" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -178,14 +150,14 @@
         android:id="@+id/btnSingIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:background="@drawable/button_hover"
         android:padding="17.5dp"
+        android:layout_marginTop="16dp"
         android:text="@string/sing_in"
         android:textAllCaps="false"
         android:textColor="@color/lighter"
         android:textSize="@dimen/button_14"
-        app:layout_constraintTop_toBottomOf="@+id/tvError" />
+        app:layout_constraintTop_toBottomOf="@+id/messageErrorName" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
