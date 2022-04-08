@@ -6,6 +6,7 @@ import { colors } from '../styles/colors';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
 
 import ButtonLarge from '../components/ButtonLarge';
+import { ImageSlider } from '../components/ImageSlider';
 
 import ArrowBackButton from '../assets/ArrowBackButton.svg';
 import CampingIcon from '../assets/CampingIcon.svg';
@@ -47,14 +48,15 @@ export function TravelPackage(){
     }
   }, [counter])
 
-  return (
+  return (      
     <ScrollView>
-
     <View style={styles.container}>
-      <StatusBar 
-        backgroundColor={'transparent'}
-        translucent
+      <StatusBar
+        barStyle='light-content'
+        backgroundColor={'#54595666'}
+        // translucent
       />
+      
       <View>
         <RectButton 
           activeOpacity={0.6} 
@@ -68,10 +70,7 @@ export function TravelPackage(){
           distance={20} 
           startColor={'#252A2733'} 
           offset={[0, 2]}>
-          <Image 
-            style={styles.imagem} 
-            source={{uri: 'https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'}} 
-          />
+            <ImageSlider imagesUrl={['https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', 'https://images.unsplash.com/photo-1611843467160-25afb8df1074?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', 'https://images.unsplash.com/photo-1516959543587-4cc499d9514b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80']}/>
         </Shadow>
       </View>
 
@@ -198,12 +197,13 @@ export function TravelPackage(){
 const styles = StyleSheet.create({
 	container: {
     flex: 1, 
-    alignItems: 'center', 
+    alignItems: 'flex-start', 
     justifyContent: 'flex-start',
+    backgroundColor: colors.neutralLighter,
 	},
   backButton: {
     position: 'absolute',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
     zIndex: 1,
     marginTop: 36,
@@ -211,12 +211,12 @@ const styles = StyleSheet.create({
     width: 48,
     height: 48,
   },
-  imagem: {
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
-    width: width,
-    height: 420,
-  },
+  // imagem: {
+  //   borderBottomLeftRadius: 20,
+  //   borderBottomRightRadius: 20,
+  //   width: width,
+  //   height: 420,
+  // },
   descricao: {
     width: width,
     paddingTop: 40,
