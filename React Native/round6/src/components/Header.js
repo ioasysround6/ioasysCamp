@@ -5,11 +5,15 @@ import { useNavigation, useRoute } from '@react-navigation/core';
 import HomeActiveIcon from '../assets/HomeActiveIcon.svg';
 import { colors } from '../styles/colors';
 
-export default function Header({ TextButtonHeaderRight, icon, isInside }) {
+export default function Header({ TextButtonHeaderRight, icon, isInside, colorText }) {
     const navigation = useNavigation();
 
     function handleMoveOn() {
         navigation.navigate("HomeScreen");
+    }
+
+    function handleGoBack(){
+        navigation.goBack();
     }
 
     return (
@@ -26,9 +30,11 @@ export default function Header({ TextButtonHeaderRight, icon, isInside }) {
             ) :
                 (
                     <>
-                        <Image source={icon} />
+                        <TouchableOpacity onPress={handleGoBack}>
+                            <Image source={icon} />
+                        </TouchableOpacity>
                         <TouchableOpacity onPress={handleMoveOn} >
-                            <Text style={styles.textButtonHeader}>{TextButtonHeaderRight}</Text>
+                            <Text style={[styles.textButtonHeader, { color: colorText }]}>{TextButtonHeaderRight}</Text>
                         </TouchableOpacity>
                     </>
                 )}
@@ -41,7 +47,6 @@ const styles = StyleSheet.create({
     viewHeader: {
         width: '100%',
         height: 50,
-        // backgroundColor: '#ad5',
         justifyContent: 'space-between',
         flexDirection: 'row',
         alignItems: 'center',
@@ -49,7 +54,7 @@ const styles = StyleSheet.create({
     },
     textButtonHeader: {
         fontSize: 14,
-        color: colors.neutralDark
+        fontWeight: '600',
     }
 })
 

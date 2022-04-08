@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
 	tituloBotao:{
 		fontSize: 14,
 		color: '#FCFCFC',
+		fontWeight:'600'
 	}
 })
 
