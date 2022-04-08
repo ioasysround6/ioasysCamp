@@ -7,16 +7,16 @@
 
     <item
         android:id="@+id/communitiesFragment"
-        android:icon="@drawable/ic_communities"
+        android:icon="@drawable/communities"
         android:title="@string/communities" />
 
     <item
         android:id="@+id/diaryFragment"
-        android:icon="@drawable/ic_diary"
+        android:icon="@drawable/diary"
         android:title="@string/diary" />
 
     <item
         android:id="@+id/tripsFragment"
-        android:icon="@drawable/ic_trips"
+        android:icon="@drawable/trips"
         android:title="@string/trips" />
 </menu>
