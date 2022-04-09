@@ -29,6 +29,7 @@
                 app:srcCompat="@drawable/image_example" />
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backArrowButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
@@ -57,67 +58,67 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/outfit_semibold"
-                android:text="Turismo comunitário"
+                android:text="@string/community_tourism"
                 android:textColor="@color/neutral_darker"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/appCompatTextView2"
+                android:id="@+id/aboutParagraphOne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="O turismo de base comunitária diferentemente do turismo tradicional tem como foco a experiência do viajante no local de destino. A viagem é toda planejada para que a pessoa participe do dia a dia da comunidade local, realizando as mesmas atividades que os moradores realizam, além de ter a oportunidade de conhecer os costumes da região."
+                android:text="@string/about_text_paragraph_one"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/aboutTitle" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/appCompatTextView3"
+                android:id="@+id/aboutParagraphTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="19dp"
-                android:text="Geralmente o turista fica hospedado na casa de um morador da comunidade, faz as refeições junto com a família e participa da rotina de atividades com essa família. Ele pode aprender e ajudar com o plantio, a cozinha, trabalhando com peças de artesanado tradicionais na comunidade, entre várias outras atividades."
+                android:text="@string/about_text_paragraph_two"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/appCompatTextView2" />
+                app:layout_constraintTop_toBottomOf="@id/aboutParagraphOne" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/appCompatTextView4"
+                android:id="@+id/aboutParagraphThree"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="19dp"
-                android:text="A ideia é colocar as comunidades locais como protgonistas e promover um estilo de viagem sustentável, com respeito à natureza, às populações e à cultura."
+                android:text="@string/about_text_paragraph_three"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/appCompatTextView3" />
+                app:layout_constraintTop_toBottomOf="@id/aboutParagraphTwo" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/appCompatTextView5"
+                android:id="@+id/aboutParagraphFour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="19dp"
-                android:text="Sem contar que é uma alternativa de renda para populações dessas comunidades, uma oportunidade de valorização da cultura local e uma forma de integrar os jovens ao modo de vida local."
+                android:text="@string/about_text_paragraph_four"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/appCompatTextView4" />
+                app:layout_constraintTop_toBottomOf="@id/aboutParagraphThree" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/appCompatTextView6"
+                android:id="@+id/aboutParagraphFive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="19dp"
-                android:text="O incentivo ao turimo de base comunitária pode ajudar na meta de erradicação da pobreza. Isso porque esse estilo de viagem ajuda a movimentar a economia local, dá maior visibilidade para essas comunidades e proporciona maior interesse pela cultura dessas pessoas."
+                android:text="@string/about_text_paragraph_five"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/appCompatTextView5" />
+                app:layout_constraintTop_toBottomOf="@id/aboutParagraphFour" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/appCompatTextView7"
+                android:id="@+id/aboutParagraphSix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="19dp"
                 android:layout_marginBottom="52dp"
-                android:text="E tudo isso ajuda a desconstruir a visão de que as pessoas dessas comunidades precisariam mudar para a capital em busca de oportunidades melhores, uma vez que elas conseguem se desenvolver e manter uma condição digna de vida dentro da sua cultura."
+                android:text="@string/about_text_paragraph_six"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/appCompatTextView6" />
+                app:layout_constraintTop_toBottomOf="@id/aboutParagraphFive" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
