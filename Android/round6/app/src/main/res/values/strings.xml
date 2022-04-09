@@ -37,4 +37,12 @@
     <string name="message_error_birth_date">Esse não é um formato válido de data</string>
     <string name="message_error_last_name">Esse campo é obrigatório</string>
     <string name="message_error_name">Esse campo é obrigatório</string>
+
+    <!-- Home Fragment -->
+    <string name="tour_package">Pacotes de turismo</string>
+    <string name="partner_communities">Comunidades Parceiras</string>
+    <string name="how_its_possible">Saiba como é possível</string>
+    <string name="activity_help_eradicate_poverty">essa atividade pode ajudar a\n erradicar a pobreza</string>
+    <string name="community_tourism">Turismo comunitário</string>
+
 </resources>
