@@ -22,7 +22,7 @@
     <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
         <item name="android:textSize">10sp</item>
     </style>
-  
+
     <style name="CustomExposedDropMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
         <item name="boxCornerRadiusTopStart">10dp</item>
         <item name="boxCornerRadiusTopEnd">10dp</item>
@@ -34,7 +34,8 @@
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/neutral_darker</item>
         <item name="android:fontFamily">@font/outfit_semibold</item>
-      
+    </style>
+
     <style name="TitleHomeFragment">
         <item name="android:textSize">@dimen/headline_24</item>
         <item name="android:textColor">@color/light</item>
