@@ -10,8 +10,16 @@ import WhatsappIcon from '../../src/assets/whatsapp.png';
 import BackButton from '../../src/assets/back.png';
 import InputArea from '../components/InputArea';
 import ButtonLarge from '../components/ButtonLarge';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Register() {
+
+    const navigation = useNavigation();
+
+    function handleGoLogin(){
+        navigation.goBack();
+    }
+
     return (
         <ScreenView>
             <Header TextButtonHeaderRight='Pular' icon={BackButton} />

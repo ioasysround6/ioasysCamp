@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import TabRoutes from './tab.routes';
 
 import Login from '../screens/Login';
+import Register from '../screens/Register';
 import { TravelPackage } from '../screens/TravelPackage';
 
 const Stack = createStackNavigator();
@@ -25,6 +26,11 @@ export function StackRoutes() {
       <Stack.Screen 
         name="TravelPackageScreen" 
         component={TravelPackage}
+      />
+
+      <Stack.Screen 
+        name="Register" 
+        component={Register}
       />
 
     </Stack.Navigator>
