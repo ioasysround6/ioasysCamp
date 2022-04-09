@@ -22,4 +22,28 @@
     <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
         <item name="android:textSize">10sp</item>
     </style>
+
+    <style name="TitleHomeFragment">
+        <item name="android:textSize">@dimen/headline_24</item>
+        <item name="android:textColor">@color/light</item>
+        <item name="fontFamily">@font/outfit_semibold</item>
+    </style>
+
+    <style name="SubTitleHomeFragment">
+        <item name="android:textSize">@dimen/headline_14</item>
+        <item name="android:textColor">@color/lighter</item>
+        <item name="fontFamily">@font/outfit_semibold</item>
+    </style>
+
+    <style name="SmallButtonHome">
+        <item name="android:textSize">@dimen/headline_14</item>
+        <item name="android:textColor">@color/lighter</item>
+        <item name="fontFamily">@font/outfit_regular</item>
+    </style>
+
+    <style name="TitleRecyclerViewHome">
+        <item name="android:textSize">@dimen/headline_20</item>
+        <item name="android:textColor">@color/neutral_darker</item>
+        <item name="fontFamily">@font/outfit_semibold</item>
+    </style>
 </resources>
