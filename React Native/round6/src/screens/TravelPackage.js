@@ -28,6 +28,10 @@ export function TravelPackage(){
 		navigation.goBack();
 	}
 
+  function handleCheckoutPage(){
+		navigation.navigate("CheckoutScreen");
+	}
+
   function somar() {
     if (counter < 5){
       setCounter(counter + 1)
@@ -123,7 +127,7 @@ export function TravelPackage(){
             backColor={activeButton 
               ? colors.primaryDefault 
               : colors.neutralMediumLight}
-            onPress={() => {}}
+            onPress={handleCheckoutPage}
           />
         </View>
 
@@ -203,7 +207,7 @@ const styles = StyleSheet.create({
 	},
   backButton: {
     position: 'absolute',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'center',
     zIndex: 1,
     marginTop: 36,
@@ -211,12 +215,6 @@ const styles = StyleSheet.create({
     width: 48,
     height: 48,
   },
-  // imagem: {
-  //   borderBottomLeftRadius: 20,
-  //   borderBottomRightRadius: 20,
-  //   width: width,
-  //   height: 420,
-  // },
   descricao: {
     width: width,
     paddingTop: 40,
