@@ -11,7 +11,7 @@ export function ImageSlider({ imagesUrl }){
     <View style={styles.container}>
 
       <SwiperFlatList
-        index={1}
+        index={0}
         paginationStyleItemActive={styles.dotActive}
         paginationStyleItemInactive={styles.dotInactive}
         showPagination
