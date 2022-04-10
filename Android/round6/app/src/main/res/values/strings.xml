@@ -32,11 +32,6 @@
     <string name="confirmation_message">Agora, para concluir o pagamento e confirmar a sua viagem, você será redirecionado para o nosso Whats App.</string>
     <string name="booking_message">Sua reserva foi efetuada com sucesso!</string>
     <string name="button_whatsapp_message">Recirecionar para WhatsApp</string>
-    <string name="message_error_password">Essa senha não atende ao critério de segurança</string>
-    <string name="message_error_email">Esse não é um formato válido de e-mail</string>
-    <string name="message_error_birth_date">Esse não é um formato válido de data</string>
-    <string name="message_error_last_name">Esse campo é obrigatório</string>
-    <string name="message_error_name">Esse campo é obrigatório</string>
     <!-- Checkout Fragment -->
     <string name="checkout">Checkout</string>
     <string name="cpf_hint">000.000.000-00</string>
@@ -60,6 +55,13 @@
     <string name="payment_amount">R$ 600,00</string>
     <string name="payment_text">Em até 3x sem juros no cartão de crédito</string>
     <string name="card_validity">01/27</string>
+    <string name="message_error_password">Essa senha não atende ao critério de segurança</string>
+    <string name="message_error_email">Esse não é um formato válido de e-mail</string>
+    <string name="message_error_birth_date">Esse não é um formato válido de data</string>
+    <string name="message_error_last_name">Esse campo é obrigatório</string>
+    <string name="message_error_name">Esse campo é obrigatório</string>
+    <string name="message_error_cpf">CPF inválido</string>
+    <string name="message_error_card_code">Cartão de crédito inválido</string>
     <string name="items">Items</string>
     <string-array name="dropdownItens">
         <item>À vista</item>
@@ -78,4 +80,5 @@
     <string name="about_text_paragraph_four">Sem contar que é uma alternativa de renda para populações dessas comunidades, uma oportunidade de valorização da cultura local e uma forma de integrar os jovens ao modo de vida local.</string>
     <string name="about_text_paragraph_five">O incentivo ao turimo de base comunitária pode ajudar na meta de erradicação da pobreza. Isso porque esse estilo de viagem ajuda a movimentar a economia local, dá maior visibilidade para essas comunidades e proporciona maior interesse pela cultura dessas pessoas.</string>
     <string name="about_text_paragraph_six">E tudo isso ajuda a desconstruir a visão de que as pessoas dessas comunidades precisariam mudar para a capital em busca de oportunidades melhores, uma vez que elas conseguem se desenvolver e manter uma condição digna de vida dentro da sua cultura.</string>
+    <string name="message_error_payment">Selecionar forma de pagamento</string>
 </resources>

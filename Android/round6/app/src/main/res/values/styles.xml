@@ -59,4 +59,10 @@
         <item name="android:textColor">@color/neutral_darker</item>
         <item name="fontFamily">@font/outfit_semibold</item>
     </style>
+
+    <style name="ErrorMessageStyle">
+        <item name="fontFamily">@font/outfit_semibold</item>
+        <item name="android:textColor">@color/error</item>
+        <item name="android:layout_marginStart">4dp</item>
+    </style>
 </resources>
