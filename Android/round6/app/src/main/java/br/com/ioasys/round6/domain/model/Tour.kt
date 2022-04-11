@@ -1,7 +1,7 @@
 package br.com.ioasys.round6.domain.model
 
 data class Tour(
-    val id: String,
+    val id: Long,
     val communityName: String = "Moita Redonda",
     val description: String = "Exposição da cultura artesanal no Ceará",
     val accommodation: String = "Casa de Joana",

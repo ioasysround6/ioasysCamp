@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "Tours")
 data class TourDataLocal(
     @PrimaryKey(autoGenerate = true)
-    val id: String,
+    val id: Long,
     val communityName: String? = null,
     val description: String? = null,
     val accommodation: String? = null,
