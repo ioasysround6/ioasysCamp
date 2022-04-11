@@ -23,6 +23,19 @@
         <item name="android:textSize">10sp</item>
     </style>
 
+    <style name="CustomExposedDropMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+    </style>
+
+    <style name="SubtitleCheckoutFragment">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/neutral_darker</item>
+        <item name="android:fontFamily">@font/outfit_semibold</item>
+    </style>
+
     <style name="TitleHomeFragment">
         <item name="android:textSize">@dimen/headline_24</item>
         <item name="android:textColor">@color/light</item>
@@ -45,5 +58,11 @@
         <item name="android:textSize">@dimen/headline_20</item>
         <item name="android:textColor">@color/neutral_darker</item>
         <item name="fontFamily">@font/outfit_semibold</item>
+    </style>
+
+    <style name="ErrorMessageStyle">
+        <item name="fontFamily">@font/outfit_semibold</item>
+        <item name="android:textColor">@color/error</item>
+        <item name="android:layout_marginStart">4dp</item>
     </style>
 </resources>
