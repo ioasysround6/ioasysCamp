@@ -4,9 +4,9 @@ import { colors } from '../styles/colors';
 
 import ImageBack from '../../src/assets/backgroundImage.png';
 
-export default function CardPackages({ title, subtitle, altura }) {
+export default function CardPackages({ title, subtitle, altura, onPress }) {
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onPress}>
             <View style={[styles.card, { height: altura }]}>
                 <ImageBackground style={styles.ImageBackground} source={ImageBack} resizeMode='cover'>
                     <View style={styles.viewTitleAndSubtitle}>

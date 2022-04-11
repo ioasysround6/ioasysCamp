@@ -1814,6 +1814,13 @@ atob@^2.1.2:
   resolved "https://registry.npmjs.org/atob/-/atob-2.1.2.tgz"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
+axios@^0.26.0:
+  version "0.26.0"
+  resolved "https://registry.npmjs.org/axios/-/axios-0.26.0.tgz"
+  integrity sha512-lKoGLMYtHvFrPVt3r+RBMp9nh34N0M8zEfCWqdWZx6phynIEhQqAdydpyBAAG211zlhX9Rgu08cOamy6XjE5Og==
+  dependencies:
+    follow-redirects "^1.14.8"
+
 babel-core@^7.0.0-bridge.0:
   version "7.0.0-bridge.0"
   resolved "https://registry.npmjs.org/babel-core/-/babel-core-7.0.0-bridge.0.tgz"
@@ -3201,6 +3208,11 @@ flow-parser@^0.121.0:
   version "0.121.0"
   resolved "https://registry.npmjs.org/flow-parser/-/flow-parser-0.121.0.tgz"
   integrity sha512-1gIBiWJNR0tKUNv8gZuk7l9rVX06OuLzY9AoGio7y/JT4V1IZErEMEq2TJS+PFcw/y0RshZ1J/27VfK1UQzYVg==
+
+follow-redirects@^1.14.8:
+  version "1.14.9"
+  resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.9.tgz"
+  integrity sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==
 
 for-in@^1.0.2:
   version "1.0.2"
@@ -5451,7 +5463,7 @@ plist@^3.0.2, plist@^3.0.4:
 
 polished@^4.1.4:
   version "4.2.2"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-4.2.2.tgz#2529bb7c3198945373c52e34618c8fe7b1aa84d1"
+  resolved "https://registry.npmjs.org/polished/-/polished-4.2.2.tgz"
   integrity sha512-Sz2Lkdxz6F2Pgnpi9U5Ng/WdWAUZxmHrNPoVlm3aAemxoy2Qy7LGjQg4uf8qKelDAUW94F4np3iH2YPf2qefcQ==
   dependencies:
     "@babel/runtime" "^7.17.8"
@@ -5618,7 +5630,7 @@ react-native-screens@^3.13.1:
 
 react-native-shadow-2@^6.0.3:
   version "6.0.3"
-  resolved "https://registry.yarnpkg.com/react-native-shadow-2/-/react-native-shadow-2-6.0.3.tgz#6e0944b99200eb6f4c6fc33a85265ad59d973572"
+  resolved "https://registry.npmjs.org/react-native-shadow-2/-/react-native-shadow-2-6.0.3.tgz"
   integrity sha512-gJP3tEEBvCus/jpclEI1RNKGsl0/nTwFzqFDdmSbqt7tLgDuy8r2oNYdn4hP1WAeT1fTH0EOh9bXDGB5ZfCV0A==
   dependencies:
     polished "^4.1.4"
@@ -5642,7 +5654,7 @@ react-native-svg@^12.3.0:
 
 react-native-swiper-flatlist@^3.0.16:
   version "3.0.16"
-  resolved "https://registry.yarnpkg.com/react-native-swiper-flatlist/-/react-native-swiper-flatlist-3.0.16.tgz#626770e36479793ace806888d84bbd2d0a496465"
+  resolved "https://registry.npmjs.org/react-native-swiper-flatlist/-/react-native-swiper-flatlist-3.0.16.tgz"
   integrity sha512-8Mkh5DnGP7x42GBI870vpiliAdXAJObi8uDdqCjd3cWJBDgVv1xmo3y11CZzqpf6241EyddX0LygSt1Rv61LYg==
 
 react-native@0.67.4:

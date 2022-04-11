@@ -1,5 +1,8 @@
-import React from 'react';
-import { View, Text, Button, ImageBackground, StyleSheet, StatusBar, ScrollView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, Button, ImageBackground, StyleSheet, StatusBar, ScrollView, FlatList } from 'react-native';
+
+import api from '../services/api';
+import { buscaTours } from '../services/requisicoes/tours';
 
 import PersonIcon from '../../src/assets/PersonIcon.png';
 
@@ -15,6 +18,27 @@ import CardPackages from '../components/CardPackages';
 export function Home() {
 
   const navigation = useNavigation();
+  const [tours, setTours] = useState([]);
+
+  async function busca() {
+    const resultado = await buscaTours()
+    console.log(resultado);
+    if (resultado) {
+      setTours(resultado)
+    }
+    else {
+      alert('Ops')
+    }
+  }
+
+
+  useEffect(() => {
+    busca();
+  }
+    , [])
+
+
+
 
   return (
     <ScrollView>
@@ -26,23 +50,37 @@ export function Home() {
         </View>
         <Text style={styles.titleAreaPackages}>Pacotes de turismo</Text>
         <View style={{ flexDirection: 'row' }}>
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-            <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" altura={200} />
-            <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" altura={200} />
-            <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" altura={200} />
-            <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" altura={200} />
-            <CardPackages title="Mãos na argila!" subtitle="Moita Redonda" altura={200} />
-          </ScrollView>
+          <FlatList
+            horizontal={true}
+            data={tours}
+            renderItem={({ item }) => (
+              <View style={{ flexDirection: 'row' }}>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                  <CardPackages title={item.communityName} subtitle="Moita Redonda" altura={200} />
+                </ScrollView>
+              </View>
+
+            )}
+            keyExtractor={item => item.communityName}
+
+          />
         </View>
         <Text style={[styles.titleAreaPackages, { marginTop: 40, marginBottom: 20 }]}>Comunidades parceiras</Text>
         <View style={{ flexDirection: 'row', marginBottom: 20 }}>
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-            <CardPackages title="Moita Redonda" altura={180} />
-            <CardPackages title="Moita Redonda" altura={180} />
-            <CardPackages title="Moita Redonda" altura={180} />
-            <CardPackages title="Moita Redonda" altura={180} />
-            <CardPackages title="Moita Redonda" altura={180} />
-          </ScrollView>
+          <FlatList
+            horizontal={true}
+            data={tours}
+            renderItem={({ item }) => (
+              <View style={{ flexDirection: 'row' }}>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                  <CardPackages title={item.communityName} subtitle="Moita Redonda" altura={180} />
+                </ScrollView>
+              </View>
+
+            )}
+            keyExtractor={item => item.communityName}
+
+          />
         </View>
       </ScreenView>
     </ScrollView>
