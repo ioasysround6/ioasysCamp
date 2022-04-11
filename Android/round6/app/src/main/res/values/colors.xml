@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary_dark">#E15D21</color>
+    <color name="primary_dark">#B74C1B</color>
     <color name="primary_default">#F86624</color>
     <color name="primary_light">#FA844E</color>
 
@@ -18,7 +18,7 @@
     
     <color name="alert">#F9C80E</color>
     <color name="success">#169873</color>
-    <color name="error">#F72C25</color>
+    <color name="error">#A62F52</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
