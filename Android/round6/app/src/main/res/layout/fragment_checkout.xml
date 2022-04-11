@@ -92,29 +92,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvTravelerName" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/errorMessageName"
+                    style="@style/ErrorMessageStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:visibility="gone"
+                    android:text="@string/message_error_name"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/inputTravelerName">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_erro" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/ErrorMessageStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/message_error_name" />
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    app:layout_constraintTop_toBottomOf="@id/inputTravelerName" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvTravelerLastName"
@@ -142,28 +128,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvTravelerLastName" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/errorMessageLastName"
+                    style="@style/ErrorMessageStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:visibility="gone"
+                    android:text="@string/message_error_name"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/inputTravelerLastName">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_erro" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/ErrorMessageStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/message_error_name" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    app:layout_constraintTop_toBottomOf="@id/inputTravelerLastName" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvTravelerBirthDate"
@@ -192,28 +165,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvTravelerBirthDate" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/errorMessageBirthDate"
+                    style="@style/ErrorMessageStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:visibility="gone"
+                    android:text="@string/message_error_birth_date"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/inputTravelerBirthDate">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_erro" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/ErrorMessageStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/message_error_birth_date" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    app:layout_constraintTop_toBottomOf="@id/inputTravelerBirthDate" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvTravelerEmail"
@@ -250,28 +210,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvTravelerEmail" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/errorMessageEmail"
+                    style="@style/ErrorMessageStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:visibility="gone"
+                    android:text="@string/message_error_email"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/inputTravelerEmail">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_erro" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/ErrorMessageStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/message_error_email" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    app:layout_constraintTop_toBottomOf="@id/inputTravelerEmail" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvTravelerCPF"
@@ -299,27 +246,14 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvTravelerCPF" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/errorMessageCPF"
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/ErrorMessageStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
+                    android:text="@string/message_error_cpf"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/inputTravelerCPF">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_erro" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/ErrorMessageStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/message_error_cpf" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    app:layout_constraintTop_toBottomOf="@+id/inputTravelerCPF" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:id="@+id/checkoutDivider"
@@ -364,28 +298,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/travelerNameTwo" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/errorMessageNameTwo"
+                    style="@style/ErrorMessageStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:visibility="gone"
+                    android:text="@string/message_error_name"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/inputTravelerNameTwo">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_erro" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/ErrorMessageStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/message_error_name" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    app:layout_constraintTop_toBottomOf="@id/inputTravelerNameTwo" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/travelerLastNameTwo"
@@ -413,28 +334,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/travelerLastNameTwo" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/errorMessageLastNameTwo"
+                    style="@style/ErrorMessageStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:visibility="gone"
+                    android:text="@string/message_error_name"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/inputTravelerLastNameTwo">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_erro" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/ErrorMessageStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/message_error_name" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    app:layout_constraintTop_toBottomOf="@id/inputTravelerLastNameTwo" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/travelerBirthDateTwo"
@@ -463,28 +371,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/travelerBirthDateTwo" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/errorMessageDateBirthTwo"
+                    style="@style/ErrorMessageStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:visibility="gone"
+                    android:text="@string/message_error_birth_date"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/inputTravelerBirthDateTwo">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_erro" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/ErrorMessageStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/message_error_birth_date" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    app:layout_constraintTop_toBottomOf="@id/inputTravelerBirthDateTwo" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/travelerEmailTwo"
@@ -521,28 +416,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/travelerEmailTwo" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/errorMessageEmailTwo"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@id/errorMessageEmailTwo"
+                    style="@style/ErrorMessageStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:visibility="gone"
+                    android:text="@string/message_error_email"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/inputTravelerEmailTwo">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_erro" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/ErrorMessageStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/message_error_email" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    app:layout_constraintTop_toBottomOf="@id/inputTravelerEmailTwo" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/travelerCPFTwo"
@@ -570,27 +452,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/travelerCPFTwo" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/errorMessageCPFTwo"
+                    style="@style/ErrorMessageStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
+                    android:text="@string/message_error_cpf"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/inputTravelerCPFTwo">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_erro" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/ErrorMessageStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/message_error_cpf" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    app:layout_constraintTop_toBottomOf="@id/inputTravelerCPFTwo" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:id="@+id/checkoutDividerTwo"
@@ -645,27 +515,14 @@
                         android:textSize="@dimen/body_12" />
                 </RadioGroup>
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/errorMessagePaymentForm"
+                    style="@style/ErrorMessageStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:visibility="gone"
+                    android:text="@string/message_error_payment"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/rgPaymentForms">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_erro" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/ErrorMessageStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/message_error_payment" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    app:layout_constraintTop_toBottomOf="@+id/rgPaymentForms" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvSplit"
@@ -801,27 +658,15 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvCardValidity" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/errorMessageCardCode"
+                    style="@style/ErrorMessageStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:gravity="center"
-                    android:visibility="gone"
+                    android:text="@string/message_error_card_code"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/inputCardCode">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_erro" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/ErrorMessageStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/message_error_card_code" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    app:layout_constraintTop_toBottomOf="@id/inputCardCode" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/finalizePurchaseButton"
@@ -842,6 +687,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
                 android:background="@drawable/total_payment_background"
+                android:elevation="20dp"
                 app:layout_constraintTop_toBottomOf="@id/checkout">
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -852,7 +698,7 @@
                     android:layout_marginTop="34dp"
                     android:fontFamily="@font/outfit_semibold"
                     android:text="@string/total_payable"
-                    android:textColor="@color/white"
+                    android:textColor="@color/neutral_darker"
                     android:textSize="@dimen/headline_20"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -865,7 +711,7 @@
                     android:layout_marginEnd="32dp"
                     android:fontFamily="@font/outfit_semibold"
                     android:text="@string/payment_amount"
-                    android:textColor="@color/white"
+                    android:textColor="@color/neutral_darker"
                     android:textSize="@dimen/headline_20"
                     app:layout_constraintBottom_toBottomOf="@id/tvTotalPayable"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -881,7 +727,7 @@
                     android:maxLines="2"
                     android:text="@string/payment_text"
                     android:textAlignment="textEnd"
-                    android:textColor="@color/white"
+                    android:textColor="@color/neutral_darker"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvTotalPrice" />
