@@ -24,16 +24,18 @@ export function TravelPackage(){
 
   const navigation = useNavigation();
 
+  const numeroDePessoas = 8;
+
 	function handleGoBack(){
 		navigation.goBack();
 	}
 
   function handleCheckoutPage(){
-		navigation.navigate("CheckoutScreen");
+		navigation.navigate("CheckoutData");
 	}
 
   function somar() {
-    if (counter < 5){
+    if (counter < numeroDePessoas){
       setCounter(counter + 1)
     }
   }
@@ -57,7 +59,7 @@ export function TravelPackage(){
     <View style={styles.container}>
       <StatusBar
         barStyle='light-content'
-        backgroundColor={'#54595666'}
+        backgroundColor={'transparent'}
         // translucent
       />
       
@@ -91,7 +93,7 @@ export function TravelPackage(){
         </View>
 
         <View style={styles.vagas}>
-          <Text style={styles.vagasTexto}> 5 vagas disponíveis</Text>
+          <Text style={styles.vagasTexto}>{numeroDePessoas} vagas disponíveis</Text>
         </View>
 
         <View style={styles.quantidade}>
