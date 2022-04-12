@@ -3,13 +3,14 @@ import React from "react";
 import { TextInput, StyleSheet, Text } from 'react-native';
 import { colors } from '../styles/colors';
 
-const InputArea = ({ titulo, corBorda, placeholder }) => {
+const InputArea = ({ titulo, corBorda, placeholder, onChangeText }) => {
     return (
         <>
             <Text style={styles.textTitle}>{titulo}</Text>
             <TextInput
                 style={[styles.input, { borderColor: corBorda }]}
-                placeholder={placeholder} 
+                placeholder={placeholder}
+                onChangeText={onChangeText} 
             />
         </>
     );
