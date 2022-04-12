@@ -9,17 +9,24 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/actionBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="110dp"
+        android:background="@drawable/background_style"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/pattern" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="14dp"
             android:background="@drawable/pressed_button"
             android:clickable="true"
             android:focusable="true"
@@ -28,14 +35,25 @@
             android:scaleType="center"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/back_arrow" />
+            app:srcCompat="@drawable/white_back_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/register"
+            android:textColor="@color/lighter"
+            app:layout_constraintBottom_toBottomOf="@id/btnBack"
+            app:layout_constraintStart_toEndOf="@id/btnBack"
+            app:layout_constraintTop_toTopOf="@id/btnBack" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvSkip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="25dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="22dp"
             android:clickable="true"
             android:focusable="true"
             android:fontFamily="@font/outfit_semibold"
@@ -43,9 +61,8 @@
             android:minWidth="48dp"
             android:minHeight="48dp"
             android:text="@string/skip"
-            android:textColor="@color/primary_default"
+            android:textColor="@color/white"
             android:textSize="@dimen/body_14"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -67,25 +84,14 @@
             android:layout_height="0dp">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvRegister"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/outfit_regular"
-                android:text="@string/register"
-                android:textColor="@color/black"
-                android:textSize="@dimen/headline_24"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvName"
                 style="@style/InputLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="40dp"
                 android:text="@string/name"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvRegister" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/inputName"

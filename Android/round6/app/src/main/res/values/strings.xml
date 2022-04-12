@@ -29,9 +29,9 @@
     <string name="register_message">Está com dificuldades para realizar o cadastro?</string>
     <string name="contact">Entre em contato</string>
     <string name="agreed_terms">Concordo com os</string>
-    <string name="confirmation_message">Agora, para concluir o pagamento e confirmar a sua viagem, você será redirecionado para o nosso Whats App.</string>
+    <string name="confirmation_message">Fique de olho no seu e-mail, vamos enviar as informações sobre sua viagem por lá! Qualquer dúvida fique a vontade para chamar a gente pelo WhatsApp:</string>
     <string name="booking_message">Sua reserva foi efetuada com sucesso!</string>
-    <string name="button_whatsapp_message">Recirecionar para WhatsApp</string>
+    <string name="button_whatsapp_message">Redirecionar para WhatsApp</string>
     <!-- Checkout Fragment -->
     <string name="checkout">Checkout</string>
     <string name="cpf_hint">000.000.000-00</string>
@@ -62,6 +62,7 @@
     <string name="message_error_name">Esse campo é obrigatório</string>
     <string name="message_error_cpf">CPF inválido</string>
     <string name="message_error_card_code">Cartão de crédito inválido</string>
+    <string name="message_error_payment">Selecionar forma de pagamento</string>
     <string name="items">Items</string>
     <string-array name="dropdownItens">
         <item>À vista</item>
@@ -74,11 +75,14 @@
     <string name="how_its_possible">Saiba como é possível</string>
     <string name="activity_help_eradicate_poverty">essa atividade pode ajudar a\n erradicar a pobreza</string>
     <string name="community_tourism">Turismo comunitário</string>
-    <string name="about_text_paragraph_one">O turismo de base comunitária diferentemente do turismo tradicional tem como foco a experiência do viajante no local de destino. A viagem é toda planejada para que a pessoa participe do dia a dia da comunidade local, realizando as mesmas atividades que os moradores realizam, além de ter a oportunidade de conhecer os costumes da região.</string>
-    <string name="about_text_paragraph_two">Geralmente o turista fica hospedado na casa de um morador da comunidade, faz as refeições junto com a família e participa da rotina de atividades com essa família. Ele pode aprender e ajudar com o plantio, a cozinha, trabalhando com peças de artesanado tradicionais na comunidade, entre várias outras atividades.</string>
-    <string name="about_text_paragraph_three">A ideia é colocar as comunidades locais como protgonistas e promover um estilo de viagem sustentável, com respeito à natureza, às populações e à cultura.</string>
-    <string name="about_text_paragraph_four">Sem contar que é uma alternativa de renda para populações dessas comunidades, uma oportunidade de valorização da cultura local e uma forma de integrar os jovens ao modo de vida local.</string>
-    <string name="about_text_paragraph_five">O incentivo ao turimo de base comunitária pode ajudar na meta de erradicação da pobreza. Isso porque esse estilo de viagem ajuda a movimentar a economia local, dá maior visibilidade para essas comunidades e proporciona maior interesse pela cultura dessas pessoas.</string>
-    <string name="about_text_paragraph_six">E tudo isso ajuda a desconstruir a visão de que as pessoas dessas comunidades precisariam mudar para a capital em busca de oportunidades melhores, uma vez que elas conseguem se desenvolver e manter uma condição digna de vida dentro da sua cultura.</string>
-    <string name="message_error_payment">Selecionar forma de pagamento</string>
+    <!-- About Fragment -->
+    <string name="tourism_description_paragraph_one">O turismo de base comunitária diferentemente do turismo tradicional tem como foco a experiência do viajante no local de destino. A viagem é toda planejada para que a pessoa participe do dia a dia da comunidade local, realizando as mesmas atividades que os moradores realizam, além de ter a oportunidade de conhecer os costumes da região.</string>
+    <string name="tourism_description_paragraph_two">Geralmente o turista fica hospedado na casa de um morador da comunidade, faz as refeições junto com a família e participa da rotina de atividades com essa família. Ele pode aprender e ajudar com o plantio, a cozinha, trabalhando com peças de artesanado tradicionais na comunidade, entre várias outras atividades.</string>
+    <string name="tourism_description_paragraph_three">A ideia é colocar as comunidades locais como protagonistas e promover um estilo de viagem sustentável, com respeito à natureza, às populações e à cultura.</string>
+    <string name="tourism_description_paragraph_four">O turismo de base comunitárioa serve como uma alternativa de renda para populações dessas comunidades, uma oportunidade de valorização da cultura local e uma forma de integrar os jovens ao modo de vida local.</string>
+    <string name="tourism_description_paragraph_five">O incentivo ao turimo de base comunitária pode ajudar na meta de erradicação da pobreza. Isso porque esse estilo de viagem ajuda a movimentar a economia local, dá maior visibilidade para essas comunidades e proporciona maior interesse pela cultura dessas pessoas.</string>
+    <string name="tourism_description_paragraph_six">E tudo isso ajuda a desconstruir a visão de que as pessoas dessas comunidades precisariam mudar para a capital em busca de oportunidades melhores, uma vez que elas conseguem se desenvolver e manter uma condição digna de vida dentro da sua cultura.</string>
+    <string name="what_is">O que é?</string>
+    <string name="how">Como acontece?</string>
+    <string name="how_generate_development">Como gera desenvolvimento?</string>
 </resources>

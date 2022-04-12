@@ -60,7 +60,7 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvTravelerOne"
-                    style="@style/SubtitleCheckoutFragment"
+                    style="@style/SubtitleStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/traveler_one"
@@ -265,7 +265,7 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvTravelerTwo"
-                    style="@style/SubtitleCheckoutFragment"
+                    style="@style/SubtitleStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
@@ -472,7 +472,7 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvPayment"
-                    style="@style/SubtitleCheckoutFragment"
+                    style="@style/SubtitleStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
