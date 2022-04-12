@@ -2,10 +2,11 @@ import React, {useState, useEffect} from 'react';
 import { colors } from '../styles/colors';
 import { useNavigation } from '@react-navigation/core';
 import { Shadow } from 'react-native-shadow-2';
+import DropDownPicker from 'react-native-dropdown-picker';
 
 import { KeyboardAvoidingView, Dimensions, StatusBar, StyleSheet, View, Text, TextInput} from 'react-native';
 
-import { ScrollView } from 'react-native-gesture-handler';
+import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import ButtonLarge from '../components/ButtonLarge';
 
 var width = Dimensions.get('window').width;
@@ -24,6 +25,23 @@ export function CheckoutPay(){
     })
   }
 
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState(null);
+  const [items, setItems] = useState([
+    {label: 'À vista', value: 'aVista'},
+    {label: '2x sem juros', value: '2xSemJuros'},
+    {label: '3x sem juros', value: '3xSemJuros'},
+    {label: '4x sem juros', value: '4xSemJuros'},
+    {label: '5x sem juros', value: '5xSemJuros'},
+    {label: '6x sem juros', value: '6xSemJuros'},
+    {label: '7x sem juros', value: '7xSemJuros'},
+    {label: '8x sem juros', value: '8xSemJuros'},
+    {label: '9x sem juros', value: '9xSemJuros'},
+    {label: '10x sem juros', value: '10xSemJuros'},
+    {label: '11x sem juros', value: '11xSemJuros'},
+    {label: '12x sem juros', value: '12xSemJuros'},
+  ]);
+
   const navigation = useNavigation();
 
 	function handlePayScreen(){
@@ -41,6 +59,42 @@ export function CheckoutPay(){
       <ScrollView>
         <View style={styles.container}>
           <View style={styles.pagamento}>
+
+            <View style={styles.cartaoDados}>
+              <Text style={styles.dadosCabecalho}>Parcelar a compra</Text>
+                <View>
+                  <DropDownPicker
+                    listMode='SCROLLVIEW'
+                    dropDownDirection="BOTTOM"
+                    listItemLabelStyle={{
+                      color: colors.neutralDark,
+                    }}
+                    selectedItemContainerStyle={{
+                      backgroundColor: colors.neutralLight,
+                    }}
+                    selectedItemLabelStyle={{
+                      color: colors.primaryDefault,
+                    }}
+                    dropDownContainerStyle={{
+                      backgroundColor: colors.neutralLighter,
+                    }}
+                    style={isFocused.dropdown ? [styles.dropdownButton, {borderColor: colors.primaryLight}] : styles.dropdownButton }
+                    placeholder= 'Selecione o número de parcelas'
+                    placeholderStyle={{
+                      color: colors.neutralMediumDark,
+                    }}
+                    onOpen={() => handleInputFocus('dropdown')}
+                    onClose={() => handleInputBlur('dropdown')}
+                    open={open}
+                    value={value}
+                    items={items}
+                    setOpen={setOpen}
+                    setValue={setValue}
+                    setItems={setItems}
+                  />
+                </View>
+            </View>
+
             
             <View style={styles.cartaoDados}>
               <Text style={styles.dadosCabecalho}>Número do cartão</Text>
@@ -186,6 +240,18 @@ const styles = StyleSheet.create({
   dadosCabecalho: {
     color: colors.neutralDarker,
     fontSize: 12,
+  },
+  dropdownButton: {
+    borderRadius: 10,
+    borderWidth: 1.6,
+    marginTop: 8,
+    paddingHorizontal: 12,
+    height: 51,
+    width: '100%',
+    color: colors.neutralDark,
+
+    borderColor: colors.neutralMediumDark,
+    fontSize: 14,
   },
   dadosInput: {
     borderRadius: 10,
