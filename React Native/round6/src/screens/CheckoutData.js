@@ -201,10 +201,10 @@ export function CheckoutData(){
 
     <View style={styles.button}>
       <ButtonLarge
-        underlayColor={colors.primaryDark}
+        underlayColor={colors.secondaryDark}
         titulo='Ir para forma de pagamento'
         backColor={
-          colors.secondaryDark 
+          colors.secondaryDefault 
         }
         onPress={handlePayScreen}
       />

@@ -168,10 +168,10 @@ export function CheckoutPay(){
     <View>
       <View style={styles.button}>
         <ButtonLarge
-          underlayColor={colors.primaryDark}
-          titulo='Ir para forma de pagamento'
+          underlayColor={colors.secondaryDark}
+          titulo='Finalizar compra'
           backColor={
-            colors.primaryDefault 
+            colors.secondaryDefault 
           }
           onPress={handlePayScreen}
         />
