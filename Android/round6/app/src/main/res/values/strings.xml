@@ -55,7 +55,7 @@
     <string name="payment_amount">R$ 600,00</string>
     <string name="payment_text">Em até 3x sem juros no cartão de crédito</string>
     <string name="card_validity">01/27</string>
-    <string name="message_error_password">Essa senha não atende ao critério de segurança</string>
+    <string name="message_error_password">A senha deve conter no mínimo 8 caracteres, uma letra maiúscula, um número e um caracter especial</string>
     <string name="message_error_email">Esse não é um formato válido de e-mail</string>
     <string name="message_error_birth_date">Esse não é um formato válido de data</string>
     <string name="message_error_last_name">Esse campo é obrigatório</string>

@@ -108,31 +108,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/inputPassword" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/messageErrorName"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/messageError"
+        style="@style/ErrorMessageStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="21dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:visibility="visible"
+        android:visibility="gone"
+        android:text="@string/invalid_password"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvError">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_error" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:fontFamily="@font/outfit_semibold"
-            android:text="@string/invalid_password"
-            android:textColor="@color/error" />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        app:layout_constraintTop_toBottomOf="@id/tvError" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvError"
@@ -150,14 +136,14 @@
         android:id="@+id/btnSingIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_hover"
         android:padding="17.5dp"
-        android:layout_marginTop="16dp"
         android:text="@string/sing_in"
         android:textAllCaps="false"
         android:textColor="@color/lighter"
         android:textSize="@dimen/button_14"
-        app:layout_constraintTop_toBottomOf="@+id/messageErrorName" />
+        app:layout_constraintTop_toBottomOf="@+id/messageError" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
