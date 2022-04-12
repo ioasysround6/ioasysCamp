@@ -36,9 +36,8 @@
         <item name="android:fontFamily">@font/outfit_semibold</item>
     </style>
 
-    <style name="TitleHomeFragment">
+    <style name="TitleStyle">
         <item name="android:textSize">@dimen/headline_24</item>
-        <item name="android:textColor">@color/light</item>
         <item name="fontFamily">@font/outfit_semibold</item>
     </style>
 
