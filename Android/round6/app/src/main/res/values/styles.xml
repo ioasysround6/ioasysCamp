@@ -30,7 +30,7 @@
         <item name="boxCornerRadiusBottomStart">10dp</item>
     </style>
 
-    <style name="SubtitleCheckoutFragment">
+    <style name="SubtitleStyle">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/neutral_darker</item>
         <item name="android:fontFamily">@font/outfit_semibold</item>
@@ -39,6 +39,12 @@
     <style name="TitleStyle">
         <item name="android:textSize">@dimen/headline_24</item>
         <item name="fontFamily">@font/outfit_semibold</item>
+    </style>
+
+    <style name="ParagraphStyle">
+        <item name="android:textSize">@dimen/body_12</item>
+        <item name="fontFamily">@font/outfit_regular</item>
+        <item name="color">@color/neutral_dark</item>
     </style>
 
     <style name="SubTitleHomeFragment">
