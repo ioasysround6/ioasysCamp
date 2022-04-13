@@ -2,11 +2,14 @@ import * as React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { colors } from '../styles/colors';
 import { useNavigation } from '@react-navigation/core';
-import { StatusBar, StyleSheet, View, Text,TouchableHighlight} from 'react-native';
+import { StatusBar, StyleSheet, View, Text,TouchableHighlight, Dimensions} from 'react-native';
 import ArrowBackButton from '../assets/ArrowBackButton';
+import Background from '../assets/SVG/Background';
 
 import { CheckoutData } from '../screens/CheckoutData';
 import { CheckoutPay } from '../screens/CheckoutPay';
+
+var width = Dimensions.get('window').width;
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -23,8 +26,16 @@ export default function TopTabRoutes() {
         barStyle='light-content'
         backgroundColor={'transparent'}
       />
-      <View style={{paddingBottom: 52}}>
-        <View style={{position: 'absolute', width: '100%', height: 200,backgroundColor: colors.primaryDefault}}>
+      <View style={{paddingBottom: 52,}}>
+        <View style={{position: 'absolute', width: width, height: 240, backgroundColor: colors.primaryDefault}}>
+          <View style={{opacity: 0.05}}>
+            <Background style={{width: '100%', height: 240/6, }}/>
+            <Background style={{width: '100%', height: 240/6, }}/>
+            <Background style={{width: '100%', height: 240/6, }}/>
+            <Background style={{width: '100%', height: 240/6, }}/>
+            <Background style={{width: '100%', height: 240/6, }}/>
+            <Background style={{width: '100%', height: 240/6, }}/>
+          </View>
         </View>
 
         <TouchableHighlight
