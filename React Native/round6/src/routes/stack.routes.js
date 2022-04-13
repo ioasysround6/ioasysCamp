@@ -6,6 +6,7 @@ import TabRoutes from './tab.routes';
 import Login from '../screens/Login';
 import Register from '../screens/Register';
 import { TravelPackage } from '../screens/TravelPackage';
+import CommunityTourism from '../screens/CommunityTourism';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +32,11 @@ export function StackRoutes() {
       <Stack.Screen 
         name="Register" 
         component={Register}
+      />
+
+      <Stack.Screen 
+        name="CommunityTourism" 
+        component={CommunityTourism}
       />
 
     </Stack.Navigator>
