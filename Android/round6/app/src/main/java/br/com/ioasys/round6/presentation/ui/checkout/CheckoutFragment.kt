@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
-import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.FragmentCheckoutBinding
+import br.com.ioasys.round6.presentation.adapters.ViewPagerAdapter
+import com.google.android.material.tabs.TabLayoutMediator
 
 class CheckoutFragment : Fragment() {
     private var _binding: FragmentCheckoutBinding? = null
@@ -22,15 +22,24 @@ class CheckoutFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setDropDown()
+        setUpTabLayout()
     }
 
-    private fun setDropDown() {
-        val items = resources.getStringArray(R.array.dropdownItens)
-        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, items)
+    private fun setUpTabLayout() {
+        val tabLayout = binding.tabLayout
+        val viewPager = binding.viewPager
+        val adapter = ViewPagerAdapter(childFragmentManager, lifecycle)
 
-        binding.autoCompleteTextView.setAdapter(arrayAdapter)
+        viewPager.adapter = adapter
+
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            when (position) {
+                0 -> tab.text = "1. Dados pessoais"
+                1 -> tab.text = "2. Pagamento"
+            }
+        }.attach()
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lighter"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:context=".presentation.ui.checkout.PaymentFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/payment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/app_margin"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@id/totalPayment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/paymentFormsOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="@string/payment_slip"
+                    android:textColor="@color/neutral_darker"
+                    android:textSize="@dimen/body_12" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="@string/pix"
+                    android:textColor="@color/neutral_darker"
+                    android:textSize="@dimen/body_12" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="@string/credit_card"
+                    android:textColor="@color/neutral_darker"
+                    android:textSize="@dimen/body_12" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/splitPurchase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/outfit_regular"
+                android:text="@string/split_the_purchase"
+                android:textColor="@color/neutral_dark"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/paymentFormsOptions" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dropDownMenu"
+                style="@style/CustomExposedDropMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/splitPurchase">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_regular"
+                    android:inputType="none"
+                    android:paddingVertical="16dp"
+                    android:text="@string/in_cash"
+                    android:textColor="@color/neutral_darker"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCardNumber"
+                style="@style/InputLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/card_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dropDownMenu" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/inputCardNumber"
+                style="@style/InputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_background"
+                android:hint="@string/card_number_hint"
+                android:maxLength="14"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColorHint="@drawable/input_hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCardNumber" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cardName"
+                style="@style/InputLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/card_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputCardNumber" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/inputCardName"
+                style="@style/InputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_background"
+                android:hint="@string/name_hint"
+                android:maxLength="14"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColorHint="@drawable/input_hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cardCode"
+                style="@style/InputLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/code"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputCardName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/inputCardCode"
+                style="@style/InputStyle"
+                android:layout_width="138dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_background"
+                android:hint="@string/card_code_hint"
+                android:maxLength="14"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColorHint="@drawable/input_hint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardCode" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cardValidity"
+                style="@style/InputLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/validity"
+                app:layout_constraintStart_toStartOf="@id/inputCardValidity"
+                app:layout_constraintTop_toBottomOf="@id/inputCardName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/inputCardValidity"
+                style="@style/InputStyle"
+                android:layout_width="138dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_background"
+                android:hint="@string/card_validity"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColorHint="@drawable/input_hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardValidity" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/errorMessageCardCode"
+                style="@style/ErrorMessageStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/message_error_card_code"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputCardCode" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/finalizePurchaseButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="48dp"
+                android:background="@drawable/button_hover"
+                android:padding="17.5dp"
+                android:text="@string/finalize_purchase"
+                android:textAllCaps="false"
+                android:textColor="@color/lighter"
+                android:textSize="@dimen/button_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/errorMessageCardCode" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/totalPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_white_style"
+        android:elevation="40dp"
+        android:paddingHorizontal="@dimen/app_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/payment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:fontFamily="@font/outfit_semibold"
+            android:text="@string/total_payable"
+            android:textColor="@color/neutral_darker"
+            android:textSize="@dimen/headline_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_semibold"
+            android:text="@string/payment_amount"
+            android:textColor="@color/neutral_darker"
+            android:textSize="@dimen/headline_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/total" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/outfit_regular"
+            android:maxLines="2"
+            android:text="@string/payment_text"
+            android:textAlignment="textEnd"
+            android:textColor="@color/neutral_dark"
+            android:textSize="@dimen/body_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/amount" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
