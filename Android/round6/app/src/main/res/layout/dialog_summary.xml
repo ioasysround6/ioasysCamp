@@ -195,7 +195,7 @@
                 android:layout_marginHorizontal="@dimen/app_margin"
                 android:layout_marginTop="32dp"
                 android:layout_marginBottom="32dp"
-                android:background="@drawable/button_hover"
+                android:background="@drawable/button_hover_secondary"
                 android:padding="17.5dp"
                 android:text="@string/sing_in"
                 android:textAllCaps="false"

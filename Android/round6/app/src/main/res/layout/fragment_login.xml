@@ -173,7 +173,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/button_hover"
+                android:background="@drawable/button_hover_secondary"
                 android:padding="17.5dp"
                 android:text="@string/sing_in"
                 android:textAllCaps="false"
