@@ -6,7 +6,6 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Gravity
-import android.view.LayoutInflater
 import androidx.fragment.app.DialogFragment
 import br.com.ioasys.round6.databinding.DialogConfirmationBinding
 
@@ -17,12 +16,12 @@ class ConfirmationDialog(
     private lateinit var binding: DialogConfirmationBinding
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        binding = DialogConfirmationBinding.inflate(LayoutInflater.from(context))
+        binding = DialogConfirmationBinding.inflate(layoutInflater)
 
         val builder = AlertDialog.Builder(requireActivity())
         builder.setView(binding.root)
 
-        binding.btnEnter.setOnClickListener {
+        binding.buttonRedirect.setOnClickListener {
             onSubmitClickListener.invoke()
         }
 

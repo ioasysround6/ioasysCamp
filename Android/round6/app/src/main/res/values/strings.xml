@@ -85,4 +85,10 @@
     <string name="what_is">O que é?</string>
     <string name="how">Como acontece?</string>
     <string name="how_generate_development">Como gera desenvolvimento?</string>
+    <string name="purchase_summary">Resumo da compra</string>
+    <string name="package_name">Pacote Mãos na Argila!</string>
+    <string name="package_description">Pacote de turismo para a comunidade Mato Serrado na cidade de Crato no Ceará na data de 21/06 a 23/06</string>
+    <string name="payment_form_description">Cartão de crédito com final de 4444, parcelado em 3x sem juros</string>
+    <string name="change_payment_method">Alterar forma de pagamento</string>
+    <string name="interest_free">3x sem juros</string>
 </resources>
