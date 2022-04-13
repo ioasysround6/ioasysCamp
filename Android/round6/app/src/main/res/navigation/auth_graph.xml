@@ -14,8 +14,8 @@
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_packagesDetailsFragment"
-            app:destination="@id/packagesDetailsFragment" />
+            android:id="@+id/action_loginFragment_to_nav_graph"
+            app:destination="@id/nav_graph" />
     </fragment>
 
     <include app:graph="@navigation/nav_graph" />
@@ -28,9 +28,4 @@
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/packagesDetailsFragment"
-        android:name="br.com.ioasys.round6.presentation.ui.packages.PackagesDetailsFragment"
-        android:label="fragment_packages_details"
-        tools:layout="@layout/fragment_packages_details" />
 </navigation>
