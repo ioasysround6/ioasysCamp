@@ -8,6 +8,13 @@
     tools:context=".presentation.ui.home.HomeFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivLogoHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -95,8 +102,7 @@
         android:layout_height="wrap_content"
         android:text="@string/tour_package"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivBackground"
         app:layout_constraintTop_toBottomOf="@+id/layoutUnsplash" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -106,8 +112,7 @@
         android:layout_height="wrap_content"
         android:text="@string/partner_communities"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivBackground"
         app:layout_constraintTop_toBottomOf="@+id/tvTitleTourPackage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
