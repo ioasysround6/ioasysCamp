@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/app_margin">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lighter"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/buttonExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/pressed_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_exit" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/summaryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_semibold"
+                android:text="@string/purchase_summary"
+                android:textColor="@color/neutral_darker"
+                android:textSize="@dimen/headline_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/buttonExit" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/packageIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/app_margin"
+                android:layout_marginTop="52dp"
+                android:src="@drawable/ic_accommodation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/summaryTitle" />
+
+            <View
+                android:id="@+id/dividerDecoration"
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="42dp"
+                android:background="@color/medium_light"
+                app:layout_constraintBottom_toTopOf="@+id/iconPayment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/packageIcon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPackageName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/outfit_semibold"
+                android:text="@string/package_name"
+                android:textColor="@color/neutral_darker"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/packageIcon"
+                app:layout_constraintStart_toEndOf="@+id/packageIcon"
+                app:layout_constraintTop_toTopOf="@id/packageIcon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/packageDesc"
+                android:layout_width="264dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/package_description"
+                app:layout_constraintStart_toStartOf="@id/tvPackageName"
+                app:layout_constraintTop_toBottomOf="@id/tvPackageName" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iconPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/app_margin"
+                android:layout_marginTop="17dp"
+                android:src="@drawable/ic_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/packageDesc" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/paymentForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/outfit_semibold"
+                android:text="@string/payment_form"
+                android:textColor="@color/neutral_darker"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/iconPayment"
+                app:layout_constraintStart_toEndOf="@+id/iconPayment"
+                app:layout_constraintTop_toTopOf="@id/iconPayment" />
+
+            <View
+                android:id="@+id/dividerDecorationTwo"
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/medium_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconPayment" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/paymentDesc"
+                android:layout_width="264dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/payment_form_description"
+                app:layout_constraintStart_toStartOf="@id/paymentForm"
+                app:layout_constraintTop_toBottomOf="@id/paymentForm" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/changePayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/outfit_semibold"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:text="@string/change_payment_method"
+                android:textColor="@color/primary_default"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/paymentDesc"
+                app:layout_constraintTop_toBottomOf="@id/paymentDesc" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/app_margin"
+                android:layout_marginTop="59dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/changePayment" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/totalPayment"
+                style="@style/SubtitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/app_margin"
+                android:layout_marginTop="16dp"
+                android:text="@string/total_payable"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/paymentAmount"
+                style="@style/SubtitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/app_margin"
+                android:text="@string/payment_amount"
+                app:layout_constraintBottom_toBottomOf="@id/totalPayment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/totalPayment" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/paymentDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/app_margin"
+                android:fontFamily="@font/outfit_regular"
+                android:text="@string/interest_free"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/paymentAmount" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSingIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/app_margin"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/button_hover"
+                android:padding="17.5dp"
+                android:text="@string/sing_in"
+                android:textAllCaps="false"
+                android:textColor="@color/lighter"
+                android:textSize="@dimen/button_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/paymentDetails" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
