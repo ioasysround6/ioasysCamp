@@ -10,8 +10,9 @@
         <item name="colorSecondaryVariant">@color/secondary_darker</item>
         <item name="colorOnSecondary">@color/neutral_darker</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/lighter</item>
         <!-- Customize your theme here. -->
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="SplashScreenStyle" parent="Theme.MaterialComponents.Light.NoActionBar">

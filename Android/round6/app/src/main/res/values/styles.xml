@@ -22,4 +22,62 @@
     <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
         <item name="android:textSize">10sp</item>
     </style>
+
+    <style name="CustomExposedDropMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+    </style>
+
+    <style name="SubtitleStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/neutral_darker</item>
+        <item name="android:fontFamily">@font/outfit_semibold</item>
+    </style>
+
+    <style name="TitleStyle">
+        <item name="android:textSize">@dimen/headline_24</item>
+        <item name="fontFamily">@font/outfit_semibold</item>
+    </style>
+
+    <style name="ParagraphStyle">
+        <item name="android:textSize">@dimen/body_12</item>
+        <item name="fontFamily">@font/outfit_regular</item>
+        <item name="color">@color/neutral_dark</item>
+    </style>
+
+    <style name="SubTitleHomeFragment">
+        <item name="android:textSize">@dimen/headline_14</item>
+        <item name="android:textColor">@color/lighter</item>
+        <item name="fontFamily">@font/outfit_semibold</item>
+    </style>
+
+    <style name="SmallButtonHome">
+        <item name="android:textSize">@dimen/headline_14</item>
+        <item name="android:textColor">@color/lighter</item>
+        <item name="fontFamily">@font/outfit_regular</item>
+    </style>
+
+    <style name="TitleRecyclerViewHome">
+        <item name="android:textSize">@dimen/headline_20</item>
+        <item name="android:textColor">@color/neutral_darker</item>
+        <item name="fontFamily">@font/outfit_semibold</item>
+    </style>
+
+    <style name="ErrorMessageStyle">
+        <item name="fontFamily">@font/outfit_semibold</item>
+        <item name="android:textColor">@color/error</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:drawableLeft">@drawable/ic_error</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/outfit_semibold</item>
+        <item name="color">@color/neutral_darker</item>
+        <item name="textAllCaps">false</item>
+    </style>
 </resources>

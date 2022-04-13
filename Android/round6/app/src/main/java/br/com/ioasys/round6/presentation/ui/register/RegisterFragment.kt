@@ -6,18 +6,22 @@ import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.FragmentRegisterBinding
-import br.com.ioasys.round6.presentation.components.ConfirmationDialog
+import br.com.ioasys.round6.presentation.viewmodels.RegisterViewModel
+import br.com.ioasys.round6.utils.ViewState
 
 class RegisterFragment : Fragment() {
     private var _binding: FragmentRegisterBinding? = null
     private val binding: FragmentRegisterBinding get() = _binding!!
 
     private var isShowPass = false
+
+    private val registerViewModel: RegisterViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,25 +34,40 @@ class RegisterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setOnClickListener()
         showPassword(isShowPass)
+        addObserver()
     }
 
     private fun setOnClickListener() {
-        binding.apply {
-            btnBack.setOnClickListener {
-                findNavController().navigateUp()
-            }
+        binding.btnBack.setOnClickListener {
+            findNavController().navigateUp()
+        }
 
-            passwordToggle.setOnClickListener {
-                isShowPass = !isShowPass
-                showPassword(isShowPass)
-            }
+        binding.passwordToggle.setOnClickListener {
+            isShowPass = !isShowPass
+            showPassword(isShowPass)
+        }
 
-            btnRegister.setOnClickListener {
-                ConfirmationDialog(
-                    onSubmitClickListener = {
-                        Toast.makeText(requireContext(), "Testando Dialog", Toast.LENGTH_SHORT).show()
-                    }
-                ).show(parentFragmentManager, "dialog")
+        binding.btnRegister.setOnClickListener {
+            binding.run {
+                registerViewModel.register(
+                    inputName.text.toString(),
+                    inputLastName.text.toString(),
+                    inputBirth.text.toString(),
+                    inputEmail.text.toString(),
+                    inputEmail.text.toString()
+                )
+
+                inputBirth.addTextChangedListener {
+                    messageErrorBirth.visibility = View.GONE
+                }
+
+                inputEmail.addTextChangedListener {
+                    messageErrorEmail.visibility = View.GONE
+                }
+
+                inputPassword.addTextChangedListener {
+                    messageErrorPassword.visibility = View.GONE
+                }
             }
         }
     }
@@ -67,5 +86,30 @@ class RegisterFragment : Fragment() {
             }
         }
         binding.inputPassword.setSelection(binding.inputPassword.text.toString().length)
+    }
+
+    private fun addObserver() {
+        registerViewModel.registeredUserViewState.observe(viewLifecycleOwner) { state ->
+
+            when (state) {
+                is ViewState.Success -> {
+                    findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+                }
+                is ViewState.Error -> {
+                    binding.apply {
+                        messageErrorBirth.visibility = View.VISIBLE
+                        messageErrorEmail.visibility = View.VISIBLE
+                        messageErrorPassword.visibility = View.VISIBLE
+                    }
+                }
+                else -> Unit
+            }
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        registerViewModel.resetViewState()
+        _binding = null
     }
 }

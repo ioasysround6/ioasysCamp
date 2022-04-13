@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_default"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    tools:context=".presentation.ui.about.AboutFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/pattern"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/patterntwo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/pressed_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:scaleType="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/white_back_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            style="@style/TitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/community_tourism"
+            android:textColor="@color/lighter"
+            app:layout_constraintBottom_toBottomOf="@id/btnBack"
+            app:layout_constraintStart_toEndOf="@id/btnBack"
+            app:layout_constraintTop_toTopOf="@id/btnBack" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/background_white_style"
+            app:layout_constraintTop_toBottomOf="@id/title">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tourismImageOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/tourismimageone" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/app_margin"
+                app:layout_constraintTop_toBottomOf="@id/tourismImageOne">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/tourismIconOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="41dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_binoculars" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tourismSubtitleOne"
+                    style="@style/SubtitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/what_is"
+                    app:layout_constraintBottom_toBottomOf="@id/tourismIconOne"
+                    app:layout_constraintStart_toEndOf="@id/tourismIconOne"
+                    app:layout_constraintTop_toTopOf="@id/tourismIconOne" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tourismDescOne"
+                    style="@style/ParagraphStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/tourism_description_paragraph_one"
+                    app:layout_constraintStart_toStartOf="@id/tourismIconOne"
+                    app:layout_constraintTop_toBottomOf="@id/tourismSubtitleOne" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/tourismIconTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tourismDescOne"
+                    app:srcCompat="@drawable/ic_direction" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tourismSubtitleTwo"
+                    style="@style/SubtitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/how"
+                    app:layout_constraintBottom_toBottomOf="@id/tourismIconTwo"
+                    app:layout_constraintStart_toEndOf="@id/tourismIconTwo"
+                    app:layout_constraintTop_toTopOf="@id/tourismIconTwo" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tourismDescTwo"
+                    style="@style/ParagraphStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/tourism_description_paragraph_two"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tourismIconTwo" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/tourism_description_paragraph_three"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tourismDescTwo" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/tourismImageTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="430dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tourismimagetwo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/appCompatTextView" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/tourismIconThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tourismImageTwo"
+                    app:srcCompat="@drawable/ic_growth" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tourismSubtitleThree"
+                    style="@style/SubtitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/how_generate_development"
+                    app:layout_constraintBottom_toBottomOf="@id/tourismIconThree"
+                    app:layout_constraintStart_toEndOf="@id/tourismIconThree"
+                    app:layout_constraintTop_toTopOf="@id/tourismIconThree" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tourismDescFour"
+                    style="@style/ParagraphStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/tourism_description_paragraph_four"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tourismSubtitleThree" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tourismDescFive"
+                    style="@style/ParagraphStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/tourism_description_paragraph_five"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tourismDescFour" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tourismDescSix"
+                    style="@style/ParagraphStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="52dp"
+                    android:text="@string/tourism_description_paragraph_six"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tourismDescFive" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

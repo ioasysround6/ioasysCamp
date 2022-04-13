@@ -6,10 +6,14 @@ import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.FragmentLoginBinding
+import br.com.ioasys.round6.presentation.viewmodels.LoginViewModel
+import br.com.ioasys.round6.utils.ViewState
 
 class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
@@ -17,9 +21,7 @@ class LoginFragment : Fragment() {
 
     private var isShowPass = false
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private val loginViewModel: LoginViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,22 +34,34 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setOnClickListener()
         showPassword(isShowPass)
+        addObserver()
     }
 
     private fun setOnClickListener() {
-        binding.apply {
-            btnSingIn.setOnClickListener {
-                findNavController().navigate(R.id.action_loginFragment_to_packagesDetailsFragment)
-            }
+        binding.btnSingIn.setOnClickListener {
+            binding.run {
+                loginViewModel.login(
+                    inputEmail.text.toString(),
+                    inputPassword.text.toString()
+                )
 
-            passwordToggle.setOnClickListener {
-                isShowPass = !isShowPass
-                showPassword(isShowPass)
-            }
+                inputEmail.addTextChangedListener {
+                    messageError.visibility = View.GONE
+                }
 
-            tvAccount.setOnClickListener {
-                findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+                inputPassword.addTextChangedListener {
+                    messageError.visibility = View.GONE
+                }
             }
+        }
+
+        binding.passwordToggle.setOnClickListener {
+            isShowPass = !isShowPass
+            showPassword(isShowPass)
+        }
+
+        binding.tvAccount.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
     }
 
@@ -67,8 +81,24 @@ class LoginFragment : Fragment() {
         binding.inputPassword.setSelection(binding.inputPassword.text.toString().length)
     }
 
+    private fun addObserver() {
+        loginViewModel.loggedUserViewState.observe(viewLifecycleOwner) { state ->
+
+            when (state) {
+                is ViewState.Success -> {
+                    findNavController().navigate(R.id.action_loginFragment_to_nav_graph)
+                }
+                is ViewState.Error -> {
+                    binding.messageError.visibility = View.VISIBLE
+                }
+                else -> Unit
+            }
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
+        loginViewModel.resetViewState()
         _binding = null
     }
 }
