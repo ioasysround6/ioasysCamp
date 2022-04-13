@@ -43,13 +43,17 @@ const styles = StyleSheet.create({
     backgroundColor: colors.neutralLighter,
   },
   dotActive: {
-    width: 6,
+    width: 14,
     height: 6,
+    marginLeft: 8,
+    marginRight: 8,
     backgroundColor: colors.neutralLighter
   },
   dotInactive: {
-    width: 6,
+    width: 8,
     height: 6,
+    marginLeft: 8,
+    marginRight: 8,
     backgroundColor: 'transparent',
     borderColor: colors.neutralLighter,
     borderWidth: 1
