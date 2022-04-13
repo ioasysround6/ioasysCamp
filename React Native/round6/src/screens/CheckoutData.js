@@ -46,12 +46,12 @@ export function CheckoutData(){
               <Text style={styles.dadosCabecalho}>Nome</Text>
               <View>
                 <TextInput
-                  style={isFocused.nome ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
+                  style={isFocused.nome1 ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
                   placeholder="Maria Fernanda"
                   placeholderTextColor={colors.neutralMediumDark}
                   autoCapitalize='words'
-                  onFocus={() => handleInputFocus('nome')}
-                  onBlur={() => handleInputBlur('nome')}
+                  onFocus={() => handleInputFocus('nome1')}
+                  onBlur={() => handleInputBlur('nome1')}
                   ></TextInput>
               </View>
             </View>
@@ -60,12 +60,12 @@ export function CheckoutData(){
               <Text style={styles.dadosCabecalho}>Sobrenome</Text>
               <View>
                 <TextInput
-                  style={isFocused.sobrenome ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
+                  style={isFocused.sobrenome1 ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
                   placeholder="Sales Souza"
                   placeholderTextColor={colors.neutralMediumDark}
                   autoCapitalize='words'
-                  onFocus={() => handleInputFocus('sobrenome')}
-                  onBlur={() => handleInputBlur('sobrenome')}
+                  onFocus={() => handleInputFocus('sobrenome1')}
+                  onBlur={() => handleInputBlur('sobrenome1')}
                   ></TextInput>
               </View>
             </View>
@@ -74,12 +74,12 @@ export function CheckoutData(){
               <Text style={styles.dadosCabecalho}>Data de Nascimento</Text>
               <View>
                 <TextInput
-                  style={isFocused.dataDeNascimento ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
+                  style={isFocused.dataDeNascimento1 ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
                   keyboardType={'numeric'}
                   placeholder="01/01/1999"
                   placeholderTextColor={colors.neutralMediumDark}
-                  onFocus={() => handleInputFocus('dataDeNascimento')}
-                  onBlur={() => handleInputBlur('dataDeNascimento')}
+                  onFocus={() => handleInputFocus('dataDeNascimento1')}
+                  onBlur={() => handleInputBlur('dataDeNascimento1')}
                   ></TextInput>
               </View>
             </View>
@@ -88,13 +88,13 @@ export function CheckoutData(){
               <Text style={styles.dadosCabecalho}>E-mail</Text>
               <View>
                 <TextInput
-                  style={isFocused.email ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
+                  style={isFocused.email1 ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
                   keyboardType={'email-address'}
                   placeholder="mariafernanda@gmail.com"
                   placeholderTextColor={colors.neutralMediumDark}
                   autoCapitalize='none'
-                  onFocus={() => handleInputFocus('email')}
-                  onBlur={() => handleInputBlur('email')}
+                  onFocus={() => handleInputFocus('email1')}
+                  onBlur={() => handleInputBlur('email1')}
                   ></TextInput>
               </View>
             </View>
@@ -103,12 +103,12 @@ export function CheckoutData(){
               <Text style={styles.dadosCabecalho}>CPF</Text>
               <View>
                 <TextInput
-                  style={isFocused.cpf ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
+                  style={isFocused.cpf1 ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
                   keyboardType={'number-pad'}
                   placeholder="111.111.111-11"
                   placeholderTextColor={colors.neutralMediumDark}
-                  onFocus={() => handleInputFocus('cpf')}
-                  onBlur={() => handleInputBlur('cpf')}
+                  onFocus={() => handleInputFocus('cpf1')}
+                  onBlur={() => handleInputBlur('cpf1')}
                   ></TextInput>
               </View>
             </View>
@@ -118,19 +118,19 @@ export function CheckoutData(){
 
           <View style={styles.dadosViajante}>
             <View style={styles.headerViajante}>
-              <Text style={styles.textoHeaderViajante}>Viajante 1</Text>
+              <Text style={styles.textoHeaderViajante}>Viajante 2</Text>
             </View>
 
             <View style={styles.viajanteDados}>
               <Text style={styles.dadosCabecalho}>Nome</Text>
               <View>
                 <TextInput
-                  style={isFocused.nome ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
+                  style={isFocused.nome2 ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
                   placeholder="Maria Fernanda"
                   placeholderTextColor={colors.neutralMediumDark}
                   autoCapitalize='words'
-                  onFocus={() => handleInputFocus('nome')}
-                  onBlur={() => handleInputBlur('nome')}
+                  onFocus={() => handleInputFocus('nome2')}
+                  onBlur={() => handleInputBlur('nome2')}
                   ></TextInput>
               </View>
             </View>
@@ -139,12 +139,12 @@ export function CheckoutData(){
               <Text style={styles.dadosCabecalho}>Sobrenome</Text>
               <View>
                 <TextInput
-                  style={isFocused.sobrenome ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
+                  style={isFocused.sobrenome2 ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
                   placeholder="Sales Souza"
                   placeholderTextColor={colors.neutralMediumDark}
                   autoCapitalize='words'
-                  onFocus={() => handleInputFocus('sobrenome')}
-                  onBlur={() => handleInputBlur('sobrenome')}
+                  onFocus={() => handleInputFocus('sobrenome2')}
+                  onBlur={() => handleInputBlur('sobrenome2')}
                   ></TextInput>
               </View>
             </View>
@@ -153,12 +153,12 @@ export function CheckoutData(){
               <Text style={styles.dadosCabecalho}>Data de Nascimento</Text>
               <View>
                 <TextInput
-                  style={isFocused.dataDeNascimento ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
+                  style={isFocused.dataDeNascimento2 ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
                   keyboardType={'numeric'}
                   placeholder="01/01/1999"
                   placeholderTextColor={colors.neutralMediumDark}
-                  onFocus={() => handleInputFocus('dataDeNascimento')}
-                  onBlur={() => handleInputBlur('dataDeNascimento')}
+                  onFocus={() => handleInputFocus('dataDeNascimento2')}
+                  onBlur={() => handleInputBlur('dataDeNascimento2')}
                   ></TextInput>
               </View>
             </View>
@@ -167,13 +167,13 @@ export function CheckoutData(){
               <Text style={styles.dadosCabecalho}>E-mail</Text>
               <View>
                 <TextInput
-                  style={isFocused.email ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
+                  style={isFocused.email2 ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
                   keyboardType={'email-address'}
                   placeholder="mariafernanda@gmail.com"
                   placeholderTextColor={colors.neutralMediumDark}
                   autoCapitalize='none'
-                  onFocus={() => handleInputFocus('email')}
-                  onBlur={() => handleInputBlur('email')}
+                  onFocus={() => handleInputFocus('email2')}
+                  onBlur={() => handleInputBlur('email2')}
                   ></TextInput>
               </View>
             </View>
@@ -182,12 +182,12 @@ export function CheckoutData(){
               <Text style={styles.dadosCabecalho}>CPF</Text>
               <View>
                 <TextInput
-                  style={isFocused.cpf ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
+                  style={isFocused.cpf2 ? [styles.dadosInput, {borderColor: colors.primaryLight}] : styles.dadosInput }
                   keyboardType={'number-pad'}
                   placeholder="111.111.111-11"
                   placeholderTextColor={colors.neutralMediumDark}
-                  onFocus={() => handleInputFocus('cpf')}
-                  onBlur={() => handleInputBlur('cpf')}
+                  onFocus={() => handleInputFocus('cpf2')}
+                  onBlur={() => handleInputBlur('cpf2')}
                   ></TextInput>
               </View>
             </View>
