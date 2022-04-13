@@ -3,6 +3,7 @@ import { View, Text, Button, ImageBackground, StyleSheet, StatusBar, ScrollView,
 
 import api from '../services/api';
 import { buscaTours } from '../services/requisicoes/tours';
+import { buscaCommunities } from '../services/requisicoes/communities';
 
 import PersonIcon from '../../src/assets/PersonIcon.png';
 
@@ -19,6 +20,7 @@ export function Home() {
 
   const navigation = useNavigation();
   const [tours, setTours] = useState([]);
+  const [communities, setCommunities] = useState([]);
 
   async function busca() {
     const resultado = await buscaTours()
@@ -27,7 +29,7 @@ export function Home() {
       setTours(resultado)
     }
     else {
-      alert('Ops')
+      alert('Ops pacotes')
     }
   }
 
@@ -37,6 +39,21 @@ export function Home() {
   }
     , [])
 
+
+  async function buscaComunidades() {
+    const resultado = await buscaCommunities()
+    console.log(`AQUI AS COMUNIDADES${resultado}`)
+    if (resultado) {
+      setCommunities(resultado)
+    }
+    else {
+      alert('Ops comunidades')
+    }
+  }
+
+  useEffect(() => {
+    buscaComunidades();
+  }, [])
 
 
 
@@ -53,11 +70,10 @@ export function Home() {
           <FlatList
             horizontal={true}
             data={tours}
+            showsHorizontalScrollIndicator={false}
             renderItem={({ item }) => (
               <View style={{ flexDirection: 'row' }}>
-                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-                  <CardPackages title={item.communityName} subtitle="Moita Redonda" altura={200} />
-                </ScrollView>
+                <CardPackages title={item.communityName} subtitle="Moita Redonda" altura={200} imgBack={item.photo1} />
               </View>
 
             )}
@@ -69,12 +85,11 @@ export function Home() {
         <View style={{ flexDirection: 'row', marginBottom: 20 }}>
           <FlatList
             horizontal={true}
-            data={tours}
+            data={communities}
+            showsHorizontalScrollIndicator={false}
             renderItem={({ item }) => (
               <View style={{ flexDirection: 'row' }}>
-                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-                  <CardPackages title={item.communityName} subtitle="Moita Redonda" altura={180} />
-                </ScrollView>
+                <CardPackages title={item.communityName} altura={180} imgBack={item.photo} />
               </View>
 
             )}

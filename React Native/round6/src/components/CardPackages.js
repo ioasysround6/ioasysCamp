@@ -4,11 +4,16 @@ import { colors } from '../styles/colors';
 
 import ImageBack from '../../src/assets/backgroundImage.png';
 
-export default function CardPackages({ title, subtitle, altura, onPress }) {
+
+
+export default function CardPackages({ title, subtitle, altura, onPress, imgBack }) {
+
+    const image = { uri: `${imgBack}` };
+
     return (
         <TouchableOpacity onPress={onPress}>
             <View style={[styles.card, { height: altura }]}>
-                <ImageBackground style={styles.ImageBackground} source={ImageBack} resizeMode='cover'>
+                <ImageBackground style={styles.ImageBackground} source={image} resizeMode='cover'>
                     <View style={styles.viewTitleAndSubtitle}>
                         <Text style={styles.title}>{title}</Text>
                         <Text style={styles.subtitle}>{subtitle}</Text>
