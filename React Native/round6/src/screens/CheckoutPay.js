@@ -1,29 +1,20 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { colors } from '../styles/colors';
 import { useNavigation } from '@react-navigation/core';
 import { Shadow } from 'react-native-shadow-2';
 import DropDownPicker from 'react-native-dropdown-picker';
 
-import { KeyboardAvoidingView, Dimensions, StatusBar, StyleSheet, View, Text, TextInput} from 'react-native';
+import { KeyboardAvoidingView, Dimensions, StyleSheet, View, Text, TextInput} from 'react-native';
 
-import { FlatList, ScrollView } from 'react-native-gesture-handler';
+import { ScrollView } from 'react-native-gesture-handler';
 import ButtonLarge from '../components/ButtonLarge';
+import { Radio } from '../components/Radio';
 
 var width = Dimensions.get('window').width;
 
 export function CheckoutPay(){
   const [isFocused, setIsFocused] = useState(false);
-
-  const handleInputFocus = (textinput) => {
-    setIsFocused({
-      [textinput]: true
-    })
-  }
-  const handleInputBlur = (textinput) => {
-    setIsFocused({
-      [textinput]: false
-    })
-  }
+  const [selected, setSelected] = useState(false);
 
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
@@ -44,6 +35,17 @@ export function CheckoutPay(){
 
   const navigation = useNavigation();
 
+  const handleInputFocus = (textinput) => {
+    setIsFocused({
+      [textinput]: true
+    })
+  }
+  const handleInputBlur = (textinput) => {
+    setIsFocused({
+      [textinput]: false
+    })
+  }
+
 	function handlePayScreen(){
 		navigation.navigate("2. Pagamento")
   }
@@ -59,6 +61,15 @@ export function CheckoutPay(){
       <ScrollView>
         <View style={styles.container}>
           <View style={styles.pagamento}>
+
+            <View style={{flex: 1, marginBottom: 16}}>
+              <Radio
+                selected={selected}
+                options={['Boleto', 'Pix', 'Cartão de crédito']} 
+                horizontal={true} 
+                onChangeSelect={(index) => setSelected(index)}
+              />
+            </View>
 
             <View style={styles.cartaoDados}>
               <Text style={styles.dadosCabecalho}>Parcelar a compra</Text>
@@ -94,7 +105,6 @@ export function CheckoutPay(){
                   />
                 </View>
             </View>
-
             
             <View style={styles.cartaoDados}>
               <Text style={styles.dadosCabecalho}>Número do cartão</Text>
@@ -154,12 +164,6 @@ export function CheckoutPay(){
               </View>
             </View>
 
-            
-
-            
-
-            
-
           </View>
         </View>
       </ScrollView>
@@ -200,8 +204,6 @@ export function CheckoutPay(){
         </View>
       </Shadow>
     </View>
-
-    
 
     </View>
   );
