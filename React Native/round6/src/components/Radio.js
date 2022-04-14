@@ -14,18 +14,20 @@ export function Radio({
     <View style={horizontal ? styles.horizontal : styles.vertical}>
       {
         options.map((opt, index) => (
-          <TouchableOpacity 
-            key={opt}
-            onPress={() => onChangeSelect(index)} 
-            style={styles.optContainer}>
-            <View style={[styles.outlineCircle, {borderColor: selected === index ? colors.primaryDefault : colors.neutralDarker}]}>
-              {selected === index && <View style={styles.innerCircle}/>}
-            </View>
+          <View key={opt} style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+            <TouchableOpacity
+              onPress={() => onChangeSelect(index)} 
+              style={styles.optContainer}>
+              <View style={[styles.outlineCircle, {borderColor: selected === index ? colors.primaryDefault : colors.neutralDarker}]}>
+                {selected === index && <View style={styles.innerCircle}/>}
+              </View>
+            </TouchableOpacity>
+
             <Text style={styles.text}>{opt}</Text>
-          </TouchableOpacity>
+          </View>
+
         ))
       }
-
     </View>
   );
 }
@@ -37,8 +39,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
 	optContainer: {
-    flexDirection: 'row',
     alignItems: 'center',
+    paddingBottom: 24,
+    paddingTop: 24,
+    paddingHorizontal: 24,
 	},
   outlineCircle: {
     width: 20,
@@ -46,7 +50,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 1.6,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   innerCircle: {
     width: 12,
@@ -56,7 +60,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 14,
-    marginLeft: 8,
+    marginLeft: -16,
     color: colors.neutralDarker
   }
 })

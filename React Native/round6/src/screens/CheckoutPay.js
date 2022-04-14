@@ -62,7 +62,7 @@ export function CheckoutPay(){
         <View style={styles.container}>
           <View style={styles.pagamento}>
 
-            <View style={{flex: 1, marginBottom: 16}}>
+            <View style={{marginLeft: -22}}>
               <Radio
                 selected={selected}
                 options={['Boleto', 'Pix', 'Cartão de crédito']} 
@@ -220,11 +220,11 @@ const styles = StyleSheet.create({
     width: '100%',
     paddingRight: 32,
     paddingLeft: 32,
-    paddingTop: 40,
+    paddingTop: 10,
   },
   cartaoDados: {
     width: '100%',
-    marginTop: 16,
+    marginTop: 12,
   },
   boxCodigoeValidade: {
     flexDirection: 'row',
