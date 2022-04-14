@@ -13,43 +13,40 @@ const Stack = createStackNavigator();
 
 export function StackRoutes() {
   return (
-    <Stack.Navigator 
-      screenOptions={{headerShown: false}}
+    <Stack.Navigator
+      screenOptions={{ headerShown: false }}
       initialRouteName="LoginScreen"
     >
-      <Stack.Screen 
-        name="LoginScreen" 
+      <Stack.Screen
+        name="LoginScreen"
         component={Login}
       />
-      <Stack.Screen 
-        name="HomeScreen" 
+      <Stack.Screen
+        name="HomeScreen"
         component={TabRoutes}
       />
-      <Stack.Screen 
-        name="TravelPackageScreen" 
+      <Stack.Screen
+        name="TravelPackageScreen"
         component={TravelPackage}
       />
 
-      <Stack.Screen 
-        name="Register" 
+      <Stack.Screen
+        name="Register"
         component={Register}
       />
 
-//       <Stack.Screen 
-// <<<<<<< RNConfigurandoAPI
-//         name="CommunityTourism" 
-//         component={CommunityTourism}
-//       />
-
-// =======
-//         name="CheckoutData" 
-//         component={TopTabRoutes}
-//       />
-//       <Stack.Screen 
-//         name="CheckoutPay" 
-//         component={TopTabRoutes}
-//       />
-// >>>>>>> development_reactnative
+      <Stack.Screen
+        name="CommunityTourism"
+        component={CommunityTourism}
+      />
+      <Stack.Screen
+        name="CheckoutData"
+        component={TopTabRoutes}
+      />
+      <Stack.Screen
+        name="CheckoutPay"
+        component={TopTabRoutes}
+      />
     </Stack.Navigator>
   );
 }
