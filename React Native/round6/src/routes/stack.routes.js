@@ -7,6 +7,7 @@ import TopTabRoutes from './topTab.routes';
 import Login from '../screens/Login';
 import Register from '../screens/Register';
 import { TravelPackage } from '../screens/TravelPackage';
+import CommunityTourism from '../screens/CommunityTourism';
 
 const Stack = createStackNavigator();
 
@@ -34,14 +35,21 @@ export function StackRoutes() {
         component={Register}
       />
 
-      <Stack.Screen 
-        name="CheckoutData" 
-        component={TopTabRoutes}
-      />
-      <Stack.Screen 
-        name="CheckoutPay" 
-        component={TopTabRoutes}
-      />
+//       <Stack.Screen 
+// <<<<<<< RNConfigurandoAPI
+//         name="CommunityTourism" 
+//         component={CommunityTourism}
+//       />
+
+// =======
+//         name="CheckoutData" 
+//         component={TopTabRoutes}
+//       />
+//       <Stack.Screen 
+//         name="CheckoutPay" 
+//         component={TopTabRoutes}
+//       />
+// >>>>>>> development_reactnative
     </Stack.Navigator>
   );
 }

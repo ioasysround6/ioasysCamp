@@ -4,8 +4,16 @@ import { View, Text, Image, StyleSheet, ImageBackground } from 'react-native';
 import ButtonSmall from './ButtonSmall';
 import { colors } from '../styles/colors';
 import BackImage from '../../src/assets/backgroundImage.png'
+import { useNavigation } from '@react-navigation/native';
 
 export default function Banner({ image, title, subtitle}) {
+
+    const navigation = useNavigation();
+
+    function handleGoCommunityTourism(){
+        navigation.navigate('CommunityTourism')
+    }
+
     return (
         <View style={styles.Banner}>
             <ImageBackground style={styles.image} source={image} resizeMode='cover'>
@@ -16,7 +24,7 @@ export default function Banner({ image, title, subtitle}) {
                         ajudar a erradicar a pobreza</Text>
                 </View>
                 <View style={{ alignItems: 'center' }}>
-                    <ButtonSmall titulo="Saiba como é possível" backColor={colors.primaryDefault} />
+                    <ButtonSmall titulo="Saiba como é possível" backColor={colors.primaryDefault} onPress={handleGoCommunityTourism}/>
                 </View>
             </ImageBackground>
         </View>
