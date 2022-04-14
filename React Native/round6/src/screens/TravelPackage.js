@@ -6,6 +6,7 @@ import { colors } from '../styles/colors';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
 
 import ButtonLarge from '../components/ButtonLarge';
+import { ImageSlider } from '../components/ImageSlider';
 
 import ArrowBackButton from '../assets/ArrowBackButton.svg';
 import CampingIcon from '../assets/CampingIcon.svg';
@@ -20,15 +21,22 @@ var width = Dimensions.get('window').width;
 export function TravelPackage(){
   const [counter, setCounter] = useState(0);
   const [activeButton, setActiveButton] = useState(false);
+  const [igual, setIgual] = useState(false);
 
   const navigation = useNavigation();
+
+  const numeroDePessoas = 10;
 
 	function handleGoBack(){
 		navigation.goBack();
 	}
 
+  function handleCheckoutPage(){
+		navigation.navigate("CheckoutData");
+	}
+
   function somar() {
-    if (counter < 5){
+    if (counter < numeroDePessoas){
       setCounter(counter + 1)
     }
   }
@@ -47,14 +55,23 @@ export function TravelPackage(){
     }
   }, [counter])
 
-  return (
-    <ScrollView>
+  useEffect(() => {
+    if (counter == numeroDePessoas) {
+      setIgual(!!setIgual)
+    } else {
+      setIgual(!setIgual)
+    }
+  }, [counter])
 
+  return (      
+    <ScrollView>
     <View style={styles.container}>
-      <StatusBar 
+      <StatusBar
+        barStyle='light-content'
         backgroundColor={'transparent'}
-        translucent
+        // translucent
       />
+      
       <View>
         <RectButton 
           activeOpacity={0.6} 
@@ -68,10 +85,7 @@ export function TravelPackage(){
           distance={20} 
           startColor={'#252A2733'} 
           offset={[0, 2]}>
-          <Image 
-            style={styles.imagem} 
-            source={{uri: 'https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'}} 
-          />
+            <ImageSlider imagesUrl={['https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', 'https://images.unsplash.com/photo-1611843467160-25afb8df1074?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', 'https://images.unsplash.com/photo-1516959543587-4cc499d9514b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80']}/>
         </Shadow>
       </View>
 
@@ -88,7 +102,7 @@ export function TravelPackage(){
         </View>
 
         <View style={styles.vagas}>
-          <Text style={styles.vagasTexto}> 5 vagas disponíveis</Text>
+          <Text style={styles.vagasTexto}>{numeroDePessoas} vagas disponíveis</Text>
         </View>
 
         <View style={styles.quantidade}>
@@ -98,9 +112,17 @@ export function TravelPackage(){
               activeOpacity={0.6} 
               style={styles.botaoSomaeSubtracao}
               onPress={subtrair}
+              disabled={!activeButton}
             >
-              <View style={styles.circuloSomaeSubtracao}>
-                <Text style={styles.iconeSomaeSubtracao}>-</Text>
+              <View style={[activeButton 
+                ? styles.circuloSomaeSubtracao 
+                : styles.circuloSomaeSubtracaoDesabilitado]}>
+                <Text 
+                  style={[
+                    styles.iconeSomaeSubtracao, 
+                    activeButton ? {color: colors.neutralLighter} 
+                    : {color: colors.neutralMediumLight}]}
+                >-</Text>
               </View>
             </TouchableOpacity>
             <Text style={styles.numeroContagem}>{counter}</Text>
@@ -108,9 +130,17 @@ export function TravelPackage(){
               activeOpacity={0.6} 
               style={styles.botaoSomaeSubtracao}
               onPress={somar}
+              disabled={igual}
             >
-              <View style={styles.circuloSomaeSubtracao}>
-                <Text style={styles.iconeSomaeSubtracao}>+</Text>
+              <View style={[!igual 
+                ? styles.circuloSomaeSubtracao 
+                : styles.circuloSomaeSubtracaoDesabilitado]}>
+                <Text
+                  style={[
+                    styles.iconeSomaeSubtracao, 
+                    !igual ? {color: colors.neutralLighter} 
+                    : {color: colors.neutralMediumLight}]}
+                >+</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -124,7 +154,7 @@ export function TravelPackage(){
             backColor={activeButton 
               ? colors.primaryDefault 
               : colors.neutralMediumLight}
-            onPress={() => {}}
+            onPress={handleCheckoutPage}
           />
         </View>
 
@@ -198,8 +228,9 @@ export function TravelPackage(){
 const styles = StyleSheet.create({
 	container: {
     flex: 1, 
-    alignItems: 'center', 
+    alignItems: 'flex-start', 
     justifyContent: 'flex-start',
+    backgroundColor: colors.neutralLighter,
 	},
   backButton: {
     position: 'absolute',
@@ -210,12 +241,6 @@ const styles = StyleSheet.create({
     marginLeft: 14,
     width: 48,
     height: 48,
-  },
-  imagem: {
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
-    width: width,
-    height: 420,
   },
   descricao: {
     width: width,
@@ -263,6 +288,7 @@ const styles = StyleSheet.create({
   contador: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   botaoSomaeSubtracao: {
     alignItems: 'center',
@@ -278,9 +304,17 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     backgroundColor: colors.primaryDefault
   },
+  circuloSomaeSubtracaoDesabilitado: {
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent:'center',
+    borderColor: colors.neutralMediumLight,
+    borderWidth: 1,
+  },
   iconeSomaeSubtracao: {
-    fontSize: 14,
-    color: colors.neutralLighter,
+    fontSize: 12,
   },
   numeroContagem: {
     fontSize: 14,
