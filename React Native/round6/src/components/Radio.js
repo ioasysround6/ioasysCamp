@@ -1,7 +1,7 @@
 import React from 'react';
 import { colors } from '../styles/colors';
 
-import { KeyboardAvoidingView, Dimensions, StyleSheet, View, Text, TextInput} from 'react-native';
+import { StyleSheet, View, Text} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export function Radio({
@@ -22,10 +22,8 @@ export function Radio({
                 {selected === index && <View style={styles.innerCircle}/>}
               </View>
             </TouchableOpacity>
-
             <Text style={styles.text}>{opt}</Text>
           </View>
-
         ))
       }
     </View>

@@ -7,8 +7,8 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import { KeyboardAvoidingView, Dimensions, StyleSheet, View, Text, TextInput} from 'react-native';
 
 import { ScrollView } from 'react-native-gesture-handler';
-import ButtonLarge from '../components/ButtonLarge';
 import { Radio } from '../components/Radio';
+import ButtonLarge from '../components/ButtonLarge';
 
 var width = Dimensions.get('window').width;
 
