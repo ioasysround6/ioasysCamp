@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontWeight: '400',
         marginTop: 16,
-        color: colors.neutralMediumDark
+        color: colors.neutralDark
     },
     viewAreaWppContact: {
         flexDirection: 'row',
@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
     TextWhatsappContact: {
         fontSize: 12,
         fontWeight: '600',
-        marginRight: 4
+        marginRight: 4,
+        color:colors.primaryDefault
     }
 })
