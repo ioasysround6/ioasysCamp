@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image, Alert, StyleSheet } from 'react-native';
+import { View, Text, Image, Alert, StyleSheet, TouchableOpacity, Linking } from 'react-native';
 import Header from '../components/Header';
 import ScreenView from '../components/ScreenView';
 
@@ -49,6 +49,10 @@ export default function Register() {
         navigation.goBack();
     }
 
+    function handleGoWhatsapp(){
+        Linking.openURL(`https://api.whatsapp.com/send?phone=556140040001&text=Ol%C3%A1%20Gostaria%20de%20saber%20mais!`);
+    }
+    
     return (
         <ScreenView>
             <Header TextButtonHeaderRight='Pular' icon={BackButton} />
@@ -74,8 +78,11 @@ export default function Register() {
             <ButtonLarge titulo='Confirmar cadastro' backColor={colors.secondaryDefault} onPress={createUser} />
             <Text style={styles.TextHelpUser}>Está com dificuldade para realizar o cadastro?</Text>
             <View style={styles.viewAreaWppContact}>
-                <Text style={styles.TextWhatsappContact}>Entre em contato</Text>
+                <TouchableOpacity onPress={handleGoWhatsapp}>
+                    <Text style={styles.TextWhatsappContact}>Entre em contato</Text>
+                </TouchableOpacity>
                 <Image source={WhatsappIcon} />
+
             </View>
 
         </ScreenView>
