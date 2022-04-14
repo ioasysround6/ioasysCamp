@@ -21,15 +21,22 @@ var width = Dimensions.get('window').width;
 export function TravelPackage(){
   const [counter, setCounter] = useState(0);
   const [activeButton, setActiveButton] = useState(false);
+  const [igual, setIgual] = useState(false);
 
   const navigation = useNavigation();
+
+  const numeroDePessoas = 10;
 
 	function handleGoBack(){
 		navigation.goBack();
 	}
 
+  function handleCheckoutPage(){
+		navigation.navigate("CheckoutData");
+	}
+
   function somar() {
-    if (counter < 5){
+    if (counter < numeroDePessoas){
       setCounter(counter + 1)
     }
   }
@@ -48,12 +55,20 @@ export function TravelPackage(){
     }
   }, [counter])
 
+  useEffect(() => {
+    if (counter == numeroDePessoas) {
+      setIgual(!!setIgual)
+    } else {
+      setIgual(!setIgual)
+    }
+  }, [counter])
+
   return (      
     <ScrollView>
     <View style={styles.container}>
       <StatusBar
         barStyle='light-content'
-        backgroundColor={'#54595666'}
+        backgroundColor={'transparent'}
         // translucent
       />
       
@@ -87,7 +102,7 @@ export function TravelPackage(){
         </View>
 
         <View style={styles.vagas}>
-          <Text style={styles.vagasTexto}> 5 vagas disponíveis</Text>
+          <Text style={styles.vagasTexto}>{numeroDePessoas} vagas disponíveis</Text>
         </View>
 
         <View style={styles.quantidade}>
@@ -97,9 +112,17 @@ export function TravelPackage(){
               activeOpacity={0.6} 
               style={styles.botaoSomaeSubtracao}
               onPress={subtrair}
+              disabled={!activeButton}
             >
-              <View style={styles.circuloSomaeSubtracao}>
-                <Text style={styles.iconeSomaeSubtracao}>-</Text>
+              <View style={[activeButton 
+                ? styles.circuloSomaeSubtracao 
+                : styles.circuloSomaeSubtracaoDesabilitado]}>
+                <Text 
+                  style={[
+                    styles.iconeSomaeSubtracao, 
+                    activeButton ? {color: colors.neutralLighter} 
+                    : {color: colors.neutralMediumLight}]}
+                >-</Text>
               </View>
             </TouchableOpacity>
             <Text style={styles.numeroContagem}>{counter}</Text>
@@ -107,9 +130,17 @@ export function TravelPackage(){
               activeOpacity={0.6} 
               style={styles.botaoSomaeSubtracao}
               onPress={somar}
+              disabled={igual}
             >
-              <View style={styles.circuloSomaeSubtracao}>
-                <Text style={styles.iconeSomaeSubtracao}>+</Text>
+              <View style={[!igual 
+                ? styles.circuloSomaeSubtracao 
+                : styles.circuloSomaeSubtracaoDesabilitado]}>
+                <Text
+                  style={[
+                    styles.iconeSomaeSubtracao, 
+                    !igual ? {color: colors.neutralLighter} 
+                    : {color: colors.neutralMediumLight}]}
+                >+</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -123,7 +154,7 @@ export function TravelPackage(){
             backColor={activeButton 
               ? colors.primaryDefault 
               : colors.neutralMediumLight}
-            onPress={() => {}}
+            onPress={handleCheckoutPage}
           />
         </View>
 
@@ -203,7 +234,7 @@ const styles = StyleSheet.create({
 	},
   backButton: {
     position: 'absolute',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'center',
     zIndex: 1,
     marginTop: 36,
@@ -211,12 +242,6 @@ const styles = StyleSheet.create({
     width: 48,
     height: 48,
   },
-  // imagem: {
-  //   borderBottomLeftRadius: 20,
-  //   borderBottomRightRadius: 20,
-  //   width: width,
-  //   height: 420,
-  // },
   descricao: {
     width: width,
     paddingTop: 40,
@@ -263,6 +288,7 @@ const styles = StyleSheet.create({
   contador: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   botaoSomaeSubtracao: {
     alignItems: 'center',
@@ -278,9 +304,17 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     backgroundColor: colors.primaryDefault
   },
+  circuloSomaeSubtracaoDesabilitado: {
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent:'center',
+    borderColor: colors.neutralMediumLight,
+    borderWidth: 1,
+  },
   iconeSomaeSubtracao: {
-    fontSize: 14,
-    color: colors.neutralLighter,
+    fontSize: 12,
   },
   numeroContagem: {
     fontSize: 14,

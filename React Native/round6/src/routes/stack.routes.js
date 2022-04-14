@@ -2,6 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import TabRoutes from './tab.routes';
+import TopTabRoutes from './topTab.routes';
 
 import Login from '../screens/Login';
 import Register from '../screens/Register';
@@ -34,11 +35,21 @@ export function StackRoutes() {
         component={Register}
       />
 
-      <Stack.Screen 
-        name="CommunityTourism" 
-        component={CommunityTourism}
-      />
+//       <Stack.Screen 
+// <<<<<<< RNConfigurandoAPI
+//         name="CommunityTourism" 
+//         component={CommunityTourism}
+//       />
 
+// =======
+//         name="CheckoutData" 
+//         component={TopTabRoutes}
+//       />
+//       <Stack.Screen 
+//         name="CheckoutPay" 
+//         component={TopTabRoutes}
+//       />
+// >>>>>>> development_reactnative
     </Stack.Navigator>
   );
 }
