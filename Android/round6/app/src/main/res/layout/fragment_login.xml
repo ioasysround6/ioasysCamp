@@ -159,9 +159,9 @@
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:focusable="true"
-                android:minHeight="32dp"
-                android:gravity="center"
                 android:fontFamily="@font/outfit_semibold"
+                android:gravity="center"
+                android:minHeight="32dp"
                 android:text="@string/error_text"
                 android:textColor="@color/primary_default"
                 android:textSize="@dimen/body_12"
@@ -264,4 +264,14 @@
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

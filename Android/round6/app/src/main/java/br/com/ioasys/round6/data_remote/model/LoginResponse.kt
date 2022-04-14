@@ -3,12 +3,29 @@ package br.com.ioasys.round6.data_remote.model
 import com.google.gson.annotations.SerializedName
 
 data class LoginResponse(
+    @SerializedName("token")
+    val token: String,
+    @SerializedName("user")
+    val user: LoginResponseData
+)
+
+data class LoginResponseData(
+    @SerializedName("id")
+    val id: String,
     @SerializedName("firstName")
-    private val firstName: String,
+    val firstName: String,
     @SerializedName("lastName")
-    private val lastName: String,
+    val lastName: String,
     @SerializedName("email")
-    private val email: String,
+    val email: String,
     @SerializedName("birthDate")
-    private val birthDate: String
+    val birthDate: String,
+    @SerializedName("photo")
+    val photo: String,
+    @SerializedName("role")
+    val role: String,
+    @SerializedName("createdAt")
+    val createdAt: String,
+    @SerializedName("updatedAt")
+    val updatedAt: String
 )
