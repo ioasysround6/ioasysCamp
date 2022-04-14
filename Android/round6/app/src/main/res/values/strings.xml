@@ -91,4 +91,13 @@
     <string name="payment_form_description">Cartão de crédito com final de 4444, parcelado em 3x sem juros</string>
     <string name="change_payment_method">Alterar forma de pagamento</string>
     <string name="interest_free">3x sem juros</string>
+    <string name="available_vacancies">7 vagas disponíveis</string>
+    <string name="people_amount">Quantidade de pessoas</string>
+    <string name="accommodation">Hospedagem</string>
+    <string name="activities">Atividades</string>
+    <string name="dates">Datas</string>
+    <string name="travel_tips">Dicas de viagem</string>
+    <string name="community_name">Mãos na argila!</string>
+    <string name="community_description">Conheça de perto uma das comunidades tradicionais produtoras de artesanato de argila, Mato Serrado. Localizada em Crato, a 8 horas de Fortaleza, é uma comunidade centenária e um local fantástico repleto de figuras icônicas no artesanato cearense!</string>
+    <string name="buy_package">Comprar pacote</string>
 </resources>
