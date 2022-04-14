@@ -21,10 +21,11 @@ var width = Dimensions.get('window').width;
 export function TravelPackage(){
   const [counter, setCounter] = useState(0);
   const [activeButton, setActiveButton] = useState(false);
+  const [igual, setIgual] = useState(false);
 
   const navigation = useNavigation();
 
-  const numeroDePessoas = 8;
+  const numeroDePessoas = 10;
 
 	function handleGoBack(){
 		navigation.goBack();
@@ -51,6 +52,14 @@ export function TravelPackage(){
       setActiveButton(!!setActiveButton)
     } else {
       setActiveButton(!setActiveButton)
+    }
+  }, [counter])
+
+  useEffect(() => {
+    if (counter == numeroDePessoas) {
+      setIgual(!!setIgual)
+    } else {
+      setIgual(!setIgual)
     }
   }, [counter])
 
@@ -103,9 +112,17 @@ export function TravelPackage(){
               activeOpacity={0.6} 
               style={styles.botaoSomaeSubtracao}
               onPress={subtrair}
+              disabled={!activeButton}
             >
-              <View style={styles.circuloSomaeSubtracao}>
-                <Text style={styles.iconeSomaeSubtracao}>-</Text>
+              <View style={[activeButton 
+                ? styles.circuloSomaeSubtracao 
+                : styles.circuloSomaeSubtracaoDesabilitado]}>
+                <Text 
+                  style={[
+                    styles.iconeSomaeSubtracao, 
+                    activeButton ? {color: colors.neutralLighter} 
+                    : {color: colors.neutralMediumLight}]}
+                >-</Text>
               </View>
             </TouchableOpacity>
             <Text style={styles.numeroContagem}>{counter}</Text>
@@ -113,9 +130,17 @@ export function TravelPackage(){
               activeOpacity={0.6} 
               style={styles.botaoSomaeSubtracao}
               onPress={somar}
+              disabled={igual}
             >
-              <View style={styles.circuloSomaeSubtracao}>
-                <Text style={styles.iconeSomaeSubtracao}>+</Text>
+              <View style={[!igual 
+                ? styles.circuloSomaeSubtracao 
+                : styles.circuloSomaeSubtracaoDesabilitado]}>
+                <Text
+                  style={[
+                    styles.iconeSomaeSubtracao, 
+                    !igual ? {color: colors.neutralLighter} 
+                    : {color: colors.neutralMediumLight}]}
+                >+</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -263,6 +288,7 @@ const styles = StyleSheet.create({
   contador: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   botaoSomaeSubtracao: {
     alignItems: 'center',
@@ -278,9 +304,17 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     backgroundColor: colors.primaryDefault
   },
+  circuloSomaeSubtracaoDesabilitado: {
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent:'center',
+    borderColor: colors.neutralMediumLight,
+    borderWidth: 1,
+  },
   iconeSomaeSubtracao: {
-    fontSize: 14,
-    color: colors.neutralLighter,
+    fontSize: 12,
   },
   numeroContagem: {
     fontSize: 14,
