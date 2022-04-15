@@ -8,12 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.FragmentRegisterBinding
 import br.com.ioasys.round6.presentation.viewmodels.RegisterViewModel
 import br.com.ioasys.round6.utils.ViewState
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RegisterFragment : Fragment() {
     private var _binding: FragmentRegisterBinding? = null
@@ -21,7 +21,7 @@ class RegisterFragment : Fragment() {
 
     private var isShowPass = false
 
-    private val registerViewModel: RegisterViewModel by viewModels()
+    private val registerViewModel: RegisterViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,19 +54,30 @@ class RegisterFragment : Fragment() {
                     inputLastName.text.toString(),
                     inputBirth.text.toString(),
                     inputEmail.text.toString(),
-                    inputEmail.text.toString()
+                    inputPassword.text.toString()
                 )
+
+                inputName.addTextChangedListener {
+                    inputName.setBackgroundResource(R.drawable.input_background)
+                }
+
+                inputLastName.addTextChangedListener {
+                    inputLastName.setBackgroundResource(R.drawable.input_background)
+                }
 
                 inputBirth.addTextChangedListener {
                     messageErrorBirth.visibility = View.GONE
+                    inputBirth.setBackgroundResource(R.drawable.input_background)
                 }
 
                 inputEmail.addTextChangedListener {
                     messageErrorEmail.visibility = View.GONE
+                    inputEmail.setBackgroundResource(R.drawable.input_background)
                 }
 
                 inputPassword.addTextChangedListener {
                     messageErrorPassword.visibility = View.GONE
+                    inputPassword.setBackgroundResource(R.drawable.input_background)
                 }
             }
         }
@@ -92,14 +103,25 @@ class RegisterFragment : Fragment() {
         registerViewModel.registeredUserViewState.observe(viewLifecycleOwner) { state ->
 
             when (state) {
+                is ViewState.Loading -> {
+                    binding.progressBar.visibility = View.VISIBLE
+                }
+
                 is ViewState.Success -> {
                     findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
                 }
+
                 is ViewState.Error -> {
                     binding.apply {
+                        progressBar.visibility = View.GONE
                         messageErrorBirth.visibility = View.VISIBLE
                         messageErrorEmail.visibility = View.VISIBLE
                         messageErrorPassword.visibility = View.VISIBLE
+                        inputName.setBackgroundResource(R.drawable.input_background_error)
+                        inputLastName.setBackgroundResource(R.drawable.input_background_error)
+                        inputBirth.setBackgroundResource(R.drawable.input_background_error)
+                        inputEmail.setBackgroundResource(R.drawable.input_background_error)
+                        inputPassword.setBackgroundResource(R.drawable.input_background_error)
                     }
                 }
                 else -> Unit
