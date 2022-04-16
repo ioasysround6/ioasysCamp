@@ -35,30 +35,169 @@
         android:layout_marginTop="52dp"
         android:background="@drawable/background_white_style"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titleMyTrips">
+        app:layout_constraintTop_toBottomOf="@id/titleMyTrips"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="34dp">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayoutMyTrips"
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMyTrip01"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/app_margin"
-            android:layout_marginTop="30dp"
-            android:background="@color/lighter"
+            android:layout_marginTop="@dimen/margin_40"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tabInlineLabel="true"
-            app:tabMode="fixed"
-            app:tabSelectedTextColor="@color/neutral_darker"
-            app:tabTextAppearance="@style/TabLayoutTextStyle"
-            app:tabTextColor="@color/neutral_dark" />
+            app:srcCompat="@drawable/background_my_trips" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitleCardMyTrips"
+            style="@style/TitleCardMyTrips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_55"
+            android:layout_marginTop="@dimen/margin_22"
+            android:text="@string/title_card01_my_trips"
+            app:layout_constraintStart_toStartOf="@id/ivMyTrip01"
+            app:layout_constraintTop_toTopOf="@+id/ivMyTrip01" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescriptionCardMyTrips"
+            style="@style/DescriptionCardMyTrips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="@string/description_card01_my_trips"
+            app:layout_constraintStart_toStartOf="@id/tvTitleCardMyTrips"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleCardMyTrips" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDateCardMyTrips"
+            style="@style/DateCardMyTrips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            android:text="@string/date_card01_my_trips"
+            app:layout_constraintStart_toStartOf="@id/tvTitleCardMyTrips"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescriptionCardMyTrips" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvViewMoreCardMyTrips"
+            style="@style/ViewMoreCardMyTrips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/viewmore_card_my_trips"
+            app:layout_constraintStart_toStartOf="@id/tvTitleCardMyTrips"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateCardMyTrips" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_IconCardMyTrips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:src="@drawable/icon01_card_mytrips"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitleCardMyTrips"
+            app:layout_constraintEnd_toStartOf="@id/tvTitleCardMyTrips"
+            app:layout_constraintTop_toTopOf="@id/tvTitleCardMyTrips" />
+
+        <!--Card 02 -->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMyTrip02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivMyTrip01"
+            app:srcCompat="@drawable/background_my_trips" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitleCardMyTrips02"
+            style="@style/TitleCardMyTrips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_55"
+            android:layout_marginTop="@dimen/margin_22"
+            android:text="@string/title_card02_my_trips"
+            app:layout_constraintStart_toStartOf="@id/ivMyTrip01"
+            app:layout_constraintTop_toTopOf="@+id/ivMyTrip02" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescriptionCardMyTrips02"
+            style="@style/DescriptionCardMyTrips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="@string/description_card02_my_trips"
+            app:layout_constraintStart_toStartOf="@id/tvTitleCardMyTrips"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleCardMyTrips02" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDateCardMyTrips02"
+            style="@style/DateCardMyTrips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            android:text="@string/date_card02_my_trips"
+            app:layout_constraintStart_toStartOf="@id/tvTitleCardMyTrips"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescriptionCardMyTrips02" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvViewMoreCardMyTrips02"
+            style="@style/ViewMoreCardMyTrips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/viewmore_card_my_trips"
+            app:layout_constraintStart_toStartOf="@id/tvTitleCardMyTrips"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateCardMyTrips02" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_IconCardMyTrips02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:src="@drawable/icon02_card_mytrips"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitleCardMyTrips02"
+            app:layout_constraintEnd_toStartOf="@id/tvTitleCardMyTrips02"
+            app:layout_constraintTop_toTopOf="@id/tvTitleCardMyTrips02" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPagerMyTrips"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDoubt"
+            style="@style/DoubtStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_4"
+            android:text="@string/doubt"
+            app:layout_constraintBottom_toTopOf="@id/tvContact"
+            app:layout_constraintStart_toStartOf="@id/tvContact" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvContact"
+            style="@style/ContactStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_30"
+            android:text="@string/contact_mytrips"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tabLayoutMyTrips" />
+            app:layout_constraintStart_toStartOf="@id/ivMyTrip02" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivWhatsappContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4"
+            android:src="@drawable/ic_whatsapp_contact"
+            app:layout_constraintBottom_toBottomOf="@id/tvContact"
+            app:layout_constraintStart_toEndOf="@id/tvContact"
+            app:layout_constraintTop_toTopOf="@id/tvContact" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
