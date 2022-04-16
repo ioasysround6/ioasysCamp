@@ -14,9 +14,10 @@ class LoginRemoteDataSourceImpl(
 
     override fun login(email: String, password: String): Flow<User> = flow {
         val response = authService.singIn(LoginRequest(email, password))
+        val token = response.headers()["Authorization"]
         if (response.isSuccessful) {
             response.body()?.let { loginResponse ->
-                emit(loginResponse.toDomain())
+                emit(loginResponse.toDomain(token ?: ""))
             }
         }
     }
