@@ -110,4 +110,7 @@
 
     <!-- Trips Fragment -->
     <string name="my_trips">Minhas Viagens</string>
+
+    <!-- Diary Fragment -->
+    <string name="my_diary">Diário de viagem</string>
 </resources>
