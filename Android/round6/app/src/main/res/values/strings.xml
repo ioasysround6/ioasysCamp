@@ -100,4 +100,11 @@
     <string name="community_name">Mãos na argila!</string>
     <string name="community_description">Conheça de perto uma das comunidades tradicionais produtoras de artesanato de argila, Mato Serrado. Localizada em Crato, a 8 horas de Fortaleza, é uma comunidade centenária e um local fantástico repleto de figuras icônicas no artesanato cearense!</string>
     <string name="buy_package">Comprar pacote</string>
+    <!-- Communities Details -->
+    <string name="curiosities">Curiosidades</string>
+    <string name="main_activities">Principais atividades</string>
+    <string name="location_description">Moita Redonda fica localizada em Cascavel, a 60 minutos de Fortaleza no estado do Ceará</string>
+    <string name="location">Localização</string>
+    <string name="curiosities_description">O museu Argilas Vivas é um ponto turístico da comunidade, onde você pode conhecer projetos locais da associação de produtores de artesanato de barro do Ceará. A comunidade também possui uma escola de música que utiliza instrumentos musicais feitos com argila</string>
+    <string name="main_activities_description">Cerca de 60% dos moradores de Mato vivem exclusivamente da fabricação artesanal de peças de Argila. Você encontra desde pequenos utensílios (Vasos, panelas e filtros) até Carrancas de 2 metros de altura</string>
 </resources>

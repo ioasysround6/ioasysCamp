@@ -7,16 +7,15 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Gravity
 import androidx.fragment.app.DialogFragment
-import br.com.ioasys.round6.databinding.DialogConfirmationBinding
+import br.com.ioasys.round6.databinding.DialogCommunitiesDetailsBinding
 
-class ConfirmationDialog : DialogFragment() {
+class CommunitiesDetailsDialog : DialogFragment() {
 
-    private lateinit var binding: DialogConfirmationBinding
+    private lateinit var binding: DialogCommunitiesDetailsBinding
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        binding = DialogConfirmationBinding.inflate(layoutInflater)
-
-        val builder = AlertDialog.Builder(requireActivity())
+        binding = DialogCommunitiesDetailsBinding.inflate(layoutInflater)
+        val builder = AlertDialog.Builder(requireContext())
         builder.setView(binding.root)
 
         val dialog = builder.create()
@@ -24,5 +23,4 @@ class ConfirmationDialog : DialogFragment() {
         dialog.window!!.setGravity(Gravity.CENTER)
         return dialog
     }
-
 }
