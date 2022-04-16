@@ -152,7 +152,6 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/input_background"
                 android:hint="@string/birth_hint"
-                android:inputType="date"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
                 android:textColorHint="@drawable/input_hint"
@@ -198,7 +197,6 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/input_background"
                 android:hint="@string/email_hint"
-                android:inputType="textEmailAddress"
                 android:paddingStart="34dp"
                 android:paddingEnd="12dp"
                 android:textColorHint="@drawable/input_hint"
@@ -235,7 +233,6 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/input_background"
                 android:hint="@string/password_hint"
-                android:inputType="textPassword"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
                 android:textColorHint="@drawable/input_hint"
@@ -354,4 +351,14 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
