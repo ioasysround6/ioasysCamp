@@ -1,4 +1,4 @@
-package br.com.ioasys.round6.data.repositories
+package br.com.ioasys.round6.data_remote.data_source
 
 import br.com.ioasys.round6.data_remote.mappers.toDomain
 import br.com.ioasys.round6.data_remote.model.RegisterRequest
@@ -8,7 +8,7 @@ import br.com.ioasys.round6.domain.repositories.RegisterRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-class RegisterRepositoryImpl(
+class RegisterRemoteDataSourceImpl(
     private val authService: AuthService
 ) : RegisterRepository {
 
