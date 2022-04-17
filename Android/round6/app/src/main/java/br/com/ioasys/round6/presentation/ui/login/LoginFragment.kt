@@ -21,6 +21,8 @@ class LoginFragment : Fragment() {
 
     private var isShowPass = false
 
+
+
     private val loginViewModel: LoginViewModel by lazy {
         getViewModel()
     }
