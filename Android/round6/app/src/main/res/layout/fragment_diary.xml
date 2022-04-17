@@ -88,38 +88,15 @@
                 app:layout_constraintTop_toBottomOf="@id/appCompatButton" />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFelipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/avatar_felipe"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_28"
+                android:layout_marginTop="@dimen/headline_24"
+                app:layout_constraintTop_toBottomOf="@+id/line" />
 
 
 
@@ -138,6 +115,23 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line" />
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPaula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/avatar_paula"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_28"
+                android:layout_marginTop="@dimen/headline_24"
+                app:layout_constraintTop_toBottomOf="@+id/line02" />
+
+
+
+
+
+
+
+
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/line03"
                 android:layout_width="0dp"
@@ -149,6 +143,17 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line02" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivJoao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/avatar_joao"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_28"
+                android:layout_marginTop="@dimen/headline_24"
+                app:layout_constraintTop_toBottomOf="@+id/line03" />
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/line04"
