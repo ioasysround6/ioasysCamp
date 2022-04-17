@@ -4,6 +4,7 @@
     <dimen name="headline_24">24sp</dimen>
     <dimen name="headline_20">20sp</dimen>
     <dimen name="headline_14">14sp</dimen>
+    <dimen name="headline_12">12sp</dimen>
     <dimen name="body_14">14sp</dimen>
     <dimen name="body_12">12sp</dimen>
     <dimen name="button_16">16sp</dimen>
@@ -13,4 +14,13 @@
     <dimen name="app_margin">32dp</dimen>
 
     <dimen name="padding_checkbox">8dp</dimen>
+
+    <dimen name="margin_55">55dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_22">22dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+
 </resources>

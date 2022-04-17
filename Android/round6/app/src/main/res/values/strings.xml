@@ -110,7 +110,17 @@
 
     <!-- Trips Fragment -->
     <string name="my_trips">Minhas Viagens</string>
+    <string name="doubt">Está com alguma dúvida?</string>
+    <string name="contact_mytrips">Entre em contato</string>
+    <string name="title_card01_my_trips">Mãos na argila!</string>
+    <string name="description_card01_my_trips">Passeio de 4 dias e 3 noites na comunidade \nde artesanato cearense Mato Serrado</string>
+    <string name="date_card01_my_trips">Data: 21/06/22 a 23/06/22</string>
+    <string name="title_card02_my_trips">Sobre as águas</string>
+    <string name="description_card02_my_trips">Passeio de 4 dias e 3 noites no Barco Hotel \nnas ilhas de Anavilhanas</string>
+    <string name="date_card02_my_trips">Data: 15/10/21 a 19/10/21</string>
+    <string name="viewmore_card_my_trips">Ver detalhes</string>
 
     <!-- Diary Fragment -->
     <string name="my_diary">Diário de viagem</string>
+
 </resources>

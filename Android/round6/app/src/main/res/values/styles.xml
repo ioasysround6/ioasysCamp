@@ -80,4 +80,46 @@
         <item name="color">@color/neutral_darker</item>
         <item name="textAllCaps">false</item>
     </style>
+
+    <style name="TitleCardMyTrips">
+        <item name="android:textSize">@dimen/headline_14</item>
+        <item name="fontFamily">@font/outfit_semibold</item>
+        <item name="android:textColor">@color/neutral_darker</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="DescriptionCardMyTrips">
+        <item name="android:textSize">@dimen/headline_12</item>
+        <item name="fontFamily">@font/outfit_regular</item>
+        <item name="android:textColor">@color/neutral_dark</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="DateCardMyTrips">
+        <item name="android:textSize">@dimen/headline_12</item>
+        <item name="fontFamily">@font/outfit_regular</item>
+        <item name="android:textColor">@color/neutral_dark</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="ViewMoreCardMyTrips">
+        <item name="android:textSize">@dimen/headline_14</item>
+        <item name="fontFamily">@font/outfit_semibold</item>
+        <item name="android:textColor">@color/secondary_default</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="DoubtStyle">
+        <item name="android:textSize">@dimen/headline_14</item>
+        <item name="fontFamily">@font/outfit_regular</item>
+        <item name="android:textColor">@color/neutral_dark</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="ContactStyle">
+        <item name="android:textSize">@dimen/headline_12</item>
+        <item name="fontFamily">@font/outfit_semibold</item>
+        <item name="android:textColor">@color/secondary_default</item>
+        <item name="textAllCaps">false</item>
+    </style>
 </resources>
