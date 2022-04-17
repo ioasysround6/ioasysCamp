@@ -122,5 +122,6 @@
 
     <!-- Diary Fragment -->
     <string name="my_diary">Diário de viagem</string>
+    <string name="share_travels">Compartilher com a gente um pouquinho da sua\n experiência em nossos pacotes de turismo aqui no\n nosso feed!</string>
 
 </resources>
