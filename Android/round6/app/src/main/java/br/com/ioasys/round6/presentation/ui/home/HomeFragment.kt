@@ -5,14 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.FragmentHomeBinding
 import br.com.ioasys.round6.domain.model.Community
 import br.com.ioasys.round6.domain.model.Tour
 import br.com.ioasys.round6.presentation.adapters.CommunityAdapter
+import br.com.ioasys.round6.presentation.adapters.TourClickListener
 import br.com.ioasys.round6.presentation.adapters.TourListAdapter
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), TourClickListener {
     private lateinit var tourListAdapter: TourListAdapter
     private lateinit var communityAdapter: CommunityAdapter
 
@@ -42,12 +45,18 @@ class HomeFragment : Fragment() {
     }
 
     private fun setTourListData() {
-        tourListAdapter = TourListAdapter()
+        tourListAdapter = TourListAdapter(this)
         binding.rvPackage.adapter = tourListAdapter
         binding.rvPackage.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
-        tourListAdapter.submitList(Tour.getMockList())
+        tourListAdapter.submitList(
+            Tour.getMockList()
+        )
+    }
+
+    override fun onTourClickListener(tour: Tour) {
+        findNavController().navigate(R.id.action_homeFragment_to_packagesDetailsFragment)
     }
 
     override fun onDestroyView() {
