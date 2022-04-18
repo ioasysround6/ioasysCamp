@@ -5,8 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.CommunityItemBinding
 import br.com.ioasys.round6.domain.model.Community
+import coil.load
 
 class CommunityAdapter :
     ListAdapter<Community, CommunityAdapter.CommunityViewHolder>(DIFF_CALLBACK) {
@@ -37,6 +39,10 @@ class CommunityAdapter :
         fun bind(community: Community) {
             binding.apply {
                 communityName.text = community.communityName
+
+                communityImage.load(community.photo1) {
+                    error(R.drawable.community_image)
+                }
             }
         }
 

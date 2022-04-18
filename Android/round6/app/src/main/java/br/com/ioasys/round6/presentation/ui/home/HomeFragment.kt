@@ -9,16 +9,15 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.FragmentHomeBinding
-import br.com.ioasys.round6.domain.model.Community
 import br.com.ioasys.round6.domain.model.Tour
 import br.com.ioasys.round6.presentation.adapters.CommunityAdapter
 import br.com.ioasys.round6.presentation.adapters.TourClickListener
 import br.com.ioasys.round6.presentation.adapters.TourListAdapter
-import br.com.ioasys.round6.presentation.viewmodels.TourViewModel
+import br.com.ioasys.round6.presentation.viewmodels.HomeViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment(), TourClickListener {
-    private val tourViewModel: TourViewModel by viewModel()
+    private val homeViewModel: HomeViewModel by viewModel()
 
     private lateinit var tourListAdapter: TourListAdapter
     private lateinit var communityAdapter: CommunityAdapter
@@ -45,7 +44,9 @@ class HomeFragment : Fragment(), TourClickListener {
         binding.rvCommunities.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
-        communityAdapter.submitList(Community.getCommunity())
+        homeViewModel.listCommunity.observe(viewLifecycleOwner) {
+            communityAdapter.submitList(it)
+        }
     }
 
     private fun setTourListData() {
@@ -54,7 +55,7 @@ class HomeFragment : Fragment(), TourClickListener {
         binding.rvPackage.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
-        tourViewModel.listTour.observe(viewLifecycleOwner) {
+        homeViewModel.listTour.observe(viewLifecycleOwner) {
             tourListAdapter.submitList(it)
         }
     }
