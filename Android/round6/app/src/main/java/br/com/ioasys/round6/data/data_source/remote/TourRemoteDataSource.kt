@@ -5,5 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface TourRemoteDataSource {
 
-    fun getTours(token: String): Flow<List<Tour>>
+    fun getTours(): Flow<List<Tour>>
 }
