@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { Home } from '../screens/Home';
 import { Communities } from '../screens/Communities';
-import { TravelPackage } from '../screens/TravelPackage';
+import { Diary } from '../screens/Diary';
 import { MyTravels } from '../screens/MyTravels';
 
 import HomeActiveIcon from '../assets/HomeActiveIcon.svg';
@@ -76,7 +76,7 @@ export default function TabRoutes(){
       />
       <Screen 
         name="Diário"
-        component={TravelPackage}
+        component={Diary}
         options={{
           tabBarIcon: (({ focused }) =>
             focused ?

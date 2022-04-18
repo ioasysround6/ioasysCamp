@@ -55,7 +55,9 @@ export function Home() {
     buscaComunidades();
   }, [])
 
-
+  function handlePacote(item){
+		navigation.navigate("TravelPackageScreen", { item });
+	}
 
   return (
     <ScrollView>
@@ -73,7 +75,7 @@ export function Home() {
             showsHorizontalScrollIndicator={false}
             renderItem={({ item }) => (
               <View style={{ flexDirection: 'row' }}>
-                <CardPackages title={item.communityName} subtitle="Moita Redonda" altura={200} imgBack={item.photo1} />
+                <CardPackages onPress={() => handlePacote(item)} title={item.communityName} subtitle="Moita Redonda" altura={200} imgBack={item.photo1} />
               </View>
 
             )}
