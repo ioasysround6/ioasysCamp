@@ -66,22 +66,22 @@
                 android:layout_marginTop="@dimen/head_32"
                 android:layout_marginEnd="@dimen/head_32"
                 android:background="@drawable/large_button"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvShare"
+                android:fontFamily="@font/outfit_semibold"
                 android:text="Fazer um post"
                 android:textAllCaps="false"
-                android:fontFamily="@font/outfit_semibold"
                 android:textColor="@color/lighter"
-                android:textSize="@dimen/headline_14"/>
+                android:textSize="@dimen/headline_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvShare" />
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/line"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginStart="@dimen/margin_28"
+                android:layout_marginTop="@dimen/margin_32"
                 android:layout_marginEnd="@dimen/margin_20"
-                android:layout_marginTop="@dimen/head_32"
                 android:background="@drawable/line"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -92,23 +92,74 @@
                 android:id="@+id/ivFelipe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_28"
+                android:layout_marginTop="@dimen/margin_24"
                 android:src="@drawable/avatar_felipe"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_28"
-                android:layout_marginTop="@dimen/headline_24"
                 app:layout_constraintTop_toBottomOf="@+id/line" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFelipe"
+                style="@style/NameTileStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12"
+                android:layout_marginTop="@dimen/margin_40"
+                android:text="@string/felipe"
+                app:layout_constraintStart_toEndOf="@id/ivFelipe"
+                app:layout_constraintTop_toBottomOf="@id/line" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCityFelipe"
+                style="@style/CityDescriptionDateStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="@string/city_felipe"
+                app:layout_constraintStart_toEndOf="@id/ivFelipe"
+                app:layout_constraintTop_toBottomOf="@id/tvFelipe" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleFelipe"
+                style="@style/NameTileStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_33"
+                android:layout_marginTop="@dimen/head_32"
+                android:text="@string/title_felipe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCityFelipe" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescriptionFelipe"
+                style="@style/CityDescriptionDateStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_33"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="@string/description_felipe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleFelipe" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDateFelipe"
+                style="@style/CityDescriptionDateStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_33"
+                android:layout_marginTop="@dimen/margin_16"
+                android:text="@string/date_felipe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDescriptionFelipe" />
 
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/line02"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:layout_marginTop="261dp"
                 android:layout_marginStart="@dimen/margin_28"
+                android:layout_marginTop="261dp"
                 android:layout_marginEnd="@dimen/margin_20"
                 android:background="@drawable/line"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -119,11 +170,76 @@
                 android:id="@+id/ivPaula"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/avatar_paula"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="@dimen/margin_28"
                 android:layout_marginTop="@dimen/headline_24"
+                android:src="@drawable/avatar_paula"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/line02" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPaula"
+                style="@style/NameTileStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12"
+                android:layout_marginTop="@dimen/margin_40"
+                android:text="@string/paula"
+                app:layout_constraintStart_toEndOf="@id/ivPaula"
+                app:layout_constraintTop_toBottomOf="@id/line02" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCityPaula"
+                style="@style/CityDescriptionDateStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="@string/city_paula"
+                app:layout_constraintStart_toEndOf="@id/ivPaula"
+                app:layout_constraintTop_toBottomOf="@id/tvPaula" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitlePaula"
+                style="@style/NameTileStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_33"
+                android:layout_marginTop="@dimen/head_32"
+                android:text="@string/title_paula"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCityPaula" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescriptionPaula"
+                style="@style/CityDescriptionDateStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_33"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="@string/description_paula"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitlePaula" />
+
+
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/tvDatePaula"-->
+<!--                style="@style/CityDescriptionDateStyle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/margin_33"-->
+<!--                android:layout_marginTop="@dimen/margin_16"-->
+<!--                android:text="@string/date_felipe"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/tvDescriptionPaula" />-->
+
+
+
 
 
 
@@ -136,8 +252,8 @@
                 android:id="@+id/line03"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:layout_marginTop="570dp"
                 android:layout_marginStart="@dimen/margin_28"
+                android:layout_marginTop="570dp"
                 android:layout_marginEnd="@dimen/margin_20"
                 android:background="@drawable/line"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -149,18 +265,95 @@
                 android:id="@+id/ivJoao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/avatar_joao"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="@dimen/margin_28"
                 android:layout_marginTop="@dimen/headline_24"
+                android:src="@drawable/avatar_joao"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/line03" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvJoao"
+                style="@style/NameTileStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12"
+                android:layout_marginTop="@dimen/margin_40"
+                android:text="@string/joao"
+                app:layout_constraintStart_toEndOf="@id/ivJoao"
+                app:layout_constraintTop_toBottomOf="@id/line03" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCityJoao"
+                style="@style/CityDescriptionDateStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="@string/city_joao"
+                app:layout_constraintStart_toEndOf="@id/ivJoao"
+                app:layout_constraintTop_toBottomOf="@id/tvJoao" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleJoao"
+                style="@style/NameTileStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_33"
+                android:layout_marginTop="@dimen/head_32"
+                android:text="@string/title_joao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCityJoao" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescriptionJoao"
+                style="@style/CityDescriptionDateStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_33"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="@string/description_joao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleJoao" />
+
+
+
+            <!--            <androidx.appcompat.widget.AppCompatImageView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"/>-->
+
+            <!--            <androidx.appcompat.widget.AppCompatTextView-->
+            <!--                android:id="@+id/tvDatePaula"-->
+            <!--                style="@style/CityDescriptionDateStyle"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="@dimen/margin_33"-->
+            <!--                android:layout_marginTop="@dimen/margin_16"-->
+            <!--                android:text="@string/date_joao"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/tvDescriptionPaula" />-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/line04"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:layout_marginTop="570dp"
                 android:layout_marginStart="@dimen/margin_28"
+                android:layout_marginTop="570dp"
                 android:layout_marginEnd="@dimen/margin_20"
                 android:background="@drawable/line"
                 app:layout_constraintEnd_toEndOf="parent"
