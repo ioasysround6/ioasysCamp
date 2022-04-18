@@ -124,7 +124,7 @@ export function Home() {
         textActivities={comunidadeSelected?.mainActivities}
         textCuriosities={comunidadeSelected?.curiosities}
       />
-    </>
+   </> 
   );
 }
 
