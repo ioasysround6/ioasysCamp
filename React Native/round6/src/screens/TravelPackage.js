@@ -14,9 +14,7 @@ import MountainIcon from '../assets/MountainIcon.svg';
 import CalendarIcon from '../assets/CalendarIcon.svg';
 import MapIcon from '../assets/MapIcon.svg';
 
-import { Dimensions, StatusBar, StyleSheet, View, Text, TouchableOpacity, TouchableHighlight} from 'react-native';
-
-var width = Dimensions.get('window').width;
+import { StatusBar, StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 export function TravelPackage(){
   const [counter, setCounter] = useState(0);
