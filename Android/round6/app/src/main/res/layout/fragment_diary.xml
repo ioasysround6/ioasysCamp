@@ -153,6 +153,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvDescriptionFelipe" />
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivChatFelipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_33"
+                android:src="@drawable/ic_chat"
+                app:layout_constraintBottom_toBottomOf="@id/tvDateFelipe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvDateFelipe" />
+
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/line02"
@@ -222,30 +232,36 @@
                 app:layout_constraintTop_toBottomOf="@id/tvTitlePaula" />
 
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPostPaula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_33"
+                android:layout_marginTop="@dimen/margin_16"
+                android:src="@drawable/post_paula"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDescriptionPaula" />
 
-<!--            <androidx.appcompat.widget.AppCompatImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"/>-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDatePaula"
+                style="@style/CityDescriptionDateStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_33"
+                android:layout_marginTop="@dimen/margin_16"
+                android:text="@string/date_paula"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivPostPaula" />
 
-<!--            <androidx.appcompat.widget.AppCompatTextView-->
-<!--                android:id="@+id/tvDatePaula"-->
-<!--                style="@style/CityDescriptionDateStyle"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="@dimen/margin_33"-->
-<!--                android:layout_marginTop="@dimen/margin_16"-->
-<!--                android:text="@string/date_felipe"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/tvDescriptionPaula" />-->
-
-
-
-
-
-
-
-
-
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivChatPaula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_33"
+                android:src="@drawable/ic_chat"
+                app:layout_constraintBottom_toBottomOf="@id/tvDatePaula"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvDatePaula" />
 
 
             <androidx.viewpager.widget.ViewPager
@@ -315,38 +331,36 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvTitleJoao" />
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPostJoao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_33"
+                android:layout_marginTop="@dimen/margin_16"
+                android:src="@drawable/post_joao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDescriptionJoao" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDateJoao"
+                style="@style/CityDescriptionDateStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_33"
+                android:layout_marginTop="@dimen/margin_16"
+                android:text="@string/date_joao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivPostJoao" />
 
-            <!--            <androidx.appcompat.widget.AppCompatImageView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"/>-->
-
-            <!--            <androidx.appcompat.widget.AppCompatTextView-->
-            <!--                android:id="@+id/tvDatePaula"-->
-            <!--                style="@style/CityDescriptionDateStyle"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_marginStart="@dimen/margin_33"-->
-            <!--                android:layout_marginTop="@dimen/margin_16"-->
-            <!--                android:text="@string/date_joao"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintTop_toBottomOf="@id/tvDescriptionPaula" />-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivChatJoao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_33"
+                android:src="@drawable/ic_chat"
+                app:layout_constraintBottom_toBottomOf="@id/tvDateJoao"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvDateJoao" />
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/line04"
