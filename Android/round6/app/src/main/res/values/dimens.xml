@@ -17,10 +17,17 @@
 
     <dimen name="margin_55">55dp</dimen>
     <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
     <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_28">28dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
     <dimen name="margin_22">22dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
     <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
     <dimen name="margin_10">10dp</dimen>
     <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_52">52dp</dimen>
+    <dimen name="margin_33">33dp</dimen>
 
 </resources>
