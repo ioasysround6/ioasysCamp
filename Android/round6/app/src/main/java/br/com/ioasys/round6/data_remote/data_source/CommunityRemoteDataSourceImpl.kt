@@ -10,7 +10,7 @@ class CommunityRemoteDataSourceImpl(
     private val communityService: CommunityService
 ) : CommunityRepository {
 
-    override suspend fun getCommunities(): Flow<List<Community>> = flow {
+    override fun getCommunities(): Flow<List<Community>> = flow {
         val communities = communityService.getCommunities()
         emit(communities)
     }

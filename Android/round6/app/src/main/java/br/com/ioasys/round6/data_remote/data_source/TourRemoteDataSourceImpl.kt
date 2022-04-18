@@ -10,7 +10,7 @@ class TourRemoteDataSourceImpl(
     private val tourService: TourService
 ) : TourRepository {
 
-    override suspend fun getTours(): Flow<List<Tour>> = flow {
+    override fun getTours(): Flow<List<Tour>> = flow {
         val tours = tourService.getTours()
         emit(tours)
     }

@@ -5,5 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface TourRepository {
 
-    suspend fun getTours(): Flow<List<Tour>>
+    fun getTours(): Flow<List<Tour>>
 }

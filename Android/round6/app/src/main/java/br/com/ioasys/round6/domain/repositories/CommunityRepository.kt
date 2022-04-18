@@ -5,5 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface CommunityRepository {
 
-    suspend fun getCommunities(): Flow<List<Community>>
+    fun getCommunities(): Flow<List<Community>>
 }
