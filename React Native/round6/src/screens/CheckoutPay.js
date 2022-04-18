@@ -4,11 +4,12 @@ import { useNavigation } from '@react-navigation/core';
 import { Shadow } from 'react-native-shadow-2';
 import DropDownPicker from 'react-native-dropdown-picker';
 
-import { KeyboardAvoidingView, Dimensions, StyleSheet, View, Text, TextInput, Modal, Pressable, TouchableOpacity} from 'react-native';
+import { KeyboardAvoidingView, Dimensions, StyleSheet, View, Text, TextInput, Modal, TouchableOpacity} from 'react-native';
 
 import CloseIcon from '../assets/SVG/CloseIcon';
 import CampingIcon from '../assets/SVG/CampingIcon';
 import CardIcon from '../assets/SVG/CardIcon';
+import WhatsappIcon from '../assets/SVG/WhatsappIcon';
 
 import { ScrollView } from 'react-native-gesture-handler';
 import { Radio } from '../components/Radio';
@@ -53,9 +54,14 @@ export function CheckoutPay(){
     })
   }
 
+  function handleCompraEfetuada(){
+    setModalSuccessVisible(!modalSuccessVisible);
+		navigation.navigate("Home");
+	}
+
   function handleModalResume() {
-    setModalResumeVisible(!modalResumeVisible)
-    setModalSuccessVisible(true)
+    setModalResumeVisible(!modalResumeVisible);
+    setModalSuccessVisible(true);
   }
 
   return(
@@ -192,7 +198,7 @@ export function CheckoutPay(){
       <View>
         <Modal
           statusBarTranslucent
-          animationType="slide"
+          animationType="fade"
           transparent={true}
           visible={modalResumeVisible}
           onRequestClose={() => {
@@ -238,7 +244,12 @@ export function CheckoutPay(){
                   <View style={{width: '100%',}}>
                     <Text style={styles.descricaoDadosTexto}>Cartão de crédito com final de 4444, parcelado em 3x sem juros</Text>
                     <View style={{paddingLeft: 22, alignItems: 'flex-start', justifyContent: 'center'}}>
-                      <Text style={styles.descricaoAlterarForma}>Alterar forma de pagamento</Text>
+                      <TouchableOpacity
+                        activeOpacity={0.6}
+                        onPress={() => setModalResumeVisible(!modalResumeVisible)}
+                      >
+                        <Text style={styles.descricaoAlterarForma}>Alterar forma de pagamento</Text>
+                      </TouchableOpacity>
                     </View>
                   </View>
                 </View>
@@ -273,7 +284,8 @@ export function CheckoutPay(){
 
       <View>
         <Modal
-          animationType="slide"
+          statusBarTranslucent
+          animationType="fade"
           transparent={true}
           visible={modalSuccessVisible}
           onRequestClose={() => {
@@ -282,17 +294,45 @@ export function CheckoutPay(){
         >
           <View style={styles.centeredViewSuccess}>
             <View style={styles.modalViewSuccess}>
-              <Text style={styles.modalTextSuccess}>Hello World!</Text>
-              <Pressable
-                style={[styles.buttonModalSuccess, styles.buttonCloseSuccess]}
-                onPress={() => setModalSuccessVisible(!modalSuccessVisible)}
-              >
-                <Text style={styles.textStyleSuccess}>Hide Modal</Text>
-              </Pressable>
+
+              <View style={styles.headerResume}>
+                <TouchableOpacity
+                  activeOpacity={0.4}
+                  style={styles.botaoFechar}
+                  onPress={handleCompraEfetuada}>
+                  <CloseIcon width={30} height={30}/>
+                </TouchableOpacity>
+                <View style={{marginTop: 32, alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+                  <Text style={styles.modalTextResume}>Sua compra foi efetuada {'\n'} com sucesso!</Text>
+                </View>
+              </View>
+
+              <View style={styles.modalDeCompraEfetuada}>
+                <Text style={styles.modalDeCompraTexto}>
+                  Fique de olho no seu e-mail, vamos enviar as {'\n'}informações sobre sua viagem por lá! {'\n'}
+                  Qualquer dúvida fique a vontade para {'\n'}
+                  chamar a gente pelo Whats App:
+                </Text>
+              </View>
+
+              <View style={{width: '100%', paddingHorizontal: 22, marginBottom: 52, alignItems: 'flex-start', justifyContent: 'center'}}>
+                <View style={{ zIndex: 2, position: 'absolute', marginLeft: 44 }}>
+                  <WhatsappIcon width={18} height={18}/>
+                </View>
+                <ButtonLarge
+                  underlayColor={colors.primaryDark}
+                  titulo='Redirecionar para WhatsApp'
+                  backColor={
+                    colors.primaryDefault
+                  }
+                  onPress={handleCompraEfetuada}
+                />
+              </View>
             </View>
           </View>
         </Modal>
       </View>
+
     </View>
 
     <View style={styles.stackTotalPagar}>
@@ -364,7 +404,6 @@ const styles = StyleSheet.create({
     height: 51,
     width: '100%',
     color: colors.neutralDark,
-
     borderColor: colors.neutralMediumDark,
     fontSize: 14,
   },
@@ -389,7 +428,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     backgroundColor: colors.neutralLighter,
   },
-
   centeredViewResume: {
     flex: 1,
     justifyContent: "flex-start",
@@ -477,18 +515,17 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: colors.neutralDark
   },
-
   centeredViewSuccess: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 22
+    backgroundColor: '#rgba(209, 210, 209, 0.75)',
+    paddingHorizontal: 32,
   },
   modalViewSuccess: {
-    margin: 20,
-    backgroundColor: "red",
+    backgroundColor: colors.neutralLighter,
+    width: '100%',
     borderRadius: 20,
-    padding: 35,
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -499,24 +536,17 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5
   },
-  buttonModalSuccess: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2
+  modalDeCompraEfetuada: {
+    width: '100%',
+    paddingHorizontal: 25,
+    marginTop: -15,
+    marginBottom: 60,
   },
-  buttonCloseSuccess: {
-    backgroundColor: "#2196F3",
+  modalDeCompraTexto: {
+    fontSize: 12,
+    textAlign: 'center',
+    color: colors.neutralDark
   },
-  textStyleSuccess: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center"
-  },
-  modalTextSuccess: {
-    marginBottom: 15,
-    textAlign: "center"
-  },
-
   stackTotalPagar: {
     width: width,
     height: 120,
