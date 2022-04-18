@@ -89,7 +89,7 @@ export function Home() {
             showsHorizontalScrollIndicator={false}
             renderItem={({ item }) => (
               <View style={{ flexDirection: 'row' }}>
-                <CardPackages title={item.communityName} altura={180} imgBack={item.photo} />
+                <CardPackages title={item.communityName} altura={180} imgBack={item.photo1} />
               </View>
 
             )}
