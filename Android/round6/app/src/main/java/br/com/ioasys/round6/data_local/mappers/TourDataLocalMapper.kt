@@ -27,8 +27,11 @@ fun TourDataLocal.toDomain(): Tour = Tour(
     travelDate = this.travelDate ?: "",
     hint = this.hint ?: "",
     price = this.price ?: "",
-    vacancies = this.vacancies ?: "",
+    vacancies = this.vacancies,
     photo1 = this.photo1 ?: "",
-    photo2 = this.photo2,
-    photo3 = this.photo3
+    photo2 = this.photo2 ?: "",
+    photo3 = this.photo3 ?: "",
+    createdAt = this.createdAt ?: "",
+    updatedAt = this.updatedAt ?: "",
+    tourName = this.tourName ?: ""
 )

@@ -5,8 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.PackageItemBinding
 import br.com.ioasys.round6.domain.model.Tour
+import coil.load
 
 class TourListAdapter(
     private val onTourClickListener: TourClickListener
@@ -40,6 +42,10 @@ class TourListAdapter(
             binding.apply {
                 packageName.text = tour.tourName
                 communityName.text = tour.communityName
+
+                packageImage.load(tour.photo1) {
+                    error(R.drawable.image)
+                }
 
                 root.setOnClickListener {
                     onTourClickListener.onTourClickListener(tour)

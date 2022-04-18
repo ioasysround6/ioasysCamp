@@ -14,8 +14,12 @@ import br.com.ioasys.round6.domain.model.Tour
 import br.com.ioasys.round6.presentation.adapters.CommunityAdapter
 import br.com.ioasys.round6.presentation.adapters.TourClickListener
 import br.com.ioasys.round6.presentation.adapters.TourListAdapter
+import br.com.ioasys.round6.presentation.viewmodels.TourViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment(), TourClickListener {
+    private val tourViewModel: TourViewModel by viewModel()
+
     private lateinit var tourListAdapter: TourListAdapter
     private lateinit var communityAdapter: CommunityAdapter
 
@@ -50,9 +54,9 @@ class HomeFragment : Fragment(), TourClickListener {
         binding.rvPackage.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
-        tourListAdapter.submitList(
-            Tour.getMockList()
-        )
+        tourViewModel.listTour.observe(viewLifecycleOwner) {
+            tourListAdapter.submitList(it)
+        }
     }
 
     override fun onTourClickListener(tour: Tour) {
