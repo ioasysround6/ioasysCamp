@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="br.com.ioasys.round6.presentation.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_packagesDetailsFragment"
+            app:destination="@id/packagesDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/diaryFragment"
@@ -28,4 +32,9 @@
         android:name="br.com.ioasys.round6.presentation.ui.trips.TripsFragment"
         android:label="fragment_trips"
         tools:layout="@layout/fragment_trips" />
+    <fragment
+        android:id="@+id/packagesDetailsFragment"
+        android:name="br.com.ioasys.round6.presentation.ui.packages.PackagesDetailsFragment"
+        android:label="fragment_packages_details"
+        tools:layout="@layout/fragment_packages_details" />
 </navigation>

@@ -5,8 +5,9 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "Tours")
 data class TourDataLocal(
-    @PrimaryKey(autoGenerate = true)
-    val id: Long,
+    @PrimaryKey
+    val id: String,
+    val tourName: String? = null,
     val communityName: String? = null,
     val description: String? = null,
     val accommodation: String? = null,
@@ -14,8 +15,10 @@ data class TourDataLocal(
     val travelDate: String? = null,
     val hint: String? = null,
     val price: String? = null,
-    val vacancies: String? = null,
+    val vacancies: Int,
     val photo1: String? = null,
     val photo2: String? = null,
     val photo3: String? = null,
+    val createdAt: String? = null,
+    val updatedAt: String? = null
 )
