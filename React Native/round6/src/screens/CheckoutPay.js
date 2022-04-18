@@ -191,6 +191,7 @@ export function CheckoutPay(){
 
       <View>
         <Modal
+          statusBarTranslucent
           animationType="slide"
           transparent={true}
           visible={modalResumeVisible}
@@ -399,7 +400,7 @@ const styles = StyleSheet.create({
   modalViewResume: {
     backgroundColor: colors.neutralLighter,
     width: '100%',
-    marginTop: 90,
+    marginTop: 120,
     borderRadius: 20,
     alignItems: "center",
     shadowColor: "#000",
