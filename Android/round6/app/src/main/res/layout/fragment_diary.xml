@@ -67,7 +67,7 @@
                 android:layout_marginEnd="@dimen/head_32"
                 android:background="@drawable/large_button"
                 android:fontFamily="@font/outfit_semibold"
-                android:text="Fazer um post"
+                android:text="@string/post"
                 android:textAllCaps="false"
                 android:textColor="@color/lighter"
                 android:textSize="@dimen/headline_14"

@@ -123,6 +123,7 @@
     <!-- Diary Fragment -->
     <string name="my_diary">Diário de viagem</string>
     <string name="share_travels">Compartilher com a gente um pouquinho da sua\nexperiência em nossos pacotes de turismo aqui no\nnosso feed!</string>
+    <string name="post">Fazer um post</string>
 
     <string name="felipe">Felipe dos Santos</string>
     <string name="city_felipe">Rio de Janeiro, RJ</string>
