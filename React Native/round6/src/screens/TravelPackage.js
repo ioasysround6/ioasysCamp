@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Shadow } from 'react-native-shadow-2';
-import { useNavigation } from '@react-navigation/core';
+import { useNavigation, useRoute } from '@react-navigation/core';
 
 import { colors } from '../styles/colors';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
@@ -14,9 +14,7 @@ import MountainIcon from '../assets/MountainIcon.svg';
 import CalendarIcon from '../assets/CalendarIcon.svg';
 import MapIcon from '../assets/MapIcon.svg';
 
-import { Dimensions, StatusBar, StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
-
-var width = Dimensions.get('window').width;
+import { StatusBar, StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 export function TravelPackage(){
   const [counter, setCounter] = useState(0);
@@ -24,8 +22,10 @@ export function TravelPackage(){
   const [igual, setIgual] = useState(false);
 
   const navigation = useNavigation();
+  const route = useRoute();
+  const { item } = route.params;
 
-  const numeroDePessoas = 10;
+  const numeroDePessoas = item.vacancies;
 
 	function handleGoBack(){
 		navigation.goBack();
@@ -69,7 +69,6 @@ export function TravelPackage(){
       <StatusBar
         barStyle='light-content'
         backgroundColor={'transparent'}
-        // translucent
       />
       
       <View>
@@ -85,20 +84,18 @@ export function TravelPackage(){
           distance={20} 
           startColor={'#252A2733'} 
           offset={[0, 2]}>
-            <ImageSlider imagesUrl={['https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', 'https://images.unsplash.com/photo-1611843467160-25afb8df1074?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', 'https://images.unsplash.com/photo-1516959543587-4cc499d9514b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80']}/>
+            <ImageSlider imagesUrl={[item.photo1, item.photo2, item.photo3]}/>
         </Shadow>
       </View>
 
       <View style={styles.descricao}>
         <View style={styles.cabecalho}>
-          <Text style={styles.pacoteDescricao}>Pacote 1</Text>
-          <Text style={styles.pacotePreco}>R$ 600,00</Text>
+          <Text style={styles.pacoteDescricao}>{item.tourName}</Text>
+          <Text style={styles.pacotePreco}>R$ {item.price}</Text>
         </View>
 
         <View style={styles.informacao}>
-          <Text style={styles.informacaoTexto}>
-            TEste Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
-          </Text>
+          <Text style={styles.informacaoTexto}>{item.description}</Text>
         </View>
 
         <View style={styles.vagas}>
@@ -109,7 +106,7 @@ export function TravelPackage(){
           <Text style={styles.quantidadeTexto}>Quantidade de Pessoas</Text>
           <View style={styles.contador}>
             <TouchableOpacity
-              activeOpacity={0.6} 
+              activeOpacity={0.3} 
               style={styles.botaoSomaeSubtracao}
               onPress={subtrair}
               disabled={!activeButton}
@@ -120,14 +117,14 @@ export function TravelPackage(){
                 <Text 
                   style={[
                     styles.iconeSomaeSubtracao, 
-                    activeButton ? {color: colors.neutralLighter} 
+                    activeButton ? {color: colors.neutralDarker} 
                     : {color: colors.neutralMediumLight}]}
                 >-</Text>
               </View>
             </TouchableOpacity>
             <Text style={styles.numeroContagem}>{counter}</Text>
-            <TouchableOpacity 
-              activeOpacity={0.6} 
+            <TouchableOpacity
+              activeOpacity={0.3} 
               style={styles.botaoSomaeSubtracao}
               onPress={somar}
               disabled={igual}
@@ -138,7 +135,7 @@ export function TravelPackage(){
                 <Text
                   style={[
                     styles.iconeSomaeSubtracao, 
-                    !igual ? {color: colors.neutralLighter} 
+                    !igual ? {color: colors.neutralDarker} 
                     : {color: colors.neutralMediumLight}]}
                 >+</Text>
               </View>
@@ -168,7 +165,7 @@ export function TravelPackage(){
           <View style={styles.informacoesPacoteDescricao}>
             <View style={styles.barralateral}></View>
             <Text style={styles.informacoesPacoteTexto}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
+              {item.accommodation}
             </Text>
           </View>
         </View>
@@ -183,7 +180,7 @@ export function TravelPackage(){
           <View style={styles.informacoesPacoteDescricao}>
             <View style={styles.barralateral}></View>
             <Text style={styles.informacoesPacoteTexto}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
+              {item.activities}
             </Text>
           </View>
         </View>
@@ -198,7 +195,7 @@ export function TravelPackage(){
           <View style={styles.informacoesPacoteDescricao}>
             <View style={styles.barralateral}></View>
             <Text style={styles.informacoesPacoteTexto}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
+              {item.travelDate}
             </Text>
           </View>
         </View>
@@ -213,7 +210,7 @@ export function TravelPackage(){
           <View style={styles.informacoesPacoteDescricao}>
             <View style={[styles.barralateral, {marginBottom: 10}]}></View>
             <Text style={[styles.informacoesPacoteTexto, {paddingBottom: 32}]}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
+              {item.hint}
             </Text>
           </View>
         </View>
@@ -243,12 +240,13 @@ const styles = StyleSheet.create({
     height: 48,
   },
   descricao: {
-    width: width,
+    flex: 1,
+    width: '100%',
     paddingTop: 40,
-    paddingLeft: 32,
-    paddingRight: 32,
+    paddingHorizontal: 32,
   },
-  cabecalho: { 
+  cabecalho: {
+    alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
@@ -302,7 +300,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
     justifyContent:'center',
-    backgroundColor: colors.primaryDefault
+    borderColor: colors.neutralDarker,
+    borderWidth: 1,
   },
   circuloSomaeSubtracaoDesabilitado: {
     width: 20,
@@ -339,6 +338,7 @@ const styles = StyleSheet.create({
     color: colors.neutralDarker,
   },
   informacoesPacoteDescricao: {
+    width: '100%',
     paddingTop: 12,
     flexDirection: 'row',
   },
@@ -351,6 +351,7 @@ const styles = StyleSheet.create({
     marginBottom: -22,
   },
   informacoesPacoteTexto: {
+    marginRight: 32,
     fontSize: 12,
     color: colors.neutralDark,
   }
