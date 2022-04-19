@@ -1,5 +1,5 @@
-import React from 'react';
-import { StatusBar, View, Image, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import React,{useState} from 'react';
+import { StatusBar, View, Image, Text, TouchableOpacity, StyleSheet,Alert } from 'react-native';
 import ScreenView from '../components/ScreenView';
 import Header from '..//components/Header';
 
@@ -14,13 +14,32 @@ import { colors } from '../styles/colors';
 import ButtonLarge from '../components/ButtonLarge';
 import { useNavigation } from '@react-navigation/native';
 
+import { loginUser } from '../services/requisicoes/loginAuth';
+
 
 export default function Login() {
+
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
 
 	const navigation = useNavigation();
 
 	function handleGoRegister() {
         navigation.navigate("Register");
+    }
+
+	async function handleLoginUser() {
+        const resultado = await loginUser(
+            email,
+            password,
+        )
+        if (resultado === true) {
+            Alert.alert('Login realizar com sucesso')
+            navigation.navigate('HomeScreen')
+        }
+        else {
+            Alert.alert('Erro ao fazer login')
+        }
     }
 
 	return (
@@ -34,15 +53,15 @@ export default function Login() {
 				<Image style={styles.imageLogo} source={Logo} />
 			</View>
 			<View style={styles.viewInputEmail}>
-				<InputArea titulo='E-mail' corBorda={colors.neutralDark} placeholder='exemplo@email.com' />
+				<InputArea titulo='E-mail' corBorda={colors.neutralDark} placeholder='exemplo@email.com' onChangeText={setEmail} />
 			</View>
-			<InputArea titulo='Senha' corBorda={colors.neutralDark} placeholder='******' />
+			<InputArea titulo='Senha' corBorda={colors.neutralDark} placeholder='******' onChangeText={setPassword}/>
 			<View style={styles.viewForgotPassword}>
 				<TouchableOpacity>
 					<Text style={styles.textForgotPassword}>Esqueci minha senha</Text>
 				</TouchableOpacity>
 			</View>
-			<ButtonLarge titulo='Entrar na minha conta' backColor={colors.primaryDefault} />
+			<ButtonLarge titulo='Entrar na minha conta' backColor={colors.primaryDefault} onPress={handleLoginUser} />
 			<View style={styles.viewCreateAccount}>
 				<View style={styles.viewTextCreateAccount}>
 					<Text style={styles.textCreateAccount}>Não possui uma conta ainda?  </Text>
