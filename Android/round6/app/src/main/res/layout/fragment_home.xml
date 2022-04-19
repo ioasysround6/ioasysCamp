@@ -45,6 +45,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,54 +55,77 @@
             android:layout_width="match_parent"
             android:layout_height="0dp">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ivUnsplash"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/app_margin"
-                android:scaleType="centerCrop"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardImageSlider"
+                android:layout_width="296dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="22dp"
+                app:cardCornerRadius="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/unsplash" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvTitleHomeFragment"
-                style="@style/TitleStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="129dp"
-                android:gravity="center_horizontal|top"
-                android:text="@string/community_tourism"
-                android:textColor="@color/light"
-                app:layout_constraintEnd_toEndOf="@id/ivUnsplash"
-                app:layout_constraintStart_toStartOf="@id/ivUnsplash"
-                app:layout_constraintTop_toTopOf="@id/ivUnsplash" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvSubTitleHomeFragment"
-                style="@style/SubTitleHomeFragment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal|top"
-                android:text="@string/activity_help_eradicate_poverty"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvTitleHomeFragment" />
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/imageSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/smallButtonHome"
-                style="@style/SmallButtonHome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/small_button"
-                android:text="@string/how_its_possible"
-                android:textAllCaps="false"
-                app:layout_constraintBottom_toBottomOf="@+id/ivUnsplash"
-                app:layout_constraintEnd_toEndOf="@id/ivUnsplash"
-                app:layout_constraintStart_toStartOf="@id/ivUnsplash"
-                app:layout_constraintTop_toBottomOf="@id/tvSubTitleHomeFragment" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/sliderIndicatorDots"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/homeTitle"
+                        style="@style/TitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="97dp"
+                        android:text="@string/community_tourism"
+                        android:textColor="@color/light"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/homeSubtitle"
+                        android:layout_width="179dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="@string/activity_help_eradicate_poverty"
+                        android:textAlignment="center"
+                        android:textColor="@color/lighter"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/homeTitle" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/howButton"
+                        style="@style/SmallButtonHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/button_hover_primary"
+                        android:paddingHorizontal="32dp"
+                        android:text="@string/how_its_possible"
+                        android:textAllCaps="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/homeSubtitle" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTitleTourPackage"
@@ -109,9 +133,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/app_margin"
+                android:layout_marginTop="40dp"
                 android:text="@string/tour_package"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ivUnsplash" />
+                app:layout_constraintTop_toBottomOf="@id/cardImageSlider" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvPackage"
@@ -134,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/app_margin"
                 android:layout_marginTop="40dp"
-                android:text="Comunidades parceiras"
+                android:text="@string/partner_communities"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rvPackage" />
 

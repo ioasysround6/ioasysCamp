@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_packagesDetailsFragment"
             app:destination="@id/packagesDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </fragment>
 
     <fragment
@@ -37,4 +40,9 @@
         android:name="br.com.ioasys.round6.presentation.ui.packages.PackagesDetailsFragment"
         android:label="fragment_packages_details"
         tools:layout="@layout/fragment_packages_details" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="br.com.ioasys.round6.presentation.ui.about.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>
