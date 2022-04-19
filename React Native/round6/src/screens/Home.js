@@ -14,6 +14,7 @@ import BackImage from '../../src/assets/backgroundImage.png'
 import Header from '../components/Header';
 import { colors } from '../styles/colors';
 import CardPackages from '../components/CardPackages';
+import ModalCommunities from '../components/ModalCommunities';
 
 
 export function Home() {
@@ -21,6 +22,12 @@ export function Home() {
   const navigation = useNavigation();
   const [tours, setTours] = useState([]);
   const [communities, setCommunities] = useState([]);
+
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const [comunidadeSelected, setComunidadeSelected] = useState();
+
+  const [titulo, setTitulo] = useState('');
 
   async function busca() {
     const resultado = await buscaTours()
@@ -39,7 +46,6 @@ export function Home() {
   }
     , [])
 
-
   async function buscaComunidades() {
     const resultado = await buscaCommunities()
     console.log(`AQUI AS COMUNIDADES${resultado}`)
@@ -55,50 +61,70 @@ export function Home() {
     buscaComunidades();
   }, [])
 
+  function handleClickCommunities(item) {
+    setModalVisible(true);
+    setComunidadeSelected(item);
+  }
 
+  function handleExitCommunities() {
+    setModalVisible(false);
+  }
 
   return (
-    <ScrollView>
-      <ScreenView>
-        <StatusBar backgroundColor="#FFF" barStyle='dark-content' />
-        <Header isInside={true} icon={PersonIcon} />
-        <View style={styles.AreaBanner}>
-          <Banner image={BackImage} title="Turismo comunitário" />
-        </View>
-        <Text style={styles.titleAreaPackages}>Pacotes de turismo</Text>
-        <View style={{ flexDirection: 'row' }}>
-          <FlatList
-            horizontal={true}
-            data={tours}
-            showsHorizontalScrollIndicator={false}
-            renderItem={({ item }) => (
-              <View style={{ flexDirection: 'row' }}>
-                <CardPackages title={item.communityName} subtitle="Moita Redonda" altura={200} imgBack={item.photo1} />
-              </View>
+    <>
+      <ScrollView>
+        <ScreenView>
+          <StatusBar backgroundColor="#FFF" barStyle='dark-content' />
+          <Header isInside={true} icon={PersonIcon} />
+          <View style={styles.AreaBanner}>
+            <Banner image={BackImage} title="Turismo comunitário" />
+          </View>
+          <Text style={styles.titleAreaPackages}>Pacotes de turismo</Text>
+          <View style={{ flexDirection: 'row' }}>
+            <FlatList
+              horizontal={true}
+              data={tours}
+              showsHorizontalScrollIndicator={false}
+              renderItem={({ item }) => (
+                <View style={{ flexDirection: 'row' }}>
+                  <CardPackages title={item.communityName} subtitle="Moita Redonda" altura={200} imgBack={item.photo1} />
+                </View>
 
-            )}
-            keyExtractor={item => item.communityName}
+              )}
+              keyExtractor={item => item.id}
 
-          />
-        </View>
-        <Text style={[styles.titleAreaPackages, { marginTop: 40, marginBottom: 20 }]}>Comunidades parceiras</Text>
-        <View style={{ flexDirection: 'row', marginBottom: 20 }}>
-          <FlatList
-            horizontal={true}
-            data={communities}
-            showsHorizontalScrollIndicator={false}
-            renderItem={({ item }) => (
-              <View style={{ flexDirection: 'row' }}>
-                <CardPackages title={item.communityName} altura={180} imgBack={item.photo} />
-              </View>
+            />
+          </View>
+          <Text style={[styles.titleAreaPackages, { marginTop: 40, marginBottom: 20 }]}>Comunidades parceiras</Text>
+          <View style={{ flexDirection: 'row', marginBottom: 20 }}>
+            <FlatList
+              horizontal={true}
+              data={communities}
+              showsHorizontalScrollIndicator={false}
+              renderItem={({ item }) => (
+                <View style={{ flexDirection: 'row' }}>
+                  <CardPackages title={item.communityName} altura={180} imgBack={item.photo1} onPress={() => handleClickCommunities(item)} />
+                </View>
 
-            )}
-            keyExtractor={item => item.communityName}
+              )}
+              keyExtractor={item => item.id}
 
-          />
-        </View>
-      </ScreenView>
-    </ScrollView>
+            />
+          </View>
+        </ScreenView>
+      </ScrollView>
+      <ModalCommunities
+        visible={modalVisible}
+        // visibleAction={setModalVisible}
+        exitModal={handleExitCommunities}
+        titulo={comunidadeSelected?.communityName}
+        subtitle={comunidadeSelected?.description}
+        imageCommunities={comunidadeSelected?.photo2}
+        textLocation={comunidadeSelected?.localization}
+        textActivities={comunidadeSelected?.mainActivities}
+        textCuriosities={comunidadeSelected?.curiosities}
+      />
+   </> 
   );
 }
 

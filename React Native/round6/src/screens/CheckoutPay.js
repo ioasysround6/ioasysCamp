@@ -4,7 +4,12 @@ import { useNavigation } from '@react-navigation/core';
 import { Shadow } from 'react-native-shadow-2';
 import DropDownPicker from 'react-native-dropdown-picker';
 
-import { KeyboardAvoidingView, Dimensions, StyleSheet, View, Text, TextInput} from 'react-native';
+import { KeyboardAvoidingView, Dimensions, StyleSheet, View, Text, TextInput, Modal, TouchableOpacity} from 'react-native';
+
+import CloseIcon from '../assets/SVG/CloseIcon';
+import CampingIcon from '../assets/SVG/CampingIcon';
+import CardIcon from '../assets/SVG/CardIcon';
+import WhatsappIcon from '../assets/SVG/WhatsappIcon';
 
 import { ScrollView } from 'react-native-gesture-handler';
 import { Radio } from '../components/Radio';
@@ -13,6 +18,9 @@ import ButtonLarge from '../components/ButtonLarge';
 var width = Dimensions.get('window').width;
 
 export function CheckoutPay(){
+  const [modalResumeVisible, setModalResumeVisible] = useState(false);
+  const [modalSuccessVisible, setModalSuccessVisible] = useState(false);
+
   const [isFocused, setIsFocused] = useState(false);
   const [selected, setSelected] = useState(false);
 
@@ -46,8 +54,14 @@ export function CheckoutPay(){
     })
   }
 
-	function handlePayScreen(){
-		navigation.navigate("2. Pagamento")
+  function handleCompraEfetuada(){
+    setModalSuccessVisible(!modalSuccessVisible);
+		navigation.navigate("Home");
+	}
+
+  function handleModalResume() {
+    setModalResumeVisible(!modalResumeVisible);
+    setModalSuccessVisible(true);
   }
 
   return(
@@ -177,9 +191,148 @@ export function CheckoutPay(){
           backColor={
             colors.secondaryDefault 
           }
-          onPress={handlePayScreen}
+          onPress={() => setModalResumeVisible(true)}
         />
-      </View>   
+      </View>
+
+      <View>
+        <Modal
+          statusBarTranslucent
+          animationType="fade"
+          transparent={true}
+          visible={modalResumeVisible}
+          onRequestClose={() => {
+            setModalResumeVisible(!modalResumeVisible);
+          }}
+        >
+          <View style={styles.centeredViewResume}>
+            <View style={styles.modalViewResume}>
+              <View style={styles.headerResume}>
+                <TouchableOpacity
+                  activeOpacity={0.4}
+                  style={styles.botaoFechar}
+                  onPress={() => setModalResumeVisible(!modalResumeVisible)}>
+                  <CloseIcon width={30} height={30}/>
+                </TouchableOpacity>
+                <View style={{marginTop: -12, alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+                  <Text style={styles.modalTextResume}>Resumo da Compra</Text>
+                </View>
+              </View>
+
+              <View style={{width: '100%', paddingHorizontal: 32}}>
+                <View style={styles.DadosPacote}>
+                  <CampingIcon width={16} height={16}/>
+                  <Text style={styles.textoHeaderDadosPacote}>
+                    Pacote Mãos na Argila!
+                  </Text>
+                </View>
+
+                <View style={styles.descricaoDados}>
+                  <View style={{width: 1, marginTop: 5,marginBottom: -9, backgroundColor: colors.neutralMediumLight}}></View>
+                  <Text style={styles.descricaoDadosTexto}>Pacote de turismo para a comunidade Mato Serrado na cidade de Crato no Ceará na data de 21/06 a 23/06</Text>
+                </View>
+
+                <View style={styles.DadosPacote}>
+                  <CardIcon width={16} height={16}/>
+                  <Text style={styles.textoHeaderDadosPacote}>
+                    Forma de pagamento
+                  </Text>
+                </View>
+
+                <View style={[styles.descricaoDados, {paddingBottom: 57}]}>
+                  <View style={{width: 1, marginTop: 5,marginBottom: -2, backgroundColor: colors.neutralMediumLight}}></View>
+                  <View style={{width: '100%',}}>
+                    <Text style={styles.descricaoDadosTexto}>Cartão de crédito com final de 4444, parcelado em 3x sem juros</Text>
+                    <View style={{paddingLeft: 22, alignItems: 'flex-start', justifyContent: 'center'}}>
+                      <TouchableOpacity
+                        activeOpacity={0.6}
+                        onPress={() => setModalResumeVisible(!modalResumeVisible)}
+                      >
+                        <Text style={styles.descricaoAlterarForma}>Alterar forma de pagamento</Text>
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+                </View>
+
+                <View style={{width: '100%', height: 1, backgroundColor: colors.neutralMediumLight}}></View>
+
+                <View style={styles.totalAPagar}>
+                  <Text style={styles.totalAPagarTitulo}>Total a pagar</Text>
+                  <View style={{alignItems: 'flex-end'}}>
+                    <Text style={styles.totalAPagarTitulo}>R$ 600,00</Text>
+                    <Text style={styles.totalAPagarParcela}>3x sem juros</Text>
+                  </View>
+                </View>
+              </View>
+
+              <View style={{width: '100%', paddingHorizontal: 32, marginBottom: 32}}>
+                <ButtonLarge
+                  underlayColor={colors.secondaryDark}
+                  titulo='Confirmar compra'
+                  backColor={
+                    colors.secondaryDefault 
+                  }
+                  onPress={handleModalResume}
+                />
+              </View>
+
+            </View>
+          </View>
+          
+        </Modal>
+      </View>
+
+      <View>
+        <Modal
+          statusBarTranslucent
+          animationType="fade"
+          transparent={true}
+          visible={modalSuccessVisible}
+          onRequestClose={() => {
+            setModalSuccessVisible(!modalSuccessVisible);
+          }}
+        >
+          <View style={styles.centeredViewSuccess}>
+            <View style={styles.modalViewSuccess}>
+
+              <View style={styles.headerResume}>
+                <TouchableOpacity
+                  activeOpacity={0.4}
+                  style={styles.botaoFechar}
+                  onPress={handleCompraEfetuada}>
+                  <CloseIcon width={30} height={30}/>
+                </TouchableOpacity>
+                <View style={{marginTop: 32, alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+                  <Text style={styles.modalTextResume}>Sua compra foi efetuada {'\n'} com sucesso!</Text>
+                </View>
+              </View>
+
+              <View style={styles.modalDeCompraEfetuada}>
+                <Text style={styles.modalDeCompraTexto}>
+                  Fique de olho no seu e-mail, vamos enviar as {'\n'}informações sobre sua viagem por lá! {'\n'}
+                  Qualquer dúvida fique a vontade para {'\n'}
+                  chamar a gente pelo Whats App:
+                </Text>
+              </View>
+
+              <View style={{width: '100%', paddingHorizontal: 22, marginBottom: 52, alignItems: 'flex-start', justifyContent: 'center'}}>
+                <View style={{ zIndex: 2, position: 'absolute', marginLeft: 44 }}>
+                  <WhatsappIcon width={18} height={18}/>
+                </View>
+                <ButtonLarge
+                  underlayColor={colors.primaryDark}
+                  titulo='Redirecionar para WhatsApp'
+                  backColor={
+                    colors.primaryDefault
+                  }
+                  onPress={handleCompraEfetuada}
+                />
+              </View>
+            </View>
+          </View>
+        </Modal>
+      </View>
+
     </View>
 
     <View style={styles.stackTotalPagar}>
@@ -251,7 +404,6 @@ const styles = StyleSheet.create({
     height: 51,
     width: '100%',
     color: colors.neutralDark,
-
     borderColor: colors.neutralMediumDark,
     fontSize: 14,
   },
@@ -275,6 +427,125 @@ const styles = StyleSheet.create({
     paddingTop: 8,
     paddingHorizontal: 32,
     backgroundColor: colors.neutralLighter,
+  },
+  centeredViewResume: {
+    flex: 1,
+    justifyContent: "flex-start",
+    alignItems: "center",
+    backgroundColor: '#rgba(209, 210, 209, 0.75)',
+    paddingHorizontal: 32,
+  },
+  modalViewResume: {
+    backgroundColor: colors.neutralLighter,
+    width: '100%',
+    marginTop: 120,
+    borderRadius: 20,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5
+  },
+  headerResume: {
+    marginTop: 8,
+    width: '100%',
+    alignItems: 'flex-end',
+    marginBottom: 27,
+  },
+  botaoFechar: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+  },
+  textStyleResume: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+  modalTextResume: {
+    textAlign: "center",
+    fontSize: 20,
+    color: colors.neutralDarker,
+  },
+  DadosPacote: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    paddingBottom: 12,
+    paddingTop: 25,
+  },
+  textoHeaderDadosPacote: {
+    paddingLeft: 14,
+    fontSize: 14,
+    color: colors.neutralDarker,
+  },
+  descricaoDados: {
+    flexDirection: 'row',
+    marginLeft: 8
+  },
+  descricaoDadosTexto: {
+    marginLeft: 23,
+    textAlign: 'left',
+    color: colors.neutralDark,
+  },
+  descricaoAlterarForma: {
+    marginTop: 16,
+    fontSize: 12,
+    color: colors.primaryDefault,
+  },
+  totalAPagar: {
+    paddingTop: 16, 
+    paddingBottom: 32,
+    flexDirection: 'row', 
+    alignItems: 'flex-start', 
+    justifyContent: 'space-between',
+  },
+  totalAPagarTitulo: {
+    fontSize: 18,
+    color: '#000000'
+  },
+  totalAPagarParcela: {
+    fontSize: 12,
+    color: colors.neutralDark
+  },
+  centeredViewSuccess: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: '#rgba(209, 210, 209, 0.75)',
+    paddingHorizontal: 32,
+  },
+  modalViewSuccess: {
+    backgroundColor: colors.neutralLighter,
+    width: '100%',
+    borderRadius: 20,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5
+  },
+  modalDeCompraEfetuada: {
+    width: '100%',
+    paddingHorizontal: 25,
+    marginTop: -15,
+    marginBottom: 60,
+  },
+  modalDeCompraTexto: {
+    fontSize: 12,
+    textAlign: 'center',
+    color: colors.neutralDark
   },
   stackTotalPagar: {
     width: width,
