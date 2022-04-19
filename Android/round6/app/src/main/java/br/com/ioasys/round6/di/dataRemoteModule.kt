@@ -1,6 +1,8 @@
 package br.com.ioasys.round6.di
 
+import br.com.ioasys.round6.data.data_source.remote.CommunityRemoteDataSource
 import br.com.ioasys.round6.data.data_source.remote.LoginRemoteDataSource
+import br.com.ioasys.round6.data.data_source.remote.TourRemoteDataSource
 import br.com.ioasys.round6.data_remote.data_source.CommunityRemoteDataSourceImpl
 import br.com.ioasys.round6.data_remote.data_source.LoginRemoteDataSourceImpl
 import br.com.ioasys.round6.data_remote.data_source.RegisterRemoteDataSourceImpl
@@ -10,9 +12,7 @@ import br.com.ioasys.round6.data_remote.service.CommunityService
 import br.com.ioasys.round6.data_remote.service.TourService
 import br.com.ioasys.round6.data_remote.utils.ApiConstants
 import br.com.ioasys.round6.data_remote.utils.WebServiceFactory
-import br.com.ioasys.round6.domain.repositories.CommunityRepository
 import br.com.ioasys.round6.domain.repositories.RegisterRepository
-import br.com.ioasys.round6.domain.repositories.TourRepository
 import org.koin.dsl.module
 
 val dataRemoteModule = module {
@@ -39,11 +39,11 @@ val dataRemoteModule = module {
 
     single { WebServiceFactory.providerOkHttpClient() }
 
-    single<CommunityRepository> {
+    single<CommunityRemoteDataSource> {
         CommunityRemoteDataSourceImpl(get())
     }
 
-    single<TourRepository> {
+    single<TourRemoteDataSource> {
         TourRemoteDataSourceImpl(get())
     }
 

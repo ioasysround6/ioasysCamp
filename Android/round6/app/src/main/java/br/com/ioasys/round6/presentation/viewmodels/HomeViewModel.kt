@@ -6,14 +6,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import br.com.ioasys.round6.domain.model.Community
 import br.com.ioasys.round6.domain.model.Tour
-import br.com.ioasys.round6.domain.repositories.CommunityRepository
-import br.com.ioasys.round6.domain.repositories.TourRepository
+import br.com.ioasys.round6.domain.usecase.GetCommunitiesUseCase
+import br.com.ioasys.round6.domain.usecase.GetToursUseCase
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class HomeViewModel(
-    private val tourRepository: TourRepository,
-    private val communityRepository: CommunityRepository
+    private val getToursUseCase: GetToursUseCase,
+    private val getCommunitiesUseCase: GetCommunitiesUseCase
 ) : ViewModel() {
 
     private val _listTour = MutableLiveData<List<Tour>>()
@@ -31,16 +31,16 @@ class HomeViewModel(
 
     private fun fetchCommunities() {
         viewModelScope.launch {
-            communityRepository.getCommunities().collect {
-                _listCommunity.value = it
+            getCommunitiesUseCase.run().collect {
+                _listCommunity.postValue(it)
             }
         }
     }
 
     private fun fetchTours() {
         viewModelScope.launch {
-            tourRepository.getTours().collect {
-                _listTour.value = it
+            getToursUseCase.run().collect {
+                _listTour.postValue(it)
             }
         }
     }
