@@ -75,10 +75,12 @@ export function Home() {
     }
 
   return (
-    <>
+    <View style={{backgroundColor: colors.neutralLighter}}>
       <ScrollView>
         <ScreenView>
-          <StatusBar backgroundColor="#FFF" barStyle='dark-content' />
+          <StatusBar 
+            backgroundColor={colors.neutralLighter} 
+            barStyle='dark-content'/>
           <Header isInside={true} icon={PersonIcon} />
           <View style={styles.AreaBanner}>
             <Banner image={BackImage} title="Turismo comunitário" />
@@ -128,7 +130,7 @@ export function Home() {
         textActivities={comunidadeSelected?.mainActivities}
         textCuriosities={comunidadeSelected?.curiosities}
       />
-   </> 
+   </View> 
   );
 }
 
