@@ -3,7 +3,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { colors } from '../styles/colors';
 import { useNavigation } from '@react-navigation/core';
 import { StatusBar, StyleSheet, View, Text,TouchableHighlight, Dimensions} from 'react-native';
-import ArrowBackButton from '../assets/ArrowBackButton';
+import ArrowBackButton from '../assets/SVG/ArrowBackButton';
 import Background from '../assets/SVG/Background';
 
 import { CheckoutData } from '../screens/CheckoutData';

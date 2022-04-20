@@ -8,14 +8,14 @@ import { Communities } from '../screens/Communities';
 import { Diary } from '../screens/Diary';
 import { MyTravels } from '../screens/MyTravels';
 
-import HomeActiveIcon from '../assets/HomeActiveIcon.svg';
-import HomeInactiveIcon from '../assets/HomeInactiveIcon.svg';
-import CommunitiesActiveIcon from '../assets/CommunitiesActiveIcon.svg';
-import CommunitiesInactiveIcon from '../assets/CommunitiesInactiveIcon.svg';
-import DiaryActiveIcon from '../assets/DiaryActiveIcon.svg';
-import DiaryInactiveIcon from '../assets/DiaryInactiveIcon.svg';
-import MyTravelsActiveIcon from '../assets/MyTravelsActiveIcon.svg';
-import MyTravelsInactiveIcon from '../assets/MyTravelsInactiveIcon.svg';
+import HomeActiveIcon from '../assets/SVG/HomeActiveIcon.svg';
+import HomeInactiveIcon from '../assets/SVG/HomeInactiveIcon.svg';
+import CommunitiesActiveIcon from '../assets/SVG/CommunitiesActiveIcon.svg';
+import CommunitiesInactiveIcon from '../assets/SVG/CommunitiesInactiveIcon.svg';
+import DiaryActiveIcon from '../assets/SVG/DiaryActiveIcon.svg';
+import DiaryInactiveIcon from '../assets/SVG/DiaryInactiveIcon.svg';
+import MyTravelsActiveIcon from '../assets/SVG/MyTravelsActiveIcon.svg';
+import MyTravelsInactiveIcon from '../assets/SVG/MyTravelsInactiveIcon.svg';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 

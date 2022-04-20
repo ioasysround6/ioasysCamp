@@ -1,9 +1,13 @@
 import React from 'react';
-import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, Image, TouchableOpacity, Dimensions } from 'react-native';
 
 import { useNavigation, useRoute } from '@react-navigation/core';
-import HomeActiveIcon from '../assets/HomeActiveIcon.svg';
+import HomeActiveIcon from '../assets/SVG/HomeActiveIcon.svg';
 import { colors } from '../styles/colors';
+
+import LogoHome from '../assets/SVG/LogoHome.svg';
+
+var width = Dimensions.get('window').width;
 
 export default function Header({ TextButtonHeaderRight, icon, isInside, colorText }) {
     const navigation = useNavigation();
@@ -20,8 +24,10 @@ export default function Header({ TextButtonHeaderRight, icon, isInside, colorTex
         <View style={styles.viewHeader}>
             {isInside === true ? (
                 <>
-                    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                        <Text style={styles.textButtonHeader}>LOGOAQUI</Text>
+                    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+                        <View style={{marginLeft: 32}}>
+                            <LogoHome width={112} height={60.61} />
+                        </View>
                     </View>
                     <TouchableOpacity>
                         <Image source={icon} />

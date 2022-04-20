@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/core';
 import { Shadow } from 'react-native-shadow-2';
 import DropDownPicker from 'react-native-dropdown-picker';
 
-import { KeyboardAvoidingView, Dimensions, StyleSheet, View, Text, TextInput, Modal, TouchableOpacity} from 'react-native';
+import { KeyboardAvoidingView, Dimensions, StyleSheet, View, Text, TextInput, Modal, TouchableOpacity, Linking } from 'react-native';
 
 import CloseIcon from '../assets/SVG/CloseIcon';
 import CampingIcon from '../assets/SVG/CampingIcon';
@@ -62,6 +62,10 @@ export function CheckoutPay(){
   function handleModalResume() {
     setModalResumeVisible(!modalResumeVisible);
     setModalSuccessVisible(true);
+  }
+
+  function handleGoWhatsapp(){
+    Linking.openURL(`https://api.whatsapp.com/send?phone=556140040001&text=Ol%C3%A1%20Gostaria%20de%20saber%20mais!`);
   }
 
   return(
@@ -325,7 +329,7 @@ export function CheckoutPay(){
                   backColor={
                     colors.primaryDefault
                   }
-                  onPress={handleCompraEfetuada}
+                  onPress={handleGoWhatsapp}
                 />
               </View>
             </View>
