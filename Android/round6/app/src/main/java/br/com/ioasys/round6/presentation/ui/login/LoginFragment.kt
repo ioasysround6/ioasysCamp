@@ -1,11 +1,14 @@
 package br.com.ioasys.round6.presentation.ui.login
 
+import android.content.Context
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -41,6 +44,8 @@ class LoginFragment : Fragment() {
 
     private fun setOnClickListener() {
         binding.btnSingIn.setOnClickListener {
+            hideKeyboard()
+
             binding.run {
                 loginViewModel.login(
                     inputEmail.text.toString(),
@@ -56,6 +61,17 @@ class LoginFragment : Fragment() {
                     messageError.visibility = View.GONE
                     inputPassword.setBackgroundResource(R.drawable.input_background)
                 }
+            }
+
+            val inputEmail = binding.inputEmail.text.toString()
+            val inputPassword = binding.inputPassword.text.toString()
+
+            if (inputEmail.isEmpty() || inputPassword.isEmpty()) {
+                Toast.makeText(
+                    requireContext(),
+                    "Por favor, preencha os campos",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
@@ -98,15 +114,23 @@ class LoginFragment : Fragment() {
                 }
 
                 is ViewState.Error -> {
-                    binding.progressBar.visibility = View.GONE
-                    binding.messageError.visibility = View.VISIBLE
-                    binding.inputEmail.setBackgroundResource(R.drawable.input_background_error)
-                    binding.inputPassword.setBackgroundResource(R.drawable.input_background_error)
+                    binding.apply {
+                        progressBar.visibility = View.GONE
+                        messageError.visibility = View.VISIBLE
+                        inputEmail.setBackgroundResource(R.drawable.input_background_error)
+                        inputPassword.setBackgroundResource(R.drawable.input_background_error)
+                    }
                 }
-
                 else -> Unit
             }
         }
+    }
+
+    private fun hideKeyboard() {
+        val imm: InputMethodManager =
+            requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+
+        imm.hideSoftInputFromWindow(view?.windowToken, 0)
     }
 
     override fun onDestroyView() {

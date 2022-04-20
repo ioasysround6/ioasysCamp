@@ -1,7 +1,6 @@
 package br.com.ioasys.round6.domain.usecase
 
-import br.com.ioasys.round6.domain.exception.InvalidEmailException
-import br.com.ioasys.round6.domain.exception.InvalidPasswordException
+import br.com.ioasys.round6.domain.exception.MissingParamsException
 import br.com.ioasys.round6.domain.model.User
 import br.com.ioasys.round6.domain.repositories.LoginRepository
 import br.com.ioasys.round6.domain.utils.UseCase
@@ -14,8 +13,8 @@ class LoginUseCase(
 ) : UseCase<LoginUseCase.Params, User>(scope = scope) {
 
     override fun run(params: Params?): Flow<User> = when {
-        params?.email?.isEmpty() == true -> throw InvalidEmailException()
-        params?.password?.isEmpty() == true -> throw InvalidPasswordException()
+        params?.email?.isEmpty() == true -> throw MissingParamsException()
+        params?.password?.isEmpty() == true -> throw MissingParamsException()
         else -> try {
             loginRepository.login(
                 email = params?.email ?: "",

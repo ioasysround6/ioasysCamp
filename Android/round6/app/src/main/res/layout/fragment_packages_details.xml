@@ -56,12 +56,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:fontFamily="@font/outfit_regular"
-                android:text="@string/community_description"
                 android:textColor="@color/neutral_dark"
                 android:textSize="@dimen/body_12"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/packageTitle" />
+                app:layout_constraintTop_toBottomOf="@id/packageTitle"
+                tools:text="@string/community_description" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/packageVacancy"
@@ -69,10 +69,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/outfit_semibold"
-                android:text="@string/available_vacancies"
                 android:textColor="@color/neutral_dark"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/packageDescription" />
+                app:layout_constraintTop_toBottomOf="@id/packageDescription"
+                tools:text="7" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/outfit_semibold"
+                android:text="@string/available_vacancies"
+                android:textColor="@color/neutral_dark"
+                app:layout_constraintBottom_toBottomOf="@id/packageVacancy"
+                app:layout_constraintStart_toEndOf="@id/packageVacancy" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/peopleAmount"
@@ -111,7 +121,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/outfit_regular"
-                    android:text="0" />
+                    android:text="@string/people_amount_number" />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/plusButton"
@@ -186,9 +196,9 @@
                 android:id="@+id/activitiesIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="33dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dividerOne"
+                app:layout_constraintTop_toBottomOf="@id/tvAccommodationDesc"
                 app:srcCompat="@drawable/ic_activities" />
 
             <View
@@ -227,9 +237,9 @@
                 android:id="@+id/datesIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="33dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dividerTwo"
+                app:layout_constraintTop_toBottomOf="@id/activitiesDesc"
                 app:srcCompat="@drawable/ic_datas" />
 
             <View
@@ -268,9 +278,9 @@
                 android:id="@+id/mapIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="33dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dividerThree"
+                app:layout_constraintTop_toBottomOf="@id/datesDesc"
                 app:srcCompat="@drawable/ic_map" />
 
             <View
@@ -297,7 +307,7 @@
                 app:layout_constraintTop_toTopOf="@id/mapIcon" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/mapDesc"
+                android:id="@+id/hintDesc"
                 android:layout_width="264dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
