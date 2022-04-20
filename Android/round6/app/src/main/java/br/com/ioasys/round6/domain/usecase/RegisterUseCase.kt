@@ -4,6 +4,9 @@ import br.com.ioasys.round6.domain.exception.*
 import br.com.ioasys.round6.domain.model.NewUser
 import br.com.ioasys.round6.domain.repositories.RegisterRepository
 import br.com.ioasys.round6.domain.utils.UseCase
+import br.com.ioasys.round6.domain.utils.extensions.isNotBirthDate
+import br.com.ioasys.round6.domain.utils.extensions.isNotEmail
+import br.com.ioasys.round6.domain.utils.extensions.isNotPassword
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 
@@ -13,11 +16,17 @@ class RegisterUseCase(
 ) : UseCase<RegisterUseCase.Params, NewUser>(scope = scope) {
 
     override fun run(params: Params?): Flow<NewUser> = when {
-        params?.firstName?.isEmpty() == true -> throw InvalidNameException()
-        params?.lastName?.isEmpty() == true -> throw InvalidLastNameException()
-        params?.birthDate?.isEmpty() == true -> throw InvalidBirthException()
-        params?.email?.isEmpty() == true -> throw InvalidEmailException()
-        params?.password?.isEmpty() == true -> throw InvalidPasswordException()
+        params?.firstName?.isBlank() == true -> throw InvalidNameException()
+        params?.lastName?.isBlank() == true -> throw InvalidLastNameException()
+
+        params?.birthDate?.isBlank() == true -> throw EmptyBirthDateException()
+        params?.birthDate?.isNotBirthDate() == true -> throw InvalidBirthDateException()
+
+        params?.email?.isBlank() == true -> throw EmptyEmailException()
+        params?.email?.isNotEmail() == true -> throw InvalidEmailFormatException()
+
+        params?.password?.isBlank() == true -> throw EmptyPasswordException()
+        params?.password?.isNotPassword() == true -> throw InvalidPasswordFormatException()
         else -> registerRepository.register(
             firstName = params?.firstName ?: "",
             lastName = params?.lastName ?: "",
