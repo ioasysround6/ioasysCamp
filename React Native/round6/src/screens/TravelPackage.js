@@ -264,7 +264,6 @@ const styles = StyleSheet.create({
   informacaoTexto: {
     color: colors.neutralDark,
     fontSize: 12,
-    textAlign: 'justify'
   },
   vagas: {
     paddingTop: 12,
