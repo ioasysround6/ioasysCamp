@@ -146,5 +146,9 @@
     <string name="date_joao">15/10/2021</string>
 
 
+    <!-- Communities Fragment -->
+    <string name="discover_communities">Conheça as comunidades</string>
+    <string name="partner_community">Selecione abaixo uma comunidade parceira</string>
+
 
 </resources>
