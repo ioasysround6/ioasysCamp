@@ -9,7 +9,7 @@ import LogoHome from '../assets/SVG/LogoHome.svg';
 
 var width = Dimensions.get('window').width;
 
-export default function Header({ TextButtonHeaderRight, icon, isInside, colorText }) {
+export default function Header({ TextButtonHeaderRight, icon, isInside, colorText, onPress }) {
     const navigation = useNavigation();
 
     function handleMoveOn() {
@@ -29,7 +29,7 @@ export default function Header({ TextButtonHeaderRight, icon, isInside, colorTex
                             <LogoHome width={112} height={60.61} />
                         </View>
                     </View>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={onPress}>
                         <Image source={icon} />
                     </TouchableOpacity>
                 </>

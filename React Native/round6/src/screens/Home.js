@@ -75,6 +75,10 @@ export function Home() {
       navigation.navigate("TravelPackageScreen", { item });
     }
 
+  function handleGoAccount(){
+    navigation.navigate("MyAccount")
+  }
+
   return (
     <View style={{backgroundColor: colors.neutralLighter}}>
       <ScrollView>
@@ -82,7 +86,7 @@ export function Home() {
           <StatusBar 
             backgroundColor={colors.neutralLighter} 
             barStyle='dark-content'/>
-          <Header isInside={true} icon={PersonIcon} />
+          <Header isInside={true} icon={PersonIcon} onPress={handleGoAccount} />
 
             <View style={{position: 'absolute', opacity: 0.05}}>
               <View style={{zIndex: 5,marginLeft: -200, marginTop: 17, transform: [{rotate: "90deg"}] }}>
