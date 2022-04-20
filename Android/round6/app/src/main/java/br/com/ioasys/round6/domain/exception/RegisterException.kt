@@ -4,4 +4,12 @@ open class RegisterException : Exception()
 
 class InvalidNameException: RegisterException()
 class InvalidLastNameException: RegisterException()
-class InvalidBirthException: RegisterException()
+
+class EmptyBirthDateException: RegisterException()
+class InvalidBirthDateException: RegisterException()
+
+class EmptyEmailException: RegisterException()
+class InvalidEmailFormatException: RegisterException()
+
+class EmptyPasswordException: RegisterException()
+class InvalidPasswordFormatException: RegisterException()

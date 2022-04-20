@@ -22,7 +22,7 @@
     <string name="name_hint">Maria Fernanda</string>
     <string name="last_name">Sobrenome</string>
     <string name="birth">Data de Nascimento</string>
-    <string name="birth_hint">01/01/1999</string>
+    <string name="birth_hint">1999–01–01</string>
     <string name="lastName_hint">Sales Souza</string>
     <string name="terms_of_use">Termos de uso</string>
     <string name="confirm_registration">Confirmar cadastro</string>
@@ -34,7 +34,7 @@
     <string name="button_whatsapp_message">Redirecionar para WhatsApp</string>
     <!-- Checkout Fragment -->
     <string name="checkout">Checkout</string>
-    <string name="cpf_hint">000.000.000-00</string>
+    <string name="cpf_hint">000.000.000–00</string>
     <string name="payment_form">Forma de pagamento</string>
     <string name="card_number_hint">0000 0000 0000 0000</string>
     <string name="card_code_hint">000</string>
