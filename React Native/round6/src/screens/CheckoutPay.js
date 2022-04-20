@@ -434,7 +434,7 @@ const styles = StyleSheet.create({
   },
   centeredViewResume: {
     flex: 1,
-    justifyContent: "flex-start",
+    justifyContent: "center",
     alignItems: "center",
     backgroundColor: '#rgba(209, 210, 209, 0.75)',
     paddingHorizontal: 32,
@@ -442,7 +442,7 @@ const styles = StyleSheet.create({
   modalViewResume: {
     backgroundColor: colors.neutralLighter,
     width: '100%',
-    marginTop: 120,
+    // marginTop: 120,
     borderRadius: 20,
     alignItems: "center",
     shadowColor: "#000",
