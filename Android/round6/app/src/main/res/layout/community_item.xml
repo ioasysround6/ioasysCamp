@@ -6,8 +6,6 @@
     android:layout_height="200dp"
     android:layout_marginEnd="16dp"
     android:backgroundTint="@color/primary_default"
-    android:clickable="true"
-    android:elevation="5dp"
     android:focusable="true"
     android:longClickable="false"
     app:cardCornerRadius="20dp">
