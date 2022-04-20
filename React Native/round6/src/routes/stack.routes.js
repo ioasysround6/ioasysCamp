@@ -8,6 +8,7 @@ import Login from '../screens/Login';
 import Register from '../screens/Register';
 import { TravelPackage } from '../screens/TravelPackage';
 import CommunityTourism from '../screens/CommunityTourism';
+import MyAccount from '../screens/MyAccount';
 
 const Stack = createStackNavigator();
 
@@ -46,6 +47,11 @@ export function StackRoutes() {
       <Stack.Screen
         name="CheckoutPay"
         component={TopTabRoutes}
+      />
+
+      <Stack.Screen
+        name="MyAccount"
+        component={MyAccount}
       />
     </Stack.Navigator>
   );
