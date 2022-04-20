@@ -64,35 +64,33 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/packageTitle"
-                android:layout_width="wrap_content"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:fontFamily="@font/outfit_semibold"
-                android:text="@string/community_name"
                 android:textColor="@color/neutral_darker"
                 android:textSize="@dimen/headline_24"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Mãos na argila!" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/packagePrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/outfit_semibold"
-                android:text="@string/payment_amount"
                 android:textColor="@color/neutral_darker"
                 android:textSize="@dimen/headline_24"
-                app:layout_constraintBottom_toBottomOf="@id/packageTitle"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/packageTitle"
+                tools:text="@string/payment_amount" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/packageDescription"
+                style="@style/BodyTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:fontFamily="@font/outfit_regular"
-                android:textColor="@color/neutral_dark"
-                android:textSize="@dimen/body_12"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/packageTitle"
@@ -220,6 +218,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvAccommodationDesc"
+                style="@style/BodyTextStyle"
                 android:layout_width="264dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -261,6 +260,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/activitiesDesc"
+                style="@style/BodyTextStyle"
                 android:layout_width="264dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -302,6 +302,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/datesDesc"
+                style="@style/BodyTextStyle"
                 android:layout_width="264dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -343,6 +344,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/hintDesc"
+                style="@style/BodyTextStyle"
                 android:layout_width="264dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"

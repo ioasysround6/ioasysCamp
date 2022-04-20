@@ -97,7 +97,7 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tourismDescOne"
-                    style="@style/ParagraphStyle"
+                    style="@style/BodyTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -127,7 +127,7 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tourismDescTwo"
-                    style="@style/ParagraphStyle"
+                    style="@style/BodyTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -176,7 +176,7 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tourismDescFour"
-                    style="@style/ParagraphStyle"
+                    style="@style/BodyTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -186,7 +186,7 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tourismDescFive"
-                    style="@style/ParagraphStyle"
+                    style="@style/BodyTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
@@ -196,7 +196,7 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tourismDescSix"
-                    style="@style/ParagraphStyle"
+                    style="@style/BodyTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
