@@ -39,6 +39,13 @@
     <style name="TitleStyle">
         <item name="android:textSize">@dimen/headline_24</item>
         <item name="fontFamily">@font/outfit_semibold</item>
+        <item name="android:textColor">@color/lighter</item>
+    </style>
+
+    <style name="SubTitleCommunitiesStyle">
+        <item name="android:textSize">@dimen/headline_12</item>
+        <item name="fontFamily">@font/outfit_regular</item>
+        <item name="android:textColor">@color/lighter</item>
     </style>
 
     <style name="ParagraphStyle">
