@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Button, ImageBackground, StyleSheet, StatusBar, ScrollView, FlatList } from 'react-native';
+import { View, Text, Button, ImageBackground, StyleSheet, StatusBar, ScrollView, FlatList, Dimensions } from 'react-native';
 
 import api from '../services/api';
 import { buscaTours } from '../services/requisicoes/tours';
@@ -16,6 +16,9 @@ import { colors } from '../styles/colors';
 import CardPackages from '../components/CardPackages';
 import ModalCommunities from '../components/ModalCommunities';
 
+import LateralHome from '../assets/SVG/LateralHome.svg';
+
+var width = Dimensions.get('window').width;
 
 export function Home() {
 
@@ -82,6 +85,23 @@ export function Home() {
             backgroundColor={colors.neutralLighter} 
             barStyle='dark-content'/>
           <Header isInside={true} icon={PersonIcon} />
+          <View style={{position: 'absolute', 
+          opacity: 0.05
+          }}>
+            <View style={{zIndex: 5,marginLeft: -200, marginTop: 17, transform: [{rotate: "90deg"}] }}>
+              <LateralHome  width={350} height={40}/>
+            </View>
+            <View style={{zIndex: 4, marginLeft: -205, marginTop: 229, transform: [{rotate: "90deg"}] }}>
+              <LateralHome  width={350} height={40}/>
+            </View>
+            <View style={{zIndex: 3,marginLeft: -210, marginTop: 229,  transform: [{rotate: "90deg"}] }}>
+              <LateralHome  width={350} height={40}/>
+            </View>
+            <View style={{zIndex: 2,marginLeft: -215, marginTop: 229,  transform: [{rotate: "90deg"}] }}>
+              <LateralHome  width={350} height={40}/>
+            </View>
+          </View>
+          
           <View style={styles.AreaBanner}>
             <Banner image={BackImage} title="Turismo comunitário" />
           </View>
