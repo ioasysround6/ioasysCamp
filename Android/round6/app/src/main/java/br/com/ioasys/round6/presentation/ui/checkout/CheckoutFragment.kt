@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import br.com.ioasys.round6.databinding.FragmentCheckoutBinding
 import br.com.ioasys.round6.presentation.adapters.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
@@ -23,6 +24,15 @@ class CheckoutFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setUpTabLayout()
+        setClickListener()
+    }
+
+    private fun setClickListener() {
+        binding.apply {
+            backButton.setOnClickListener {
+                findNavController().navigateUp()
+            }
+        }
     }
 
     private fun setUpTabLayout() {
