@@ -22,7 +22,7 @@
     <string name="name_hint">Maria Fernanda</string>
     <string name="last_name">Sobrenome</string>
     <string name="birth">Data de Nascimento</string>
-    <string name="birth_hint">01/01/1999</string>
+    <string name="birth_hint">1999–01–01</string>
     <string name="lastName_hint">Sales Souza</string>
     <string name="terms_of_use">Termos de uso</string>
     <string name="confirm_registration">Confirmar cadastro</string>
@@ -34,7 +34,7 @@
     <string name="button_whatsapp_message">Redirecionar para WhatsApp</string>
     <!-- Checkout Fragment -->
     <string name="checkout">Checkout</string>
-    <string name="cpf_hint">000.000.000-00</string>
+    <string name="cpf_hint">000.000.000–00</string>
     <string name="payment_form">Forma de pagamento</string>
     <string name="card_number_hint">0000 0000 0000 0000</string>
     <string name="card_code_hint">000</string>
@@ -72,7 +72,7 @@
     <!-- Home Fragment -->
     <string name="tour_package">Pacotes de turismo</string>
     <string name="partner_communities">Comunidades Parceiras</string>
-    <string name="how_its_possible">Saiba como é possível</string>
+    <string name="how_its_possible">Saber como</string>
     <string name="activity_help_eradicate_poverty">essa atividade pode ajudar a\n erradicar a pobreza</string>
     <string name="community_tourism">Turismo comunitário</string>
     <!-- About Fragment -->
@@ -145,6 +145,10 @@
     <string name="description_joao">Foi a primeira vez que fiz uma viagem com o conceito\nde base comunitária.Fui com um grupo de amigos para\na comunidade do Mato Serrado no Ceará e foi muito\nboa a experiência, muito melhor do que eu imaginava.\nAcho que fazer viagem de turismo tradicional até vai\nficar sem graça daqui pra frente! Kkkkkkk</string>
     <string name="date_joao">15/10/2021</string>
 
+
+    <!-- Communities Fragment -->
+    <string name="discover_communities">Conheça as comunidades</string>
+    <string name="partner_community">Selecione abaixo uma comunidade parceira</string>
 
 
 </resources>

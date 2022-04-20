@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import br.com.ioasys.round6.databinding.FragmentCommunitiesBinding
 
@@ -13,6 +14,23 @@ class CommunitiesFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setOnClickListener()
+    }
+
+    private fun setOnClickListener() {
+        binding.saveCommunities01.setOnClickListener {
+            Toast.makeText(context, "Teste 01", Toast.LENGTH_LONG).show()
+        }
+        binding.saveCommunities02.setOnClickListener {
+            Toast.makeText(context, "Teste 02", Toast.LENGTH_LONG).show()
+        }
+        binding.saveCommunities03.setOnClickListener {
+            Toast.makeText(context, "Teste 03", Toast.LENGTH_LONG).show()
+        }
     }
 
     override fun onCreateView(

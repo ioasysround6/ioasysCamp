@@ -147,7 +147,7 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/tourismImageTwo"
                     android:layout_width="match_parent"
-                    android:layout_height="430dp"
+                    android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
                     android:src="@drawable/tourismimagetwo"

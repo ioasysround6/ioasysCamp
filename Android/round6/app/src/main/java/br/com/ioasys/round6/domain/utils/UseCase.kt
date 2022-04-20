@@ -13,9 +13,9 @@ abstract class UseCase<in Params, out T>(
     abstract fun run(params: Params? = null): Flow<T>
 
     operator fun invoke(
-        params: Params,
+        params: Params? = null,
         onSuccess: (T) -> Unit = {},
-        onError: (Throwable) -> Unit = {}
+        onError: ((Throwable) -> Unit) = {}
     ) {
         scope.launch(Dispatchers.IO) {
             try {
