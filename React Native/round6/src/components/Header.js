@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Text, Image, TouchableOpacity, Dimensions } from 'react-native';
 
 import { useNavigation, useRoute } from '@react-navigation/core';
-import HomeActiveIcon from '../assets/HomeActiveIcon.svg';
+import HomeActiveIcon from '../assets/SVG/HomeActiveIcon.svg';
 import { colors } from '../styles/colors';
 
 import LogoHome from '../assets/SVG/LogoHome.svg';

@@ -8,11 +8,11 @@ import { RectButton, ScrollView } from 'react-native-gesture-handler';
 import ButtonLarge from '../components/ButtonLarge';
 import { ImageSlider } from '../components/ImageSlider';
 
-import ArrowBackButton from '../assets/ArrowBackButton.svg';
-import CampingIcon from '../assets/CampingIcon.svg';
-import MountainIcon from '../assets/MountainIcon.svg';
-import CalendarIcon from '../assets/CalendarIcon.svg';
-import MapIcon from '../assets/MapIcon.svg';
+import ArrowBackButton from '../assets/SVG/ArrowBackButton.svg';
+import CampingIcon from '../assets/SVG/CampingIcon.svg';
+import MountainIcon from '../assets/SVG/MountainIcon.svg';
+import CalendarIcon from '../assets/SVG/CalendarIcon.svg';
+import MapIcon from '../assets/SVG/MapIcon.svg';
 
 import { StatusBar, StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
