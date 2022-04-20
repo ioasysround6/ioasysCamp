@@ -149,6 +149,7 @@
     <!-- Communities Fragment -->
     <string name="discover_communities">Conheça as comunidades</string>
     <string name="partner_community">Selecione abaixo uma comunidade parceira</string>
+    <string name="people_amount_number">0</string>
 
 
 </resources>

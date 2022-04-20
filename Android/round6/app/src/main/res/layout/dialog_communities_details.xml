@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginHorizontal="@dimen/app_margin">
 
     <com.google.android.material.card.MaterialCardView
@@ -41,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/outfit_semibold"
-                android:text="@string/community_name"
+                tools:text="@string/community_name"
                 android:textColor="@color/neutral_darker"
                 android:textSize="@dimen/headline_20"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -53,11 +54,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/outfit_regular"
                 android:paddingHorizontal="@dimen/app_margin"
-                android:text="@string/community_description"
+                tools:text="@string/community_description"
                 android:textAlignment="center"
-                android:textColor="@color/neutral_dark"
+                style="@style/BodyTextStyle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/communityName" />
@@ -112,10 +112,8 @@
                         android:layout_width="201dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:fontFamily="@font/outfit_regular"
-                        android:text="@string/location_description"
-                        android:textColor="@color/neutral_dark"
-                        android:textSize="@dimen/body_12"
+                        style="@style/BodyTextStyle"
+                        tools:text="@string/location_description"
                         app:layout_constraintStart_toStartOf="@id/locationTitle"
                         app:layout_constraintTop_toBottomOf="@id/locationTitle" />
 
@@ -146,9 +144,8 @@
                         android:layout_width="201dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:fontFamily="@font/outfit_regular"
-                        android:text="@string/main_activities_description"
-                        android:textSize="@dimen/body_12"
+                        style="@style/BodyTextStyle"
+                        tools:text="@string/main_activities_description"
                         app:layout_constraintStart_toStartOf="@id/mainActivitiesTitle"
                         app:layout_constraintTop_toBottomOf="@id/mainActivitiesTitle" />
 
@@ -180,9 +177,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="32dp"
-                        android:fontFamily="@font/outfit_regular"
-                        android:text="@string/curiosities_description"
-                        android:textSize="@dimen/body_12"
+                        style="@style/BodyTextStyle"
+                        tools:text="@string/curiosities_description"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/curiositiesTitle"
                         app:layout_constraintTop_toBottomOf="@id/curiositiesTitle" />

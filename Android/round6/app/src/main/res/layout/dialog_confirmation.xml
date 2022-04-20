@@ -53,11 +53,9 @@
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:fontFamily="@font/outfit_regular"
+                style="@style/BodyTextStyle"
                 android:text="@string/confirmation_message"
                 android:textAlignment="center"
-                android:textColor="@color/neutral_dark"
-                android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/bookingConfirmationTitle" />

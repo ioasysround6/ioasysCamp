@@ -82,6 +82,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/packageDesc"
+                style="@style/BodyTextStyle"
                 android:layout_width="264dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -124,6 +125,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/paymentDesc"
+                style="@style/BodyTextStyle"
                 android:layout_width="264dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
