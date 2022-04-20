@@ -17,12 +17,11 @@ abstract class UseCase<in Params, out T>(
         onSuccess: (T) -> Unit = {},
         onError: ((Throwable) -> Unit) = {}
     ) {
-
         scope.launch(Dispatchers.IO) {
             try {
                 run(params = params).collect {
                     withContext(Dispatchers.Main) {
-                        onSuccess.invoke(it)
+                        onSuccess(it)
                     }
                 }
             } catch (e: Exception) {

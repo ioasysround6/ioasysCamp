@@ -6,7 +6,7 @@
         <item name="android:paddingTop">17dp</item>
         <item name="android:textSize">@dimen/body_14</item>
         <item name="fontFamily">@font/outfit_regular</item>
-        <item name="singleLine">true</item>
+        <item name="maxLines">1</item>
     </style>
 
     <style name="InputLabel">
