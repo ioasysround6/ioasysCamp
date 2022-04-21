@@ -24,6 +24,8 @@ class PackagesDetailsFragment : Fragment() {
 
     private val args: PackagesDetailsFragmentArgs by navArgs()
     private lateinit var tour: Tour
+    private var mImageList: List<String> = listOf("", "", "")
+
     private var _binding: FragmentPackagesDetailsBinding? = null
     private val binding: FragmentPackagesDetailsBinding get() = _binding!!
 
@@ -32,13 +34,6 @@ class PackagesDetailsFragment : Fragment() {
     private lateinit var viewPager: ViewPager2
     private lateinit var sliderViewViewPagerAdapter: SliderViewPagerAdapter
 
-    private val mImageList = listOf(
-        "https://i.imgur.com/EKE6lmt.png",
-        "https://i.imgur.com/0WbJLsJ.jpg",
-        "https://i.imgur.com/VzfYJsl.png"
-    )
-
-    private var dots: Array<TextView?> = arrayOfNulls<TextView>(mImageList.size)
 
     private var onImageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
@@ -62,6 +57,8 @@ class PackagesDetailsFragment : Fragment() {
         setClickListener()
         setupView()
     }
+
+    private var dots: Array<TextView?> = arrayOfNulls(mImageList.size)
 
     private fun setClickListener() {
         binding.apply {
@@ -94,6 +91,8 @@ class PackagesDetailsFragment : Fragment() {
     }
 
     private fun setViewPagerSlider() {
+        mImageList = listOf(tour.photo1, tour.photo2, tour.photo3)
+
         viewPager = binding.imageSlider
         sliderViewViewPagerAdapter = SliderViewPagerAdapter(mImageList)
 
