@@ -67,6 +67,7 @@ export default function TopTabRoutes() {
             tabBarLabelStyle: {
               width: '100%', 
               fontSize: 14,
+              fontWeight: '600',
               textTransform: 'capitalize',
               paddingTop: 25,
             },
@@ -115,5 +116,6 @@ const styles = StyleSheet.create({
   headerText: {
     color: colors.neutralLighter,
     fontSize: 24,
+    fontWeight: '600'
   },
 })
