@@ -87,6 +87,11 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_bg_slider"/>
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/homeTitle"
                         style="@style/TitleStyle"

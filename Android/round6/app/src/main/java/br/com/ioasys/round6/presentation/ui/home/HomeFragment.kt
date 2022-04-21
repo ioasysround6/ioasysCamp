@@ -68,9 +68,16 @@ class HomeFragment : Fragment(), TourClickListener {
     }
 
     private fun setOnClickListener() {
-        binding.howButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_aboutFragment)
+        binding.apply {
+            howButton.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_aboutFragment)
+            }
+
+            ivProfile.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_accountFragment)
+            }
         }
+
     }
 
     private fun setCommunityData() {
