@@ -1,8 +1,10 @@
 import api from "../api";
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 export async function loginUser(email, password) {
     try{
-    await api.post('/auth/login',{
+  const resultado = await api.post('/auth/login',{
         email:email,
         password:password,
             },{
@@ -10,6 +12,8 @@ export async function loginUser(email, password) {
                     "Content-Type": "application/json",
                 }
             });
+          AsyncStorage.setItem("TOKEN", resultado.data.token)    
+          console.log(`Dados usuário${JSON.stringify(resultado)}`);
           return true
         }
         catch (error) {

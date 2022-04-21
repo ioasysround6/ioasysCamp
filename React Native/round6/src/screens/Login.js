@@ -1,7 +1,9 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import { StatusBar, View, Image, Text, TouchableOpacity, StyleSheet,Alert } from 'react-native';
 import ScreenView from '../components/ScreenView';
 import Header from '..//components/Header';
+
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // import HomeActiveIcon from '../../src/assets/HomeActiveIcon';
 import BackButton from '../../src/assets/back.png';
@@ -41,6 +43,18 @@ export default function Login() {
             Alert.alert('Erro ao fazer login')
         }
     }
+
+	useEffect(()=>{
+		AsyncStorage.getItem("TOKEN").then((token)=>{
+			console.log(token)
+			{token ? (
+				navigation.navigate('HomeScreen')
+			):
+			(	
+				navigation.navigate('LoginScreen')
+			)}
+		})
+	},[])
 
 	return (
 		<ScreenView>
