@@ -3,7 +3,7 @@ import React,{useState} from "react";
 import { TextInput, StyleSheet, Text } from 'react-native';
 import { colors } from '../styles/colors';
 
-const InputArea = ({ titulo, corBorda, placeholder, onChangeText }) => {
+const InputArea = ({ titulo, corBorda, placeholder, onChangeText,secutiryText }) => {
 
     const [borderColor, setBorderColor] = useState('#131313')
     const [borderWidth, setBorderWidth] = useState(1)
@@ -28,6 +28,7 @@ const InputArea = ({ titulo, corBorda, placeholder, onChangeText }) => {
                 onChangeText={onChangeText} 
                 onFocus={selectInput}
                 onBlur={unselectInput}
+                secureTextEntry={secutiryText}
             />
         </>
     );

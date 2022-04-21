@@ -48,7 +48,7 @@ export default function Login() {
 			navigation.navigate('HomeScreen')
 		}
 		else {
-			Alert.alert('Erro ao fazer login')
+			Alert.alert('Usuário ou senha incorretos')
 		}
 	}
 
@@ -102,7 +102,7 @@ export default function Login() {
 					<View style={styles.viewInputEmail}>
 						<InputArea titulo='E-mail' corBorda={colors.neutralDark} placeholder='exemplo@email.com' onChangeText={setEmail} />
 					</View>
-					<InputArea titulo='Senha' corBorda={colors.neutralDark} placeholder='******' onChangeText={setPassword}/>
+					<InputArea titulo='Senha' corBorda={colors.neutralDark} placeholder='******' onChangeText={setPassword} secutiryText={true}/>
 					<View style={styles.viewForgotPassword}>
 						<TouchableOpacity>
 							<Text style={styles.textForgotPassword}>Esqueci minha senha</Text>
