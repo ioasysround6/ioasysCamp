@@ -15,7 +15,10 @@ fun Tour.toDao(): TourDataLocal = TourDataLocal(
     vacancies = this.vacancies,
     photo1 = this.photo1,
     photo2 = this.photo2,
-    photo3 = this.photo3
+    photo3 = this.photo3,
+    tourName = this.tourName,
+    createdAt = this.createdAt,
+    updatedAt = this.updatedAt
 )
 
 fun TourDataLocal.toDomain(): Tour = Tour(

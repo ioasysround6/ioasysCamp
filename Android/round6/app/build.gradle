@@ -80,6 +80,8 @@ dependencies {
     //TabLayout
     implementation "com.google.android.material:material:1.6.0-beta01"
 
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+
     //Tests
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.mockito.kotlin:mockito-kotlin:4.0.0'

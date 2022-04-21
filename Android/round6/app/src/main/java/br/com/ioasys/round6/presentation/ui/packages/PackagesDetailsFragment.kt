@@ -14,6 +14,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.FragmentPackagesDetailsBinding
+import br.com.ioasys.round6.domain.model.Tour
 import br.com.ioasys.round6.presentation.adapters.SliderViewPagerAdapter
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -23,6 +24,7 @@ class PackagesDetailsFragment : Fragment() {
     private val binding: FragmentPackagesDetailsBinding get() = _binding!!
 
     private var num = 0
+    private var tour: Tour? = null
 
     private lateinit var viewPager: ViewPager2
     private lateinit var sliderViewViewPagerAdapter: SliderViewPagerAdapter
@@ -54,6 +56,7 @@ class PackagesDetailsFragment : Fragment() {
         counterButton()
         setViewPagerSlider()
         setClickListener()
+        setupView()
     }
 
     private fun setClickListener() {
@@ -130,6 +133,19 @@ class PackagesDetailsFragment : Fragment() {
                     R.color.white
                 )
             )
+        }
+    }
+
+    private fun setupView() {
+        binding.apply {
+            packageTitle.text = tour?.tourName
+            packagePrice.text = tour?.price
+            packageDescription.text = tour?.description
+            packageVacancy.text = tour?.vacancies.toString()
+            tvAccommodationDesc.text = tour?.accommodation
+            activitiesDesc.text = tour?.activities
+            datesDesc.text = tour?.travelDate
+            hintDesc.text = tour?.hint
         }
     }
 

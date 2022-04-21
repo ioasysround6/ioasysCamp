@@ -15,7 +15,7 @@ val dataModule = module {
     }
 
     single<TourRepository> {
-        TourRepositoryImpl(get())
+        TourRepositoryImpl(get(), get())
     }
 
     single<LoginRepository> {

@@ -15,6 +15,8 @@ class LoginRemoteDataSourceImpl(
 
     override fun login(email: String, password: String): Flow<User> = flow {
         val networkWrapper = NetworkWrapper()
-        emit(networkWrapper { authService.singIn(LoginRequest(email, password)).toDomain() })
+        emit(networkWrapper {
+            authService.singIn(LoginRequest(email, password)).toDomain(token = "")
+        })
     }
 }

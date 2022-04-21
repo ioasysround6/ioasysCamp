@@ -1,9 +1,6 @@
 package br.com.ioasys.round6.di
 
-import br.com.ioasys.round6.domain.usecase.GetCommunitiesUseCase
-import br.com.ioasys.round6.domain.usecase.GetToursUseCase
-import br.com.ioasys.round6.domain.usecase.LoginUseCase
-import br.com.ioasys.round6.domain.usecase.RegisterUseCase
+import br.com.ioasys.round6.domain.usecase.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import org.koin.dsl.module
@@ -16,4 +13,5 @@ val domainModule = module {
     factory { RegisterUseCase(get(), get()) }
     factory { GetToursUseCase(get(), get()) }
     factory { GetCommunitiesUseCase(get(), get()) }
+    factory { SaveTourListUseCase(get(), get()) }
 }
