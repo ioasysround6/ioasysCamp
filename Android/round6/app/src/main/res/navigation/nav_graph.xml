@@ -40,6 +40,9 @@
         android:name="br.com.ioasys.round6.presentation.ui.packages.PackagesDetailsFragment"
         android:label="fragment_packages_details"
         tools:layout="@layout/fragment_packages_details" >
+        <argument
+            android:name="tour"
+            app:argType="br.com.ioasys.round6.domain.model.Tour" />
         <action
             android:id="@+id/action_packagesDetailsFragment_to_homeFragment"
             app:destination="@id/homeFragment" />

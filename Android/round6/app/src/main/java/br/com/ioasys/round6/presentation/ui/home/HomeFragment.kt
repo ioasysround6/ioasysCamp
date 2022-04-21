@@ -143,7 +143,8 @@ class HomeFragment : Fragment(), TourClickListener {
     }
 
     override fun onTourClickListener(tour: Tour) {
-        findNavController().navigate(R.id.action_homeFragment_to_packagesDetailsFragment)
+        val action = HomeFragmentDirections.actionHomeFragmentToPackagesDetailsFragment(tour)
+        findNavController().navigate(action)
     }
 
     override fun onDestroyView() {
