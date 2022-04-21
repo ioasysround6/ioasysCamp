@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_aboutFragment"
             app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
     </fragment>
 
     <fragment
@@ -28,7 +31,11 @@
         android:id="@+id/communitiesFragment"
         android:name="br.com.ioasys.round6.presentation.ui.communities.CommunitiesFragment"
         android:label="fragment_communities"
-        tools:layout="@layout/fragment_communities" />
+        tools:layout="@layout/fragment_communities" >
+        <action
+            android:id="@+id/action_communitiesFragment_to_communitiesDetailsDialog"
+            app:destination="@id/communitiesDetailsDialog" />
+    </fragment>
 
     <fragment
         android:id="@+id/tripsFragment"
@@ -60,4 +67,13 @@
         android:name="br.com.ioasys.round6.presentation.ui.checkout.CheckoutFragment"
         android:label="fragment_checkout"
         tools:layout="@layout/fragment_checkout" />
+    <dialog
+        android:id="@+id/communitiesDetailsDialog"
+        android:name="br.com.ioasys.round6.presentation.components.CommunitiesDetailsDialog"
+        android:label="CommunitiesDetailsDialog" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="br.com.ioasys.round6.presentation.ui.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
 </navigation>

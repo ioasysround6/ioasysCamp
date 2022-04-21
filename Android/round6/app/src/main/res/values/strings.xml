@@ -24,7 +24,6 @@
     <string name="birth">Data de Nascimento</string>
     <string name="birth_hint">1999–01–01</string>
     <string name="lastName_hint">Sales Souza</string>
-    <string name="terms_of_use">Termos de uso</string>
     <string name="confirm_registration">Confirmar cadastro</string>
     <string name="register_message">Está com dificuldades para realizar o cadastro?</string>
     <string name="contact">Entre em contato</string>
@@ -150,6 +149,13 @@
     <string name="discover_communities">Conheça as comunidades</string>
     <string name="partner_community">Selecione abaixo uma comunidade parceira</string>
     <string name="people_amount_number">0</string>
+    <string name="terms_of_use">Termos de uso</string>
+    <string name="service_by_whatsApp">Atendimento por WhatsApp</string>
+    <string name="about_cobe">Sobre a Cobé</string>
+    <string name="personal_information">Informações pessoais</string>
+    <string name="payment_information">Informações de pagamento</string>
+    <string name="my_account">Minha conta</string>
+    <string name="log_out_of_my_account">Sair da minha conta</string>
 
 
 </resources>
