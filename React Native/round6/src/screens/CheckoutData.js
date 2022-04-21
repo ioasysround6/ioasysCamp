@@ -233,6 +233,7 @@ const styles = StyleSheet.create({
   textoHeaderViajante: {
     color: colors.neutralDarker,
     fontSize: 18,
+    fontWeight: '600'
   },
   viajanteDados: {
     width: '100%',
@@ -241,6 +242,7 @@ const styles = StyleSheet.create({
   dadosCabecalho: {
     color: colors.neutralDarker,
     fontSize: 12,
+    fontWeight: '400'
   },
   dadosInput: {
     borderRadius: 10,
@@ -253,6 +255,8 @@ const styles = StyleSheet.create({
 
     borderColor: colors.neutralMediumDark,
     fontSize: 14,
+    fontWeight: '400'
+
   },
   separacaoViajante: {
     marginTop: 48,

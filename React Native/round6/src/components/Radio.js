@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 14,
+    fontWeight: '400',
     marginLeft: -16,
     color: colors.neutralDarker
   }

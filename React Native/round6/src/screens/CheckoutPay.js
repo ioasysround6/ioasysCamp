@@ -306,16 +306,14 @@ export function CheckoutPay(){
                   onPress={handleCompraEfetuada}>
                   <CloseIcon width={30} height={30}/>
                 </TouchableOpacity>
-                <View style={{marginTop: 32, alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+                <View style={{marginTop: 22, alignItems: 'center', justifyContent: 'center', width: '100%'}}>
                   <Text style={styles.modalTextResume}>Sua compra foi efetuada {'\n'} com sucesso!</Text>
                 </View>
               </View>
 
               <View style={styles.modalDeCompraEfetuada}>
                 <Text style={styles.modalDeCompraTexto}>
-                  Fique de olho no seu e-mail, vamos enviar as {'\n'}informações sobre sua viagem por lá! {'\n'}
-                  Qualquer dúvida fique a vontade para {'\n'}
-                  chamar a gente pelo Whats App:
+                  Fique de olho no seu e-mail, vamos enviar as informações sobre sua viagem por lá! Qualquer dúvida fique a vontade para chamar a gente pelo Whats App:
                 </Text>
               </View>
 
@@ -399,6 +397,7 @@ const styles = StyleSheet.create({
   dadosCabecalho: {
     color: colors.neutralDarker,
     fontSize: 12,
+    fontWeight: '400'
   },
   dropdownButton: {
     borderRadius: 10,
@@ -434,7 +433,7 @@ const styles = StyleSheet.create({
   },
   centeredViewResume: {
     flex: 1,
-    justifyContent: "flex-start",
+    justifyContent: "center",
     alignItems: "center",
     backgroundColor: '#rgba(209, 210, 209, 0.75)',
     paddingHorizontal: 32,
@@ -442,7 +441,7 @@ const styles = StyleSheet.create({
   modalViewResume: {
     backgroundColor: colors.neutralLighter,
     width: '100%',
-    marginTop: 120,
+    // marginTop: 120,
     borderRadius: 20,
     alignItems: "center",
     shadowColor: "#000",
@@ -476,6 +475,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 20,
     color: colors.neutralDarker,
+    fontWeight: '600'
   },
   DadosPacote: {
     width: '100%',
@@ -488,6 +488,7 @@ const styles = StyleSheet.create({
   textoHeaderDadosPacote: {
     paddingLeft: 14,
     fontSize: 14,
+    fontWeight: '600',
     color: colors.neutralDarker,
   },
   descricaoDados: {
@@ -498,11 +499,14 @@ const styles = StyleSheet.create({
     marginLeft: 23,
     textAlign: 'left',
     color: colors.neutralDark,
+    fontSize: 14,
+    fontWeight: '400'
   },
   descricaoAlterarForma: {
     marginTop: 16,
     fontSize: 12,
     color: colors.primaryDefault,
+    fontWeight: '600'
   },
   totalAPagar: {
     paddingTop: 16, 
@@ -513,7 +517,8 @@ const styles = StyleSheet.create({
   },
   totalAPagarTitulo: {
     fontSize: 18,
-    color: '#000000'
+    color: '#000000',
+    fontWeight: '600',
   },
   totalAPagarParcela: {
     fontSize: 12,
@@ -544,12 +549,13 @@ const styles = StyleSheet.create({
     width: '100%',
     paddingHorizontal: 25,
     marginTop: -15,
-    marginBottom: 60,
+    marginBottom: 30,
   },
   modalDeCompraTexto: {
-    fontSize: 12,
+    fontSize: 14,
     textAlign: 'center',
-    color: colors.neutralDark
+    color: colors.neutralDark,
+    fontWeight: '400'
   },
   stackTotalPagar: {
     width: width,
@@ -574,6 +580,7 @@ const styles = StyleSheet.create({
   textTotalPagar: {
     fontSize: 20,
     color: colors.neutralDarker,
+    fontWeight: '600'
   },
   boxPreco: {
     flex: 1,
@@ -585,6 +592,7 @@ const styles = StyleSheet.create({
   },
   precoParcelamento: {
     fontSize: 12,
+    fontWeight: '400',
     color: colors.neutralDark,
   }
 })
