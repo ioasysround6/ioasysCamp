@@ -71,6 +71,10 @@ export default function TabRoutes(){
           tabBarIcon: (({ focused }) =>
             focused ?
             <>
+              <FocusAwareStatusBar
+                barStyle="light-content"
+                backgroundColor={'transparent'}
+              />
               <View style={styles.icone}>
                 <View style={styles.posicaoCirculoComunidades}/>
               </View>
