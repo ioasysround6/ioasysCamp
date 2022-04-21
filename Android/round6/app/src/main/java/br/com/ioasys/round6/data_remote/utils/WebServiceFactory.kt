@@ -1,8 +1,10 @@
 package br.com.ioasys.round6.data_remote.utils
 
+import br.com.ioasys.round6.data_remote.utils.interceptor.AuthInterceptor
 import okhttp3.Dispatcher
 import okhttp3.OkHttpClient
 import okhttp3.ResponseBody
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -23,16 +25,20 @@ object WebServiceFactory {
             .build().create()
     }
 
-    fun providerOkHttpClient(): OkHttpClient =
-        OkHttpClient.Builder()
+    fun providerOkHttpClient(): OkHttpClient {
+        val interceptor = HttpLoggingInterceptor()
+        interceptor.level = HttpLoggingInterceptor.Level.BODY
+        return OkHttpClient.Builder().addInterceptor(AuthInterceptor())
             .dispatcher(Dispatcher().apply {
                 maxRequests = 1
                 maxRequestsPerHost = 1
             })
+            .addInterceptor(interceptor)
             .connectTimeout(30L, TimeUnit.SECONDS)
             .readTimeout(30L, TimeUnit.SECONDS)
             .writeTimeout(30L, TimeUnit.SECONDS)
             .build()
+    }
 
     object UnitConverterFactory : Converter.Factory() {
         override fun responseBodyConverter(

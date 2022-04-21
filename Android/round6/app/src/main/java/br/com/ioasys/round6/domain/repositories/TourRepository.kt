@@ -6,4 +6,5 @@ import kotlinx.coroutines.flow.Flow
 interface TourRepository {
 
     fun getTours(): Flow<List<Tour>>
+    fun saveTours(tourList: List<Tour>)
 }
