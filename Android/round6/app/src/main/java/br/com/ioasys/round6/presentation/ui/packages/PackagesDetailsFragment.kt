@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.viewpager2.widget.ViewPager2
 import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.FragmentPackagesDetailsBinding
@@ -20,11 +21,13 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class PackagesDetailsFragment : Fragment() {
+
+    private val args: PackagesDetailsFragmentArgs by navArgs()
+    private lateinit var tour: Tour
     private var _binding: FragmentPackagesDetailsBinding? = null
     private val binding: FragmentPackagesDetailsBinding get() = _binding!!
 
     private var num = 0
-    private var tour: Tour? = null
 
     private lateinit var viewPager: ViewPager2
     private lateinit var sliderViewViewPagerAdapter: SliderViewPagerAdapter
@@ -53,6 +56,7 @@ class PackagesDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        tour = args.tour
         counterButton()
         setViewPagerSlider()
         setClickListener()
@@ -138,14 +142,14 @@ class PackagesDetailsFragment : Fragment() {
 
     private fun setupView() {
         binding.apply {
-            packageTitle.text = tour?.tourName
-            packagePrice.text = tour?.price
-            packageDescription.text = tour?.description
-            packageVacancy.text = tour?.vacancies.toString()
-            tvAccommodationDesc.text = tour?.accommodation
-            activitiesDesc.text = tour?.activities
-            datesDesc.text = tour?.travelDate
-            hintDesc.text = tour?.hint
+            packageTitle.text = tour.tourName
+            packagePrice.text = tour.price
+            packageDescription.text = tour.description
+            packageVacancy.text = tour.vacancies.toString()
+            tvAccommodationDesc.text = tour.accommodation
+            activitiesDesc.text = tour.activities
+            datesDesc.text = tour.travelDate
+            hintDesc.text = tour.hint
         }
     }
 

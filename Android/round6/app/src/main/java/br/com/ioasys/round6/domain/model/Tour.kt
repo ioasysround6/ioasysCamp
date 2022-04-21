@@ -1,5 +1,9 @@
 package br.com.ioasys.round6.domain.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Tour(
     val id: String,
     val tourName: String,
@@ -16,4 +20,4 @@ data class Tour(
     val photo3: String,
     val createdAt: String,
     val updatedAt: String,
-)
+) : Parcelable

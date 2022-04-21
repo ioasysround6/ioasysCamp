@@ -91,7 +91,7 @@
     <string name="payment_form_description">Cartão de crédito com final de 4444, parcelado em 3x sem juros</string>
     <string name="change_payment_method">Alterar forma de pagamento</string>
     <string name="interest_free">3x sem juros</string>
-    <string name="available_vacancies">7 vagas disponíveis</string>
+    <string name="available_vacancies"> vagas disponíveis</string>
     <string name="people_amount">Quantidade de pessoas</string>
     <string name="accommodation">Hospedagem</string>
     <string name="activities">Atividades</string>
