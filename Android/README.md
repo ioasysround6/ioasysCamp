@@ -5,9 +5,7 @@
 <br>
 
 <p align="center">
-<!--    <img src="assets/gofinances.gif" width="400"> -->
-  
-  Colocar o gif do app
+<img src="video_apresentacao.gif" width="400"> 
  </p>
 
 ## ✨ Tecnologias
