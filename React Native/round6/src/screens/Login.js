@@ -49,7 +49,7 @@ export default function Login() {
 			password,
 		)
 		if (resultado === true) {
-			Alert.alert('Login realizar com sucesso')
+			Alert.alert('Login realizado com sucesso')
 			navigation.navigate('HomeScreen')
 		}
 		else if (email === '') {
