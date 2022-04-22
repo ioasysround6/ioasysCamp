@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.PackageItemBinding
 import br.com.ioasys.round6.domain.model.Tour
+import br.com.ioasys.round6.presentation.listeners.TourClickListener
 import coil.load
 
 class TourListAdapter(
