@@ -108,7 +108,6 @@ export function Communities(){
             transparent={true}
             visible={modalAracari}
             onRequestClose={() => {
-              Alert.alert("Modal has been closed.");
               setModalAracari(!modalAracari);
             }}
           >
@@ -203,7 +202,6 @@ export function Communities(){
             transparent={true}
             visible={modalMatoSerrado}
             onRequestClose={() => {
-              Alert.alert("Modal has been closed.");
               setModalMatoSerrado(!modalMatoSerrado);
             }}
           >
@@ -299,7 +297,6 @@ export function Communities(){
             transparent={true}
             visible={modalSerraDoParaiso}
             onRequestClose={() => {
-              Alert.alert("Modal has been closed.");
               setModalMatoSerrado(!modalSerraDoParaiso);
             }}
           >
