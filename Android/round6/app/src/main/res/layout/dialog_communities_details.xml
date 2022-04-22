@@ -77,7 +77,7 @@
                     android:layout_height="0dp">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/comunityImage"
+                        android:id="@+id/communityImage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -91,7 +91,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="34dp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/comunityImage"
+                        app:layout_constraintTop_toBottomOf="@id/communityImage"
                         app:srcCompat="@drawable/ic_location" />
 
                     <androidx.appcompat.widget.AppCompatTextView
