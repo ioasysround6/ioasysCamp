@@ -20,6 +20,7 @@ import br.com.ioasys.round6.domain.model.Tour
 import br.com.ioasys.round6.presentation.adapters.CommunityAdapter
 import br.com.ioasys.round6.presentation.adapters.SliderViewPagerAdapter
 import br.com.ioasys.round6.presentation.adapters.TourListAdapter
+import br.com.ioasys.round6.presentation.components.CommunitiesDetailsDialog
 import br.com.ioasys.round6.presentation.listeners.CommunityClickListener
 import br.com.ioasys.round6.presentation.listeners.TourClickListener
 import br.com.ioasys.round6.presentation.viewmodels.HomeViewModel
@@ -83,7 +84,7 @@ class HomeFragment : Fragment(), TourClickListener, CommunityClickListener {
     }
 
     private fun setCommunityData() {
-        communityAdapter = CommunityAdapter()
+        communityAdapter = CommunityAdapter(this)
         binding.rvCommunities.adapter = communityAdapter
         binding.rvCommunities.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
@@ -134,7 +135,7 @@ class HomeFragment : Fragment(), TourClickListener, CommunityClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 dots[i]?.text = Html.fromHtml("&#8226", Html.FROM_HTML_MODE_LEGACY)
             } else {
-                dots[i]?.text = Html.fromHtml("")
+                dots[i]?.text = Html.fromHtml("&#8226")
             }
             dots[i]?.textSize = 38f
             dots[i]?.setTextColor(ContextCompat.getColor(requireContext(), R.color.sliderDots))
@@ -157,7 +158,7 @@ class HomeFragment : Fragment(), TourClickListener, CommunityClickListener {
     }
 
     override fun onCommunityClickListener(community: Community) {
-        TODO("Not yet implemented")
+        CommunitiesDetailsDialog().show(childFragmentManager, javaClass.name)
     }
 
     override fun onDestroyView() {

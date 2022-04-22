@@ -1,13 +1,9 @@
 package br.com.ioasys.round6.presentation.ui.packages
 
-import android.os.Build
 import android.os.Bundle
-import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -21,26 +17,18 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class PackagesDetailsFragment : Fragment() {
-
-    private val args: PackagesDetailsFragmentArgs by navArgs()
-    private lateinit var tour: Tour
-    private var mImageList: List<String> = listOf("", "", "")
-
     private var _binding: FragmentPackagesDetailsBinding? = null
     private val binding: FragmentPackagesDetailsBinding get() = _binding!!
 
+    private val args: PackagesDetailsFragmentArgs by navArgs()
+
+    private lateinit var tour: Tour
     private var num = 0
 
     private lateinit var viewPager: ViewPager2
     private lateinit var sliderViewViewPagerAdapter: SliderViewPagerAdapter
 
-
-    private var onImageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
-        override fun onPageSelected(position: Int) {
-            super.onPageSelected(position)
-            addDots(position)
-        }
-    }
+    private var mImageList = listOf("", "", "")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -57,8 +45,6 @@ class PackagesDetailsFragment : Fragment() {
         setClickListener()
         setupView()
     }
-
-    private var dots: Array<TextView?> = arrayOfNulls(mImageList.size)
 
     private fun setClickListener() {
         binding.apply {
@@ -98,13 +84,12 @@ class PackagesDetailsFragment : Fragment() {
 
         viewPager.apply {
             adapter = sliderViewViewPagerAdapter
-            registerOnPageChangeCallback(onImageChangeCallback)
         }
 
         lifecycleScope.launch {
             while (true) {
                 for (i in 0..mImageList.size) {
-                    delay(11000)
+                    delay(1000)
                     if (i == 0) {
                         viewPager.setCurrentItem(i, false)
                     } else {
@@ -112,30 +97,6 @@ class PackagesDetailsFragment : Fragment() {
                     }
                 }
             }
-        }
-    }
-
-    private fun addDots(currentPage: Int) {
-        binding.sliderIndicatorDots.removeAllViews()
-        for (i in mImageList.indices) {
-            dots[i] = TextView(requireContext())
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                dots[i]?.text = Html.fromHtml("&#8226", Html.FROM_HTML_MODE_LEGACY)
-            } else {
-                dots[i]?.text = Html.fromHtml("&#8226")
-            }
-            dots[i]?.textSize = 38f
-            dots[i]?.setTextColor(ContextCompat.getColor(requireContext(), R.color.sliderDots))
-            binding.sliderIndicatorDots.addView(dots[i])
-        }
-
-        if (dots.isNotEmpty()) {
-            dots[currentPage]?.setTextColor(
-                ContextCompat.getColor(
-                    requireContext(),
-                    R.color.white
-                )
-            )
         }
     }
 
