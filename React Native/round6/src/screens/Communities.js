@@ -13,9 +13,10 @@ import Box from '../assets/SVG/Box';
 export function Communities(){
   const [modalAracari, setModalAracari] = useState(false);
   const [modalMatoSerrado, setModalMatoSerrado] = useState(false);
+  const [modalSerraDoParaiso, setModalSerraDoParaiso] = useState(false);
 
   return (
-    <View style={{flex: 1, backgroundColor: 'purple'}}>
+    <View style={{flex: 1, backgroundColor: colors.neutralLighter}}>
 
       <View style={styles.header}>
         <View style={styles.boxTextoHeader}>
@@ -25,7 +26,7 @@ export function Communities(){
       </View>
 
       <View style={styles.boxMapa}>
-        <View style={{backgroundColor: 'purple',}}>
+        <View style={{backgroundColor: colors.neutralLighter,}}>
           <MapaComunidades />
 
           <View style={{position: 'absolute'}}>
@@ -46,6 +47,18 @@ export function Communities(){
                 activeOpacity={0.6}
                 style={styles.botaoPinEstilo}
                 onPress={() => setModalMatoSerrado(true)} 
+              >
+                <PinIcon width="36" height="36"/>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          <View style={{position: 'absolute'}}>
+            <View style={styles.posPin03}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                style={styles.botaoPinEstilo}
+                onPress={() => setModalSerraDoParaiso(true)} 
               >
                 <PinIcon width="36" height="36"/>
               </TouchableOpacity>
@@ -107,7 +120,7 @@ export function Communities(){
                       <View style={{flexDirection: 'row', paddingTop: 16}}>
                         <View style={{backgroundColor: colors.neutralMediumLight, width: 2, marginLeft: 7, marginRight: 22, height: '75%'}} />
                         <View style={{width: '100%', paddingRight: 33}}>
-                          <Text style={{fontSize: 14, fontWeight: '400', color: colors.neutralDark}}>A comunidade de Serra do Paraíso fica localizada na cidade de Jacobina no interior da Bahia a 5h de Salvador</Text>
+                          <Text style={{fontSize: 14, fontWeight: '400', color: colors.neutralDark}}>A comunidade de Araçari fica as margens do Rio Negro e faz parte do Arquipélago de Anavilhanas</Text>
                         </View>
                       </View>
                     </View>
@@ -179,7 +192,7 @@ export function Communities(){
                     </View>
 
                     <View style={{marginTop: 8, alignItems: 'center', justifyContent: 'center', width: '100%'}}>
-                      <Text style={styles.modalTextResume2}>Uma comunidade bem pequena próxima a Boa Vista no Amazonas, pouco conhecida, mas com paisagens incríveis!</Text>
+                      <Text style={styles.modalTextResume2}>Uma comunidade centenária e um local fantástico repleto de figuras icônicas no artesanato cearense</Text>
                     </View>
                   </View>
 
@@ -187,7 +200,103 @@ export function Communities(){
                     <View style={{alignItems: 'center'}}>
                       <View style={{width: 200, height: 200, borderRadius: 20,}}>
                         <Image 
-                          source={{ uri: 'https://i.imgur.com/fAhWUSa.png' }}
+                          source={{ uri: 'https://i.imgur.com/keknKg3.png' }}
+                          style={{ width: 200, height: 200, borderRadius: 20 }}
+                        />
+                      </View >
+                    </View>
+
+                    <View style={{marginHorizontal: 33, paddingTop: 32,}}>
+                      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                        <Triangle width={14.86} height={14.86}/>
+                        <Text style={{paddingLeft: 12.57, fontSize: 14, fontWeight: '600', color: colors.neutralDarker}}>Localização</Text>
+                      </View>
+
+                      <View style={{flexDirection: 'row', paddingTop: 16}}>
+                        <View style={{backgroundColor: colors.neutralMediumLight, width: 2, marginLeft: 7, marginRight: 22, height: '75%'}} />
+                        <View style={{width: '100%', paddingRight: 33}}>
+                          <Text style={{fontSize: 14, fontWeight: '400', color: colors.neutralDark}}>Mato Serrado fica localizada em Crato, a 8 horas de Fortaleza no estado do Ceará</Text>
+                        </View>
+                      </View>
+                    </View>
+
+                    <View style={{marginHorizontal: 33, paddingTop: 32,}}>
+                      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                        <Plant width={14.86} height={14.86}/>
+                        <Text style={{paddingLeft: 12.57, fontSize: 14, fontWeight: '600', color: colors.neutralDarker}}>Principais atividades</Text>
+                      </View>
+
+                      <View style={{flexDirection: 'row', paddingTop: 16}}>
+                        <View style={{backgroundColor: colors.neutralMediumLight, width: 2, marginLeft: 7, marginRight: 22, height: '75%'}} />
+                        <View style={{width: '100%', paddingRight: 33}}>
+                          <Text style={{fontSize: 14, fontWeight: '400', color: colors.neutralDark}}>Cerca de 60% dos moradores de Mato vivem exclusivamente da fabricação artesanal de peças de Argila. Você encontra desde pequenos utensílios (Vasos, panelas e filtros) até Carrancas de 2 metros de altura</Text>
+                        </View>
+                      </View>
+                    </View>
+
+                    <View style={{marginHorizontal: 33, paddingTop: 32, paddingBottom: 40}}>
+                      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                        <Box width={14.86} height={14.86}/>
+                        <Text style={{paddingLeft: 12.57, fontSize: 14, fontWeight: '600', color: colors.neutralDarker}}>Curiosidades</Text>
+                      </View>
+
+                      <View style={{flexDirection: 'row', paddingTop: 16}}>
+                        <View style={{backgroundColor: colors.neutralMediumLight, width: 2, marginLeft: 7, marginRight: 22, height: '75%'}} />
+                        <View style={{width: '100%', paddingRight: 33}}>
+                          <Text style={{fontSize: 14, fontWeight: '400', color: colors.neutralDark}}>
+                          O museu Argilas Vivas é um ponto turístico da comunidade, onde você pode conhecer projetos locais da associação de produtores de artesanato de barro do Ceará.{'\n'}
+                          A comunidade também possui uma escola de música que utiliza instrumentos musicais feitos com argila</Text>
+                        </View>
+                      </View>
+                    </View>
+                    
+                  </ScrollView>
+              </View>
+            </View>
+          </Modal>
+        </View>
+        </View>
+      </View>
+
+      {/* Modal do Serra do Paraiso */}
+
+      <View>
+        <View style={{position: 'absolute'}}>
+        <View style={styles.centeredView}>
+          <Modal
+            statusBarTranslucent
+            animationType="fade"
+            transparent={true}
+            visible={modalSerraDoParaiso}
+            onRequestClose={() => {
+              Alert.alert("Modal has been closed.");
+              setModalMatoSerrado(!modalSerraDoParaiso);
+            }}
+          >
+            <View style={styles.centeredView}>
+              <View style={styles.modalView}>
+
+                <View style={styles.headerResume}>
+                  <TouchableOpacity
+                    activeOpacity={0.4}
+                    style={styles.botaoFechar}
+                    onPress={() => setModalSerraDoParaiso(!modalSerraDoParaiso)}>
+                    <CloseIcon width={30} height={30}/>
+                  </TouchableOpacity>
+                    <View style={{marginTop: -12, alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+                      <Text style={styles.modalTextResume}>Sera do Paraiso</Text>
+                    </View>
+
+                    <View style={{marginTop: 8, alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+                      <Text style={styles.modalTextResume2}>Uma comunidade quilombola que vive da agricultura familiar na Bahia. É uma comunidade tradicional e rica em cultura</Text>
+                    </View>
+                  </View>
+
+                  <ScrollView style={{width: '100%', paddingTop: 4}}>
+                    <View style={{alignItems: 'center'}}>
+                      <View style={{width: 200, height: 200, borderRadius: 20,}}>
+                        <Image 
+                          source={{ uri: 'https://i.imgur.com/o7YXZ3G.png' }}
                           style={{ width: 200, height: 200, borderRadius: 20 }}
                         />
                       </View >
@@ -216,7 +325,7 @@ export function Communities(){
                       <View style={{flexDirection: 'row', paddingTop: 16}}>
                         <View style={{backgroundColor: colors.neutralMediumLight, width: 2, marginLeft: 7, marginRight: 22, height: '75%'}} />
                         <View style={{width: '100%', paddingRight: 33}}>
-                          <Text style={{fontSize: 14, fontWeight: '400', color: colors.neutralDark}}>A comunidae de Araçari vive principalmente da pesca no Rio Negro e da produção de peças de artesanato de madeira que é extraído da própria região</Text>
+                          <Text style={{fontSize: 14, fontWeight: '400', color: colors.neutralDark}}>A comunidade de Serra do Paraíso vive da agricultura familiar, destacando-se principalmente o plantio de frutas, café e milho. Toda a família participa da atividade</Text>
                         </View>
                       </View>
                     </View>
@@ -230,8 +339,8 @@ export function Communities(){
                       <View style={{flexDirection: 'row', paddingTop: 16}}>
                         <View style={{backgroundColor: colors.neutralMediumLight, width: 2, marginLeft: 7, marginRight: 22, height: '75%'}} />
                         <View style={{width: '100%', paddingRight: 33}}>
-                          <Text style={{fontSize: 14, fontWeight: '400', color: colors.neutralDark}}>Um produto comercializado que garante a subsistência dos moradores locais são palitos de churrasco, que são produzidos também com recursos da região.{'\n'}
-                          A comunidade recebe o nome em homenagem à ave Araçari típica da região</Text>
+                          <Text style={{fontSize: 14, fontWeight: '400', color: colors.neutralDark}}>
+                          A comunidade tem origem desde a época da colonização no Brasil e carrega até hoje traços culturais muito fortes da sua origem. Todas as famílias são muito engajadas e são muito comuns as festas na comunidade com muita música e danças</Text>
                         </View>
                       </View>
                     </View>
@@ -279,7 +388,7 @@ const styles = StyleSheet.create({
   },
   boxMapa: {
     flex: 1, 
-    backgroundColor: 'red', 
+    backgroundColor: colors.neutralLighter, 
     alignItems: 'center', 
     justifyContent: 'center', 
     zIndex: 1
@@ -295,6 +404,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center', 
     marginTop: 95, 
     marginLeft: 350
+  },
+  posPin03: {
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    marginTop: 175, 
+    marginLeft: 325
   },
   botaoPinEstilo: {
     paddingHorizontal: 10, 
