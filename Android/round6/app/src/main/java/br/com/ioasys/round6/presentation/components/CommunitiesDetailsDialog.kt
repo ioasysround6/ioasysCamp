@@ -40,12 +40,12 @@ class CommunitiesDetailsDialog : DialogFragment() {
 
     private fun setupView() {
         binding.apply {
-            communityName.text = community?.communityName
+            tvCommunityName.text = community?.communityName
             Picasso.get().load(community?.photo2).into(communityImage)
             tvCommunityDescription.text = community?.description
             tvLocationDescription.text = community?.localization
             tvMainActivitiesDescription.text = community?.mainActivities
-            curiositiesDescription.text = community?.curiosities
+            tvCuriositiesDescription.text = community?.curiosities
         }
     }
 
