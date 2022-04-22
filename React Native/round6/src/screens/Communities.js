@@ -9,6 +9,7 @@ import CloseIcon from '../assets/SVG/CloseIcon';
 import Triangle from '../assets/SVG/Triangle';
 import Plant from '../assets/SVG/Plant';
 import Box from '../assets/SVG/Box';
+import Background from '../assets/SVG/Background';
 
 export function Communities(){
   const [modalAracari, setModalAracari] = useState(false);
@@ -25,8 +26,37 @@ export function Communities(){
         </View>
       </View>
 
+      <View style={{position: 'absolute', zIndex: 2, width: '100%', height: '100%'}}>
+        <View style={{opacity: 0.05}}>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+          <Background style={{width: '100%', height: 40}}/>
+        </View>
+      </View>
+
+
       <View style={styles.boxMapa}>
-        <View style={{backgroundColor: colors.neutralLighter,}}>
+        <View>
           <MapaComunidades />
 
           <View style={{position: 'absolute'}}>
@@ -101,7 +131,7 @@ export function Communities(){
                     </View>
                   </View>
 
-                  <ScrollView style={{width: '100%', paddingTop: 4}}>
+                  <ScrollView style={{width: '100%', paddingTop: 26}}>
                     <View style={{alignItems: 'center'}}>
                       <View style={{width: 200, height: 200, borderRadius: 20,}}>
                         <Image 
@@ -196,7 +226,7 @@ export function Communities(){
                     </View>
                   </View>
 
-                  <ScrollView style={{width: '100%', paddingTop: 4}}>
+                  <ScrollView style={{width: '100%', paddingTop: 26}}>
                     <View style={{alignItems: 'center'}}>
                       <View style={{width: 200, height: 200, borderRadius: 20,}}>
                         <Image 
@@ -292,7 +322,7 @@ export function Communities(){
                     </View>
                   </View>
 
-                  <ScrollView style={{width: '100%', paddingTop: 4}}>
+                  <ScrollView style={{width: '100%', paddingTop: 26}}>
                     <View style={{alignItems: 'center'}}>
                       <View style={{width: 200, height: 200, borderRadius: 20,}}>
                         <Image 
@@ -353,15 +383,13 @@ export function Communities(){
         </View>
       </View>
 
-
-
-
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   header: {
+    zIndex: 3,
     backgroundColor: colors.primaryDefault, 
     width: '100%',
     alignItems: 'center',
@@ -387,11 +415,10 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   boxMapa: {
-    flex: 1, 
-    backgroundColor: colors.neutralLighter, 
+    flex: 1,
+    zIndex: 3,
     alignItems: 'center', 
     justifyContent: 'center', 
-    zIndex: 1
   },
   posPin01: {
     alignItems: 'center', 
@@ -402,8 +429,8 @@ const styles = StyleSheet.create({
   posPin02: {
     alignItems: 'center', 
     justifyContent: 'center', 
-    marginTop: 95, 
-    marginLeft: 350
+    marginTop: 106, 
+    marginLeft: 347
   },
   posPin03: {
     alignItems: 'center', 
@@ -444,7 +471,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
     width: '100%',
     alignItems: 'flex-end',
-    marginBottom: 28,
+    marginBottom: 6,
   },
   botaoFechar: {
     alignItems: 'center',
