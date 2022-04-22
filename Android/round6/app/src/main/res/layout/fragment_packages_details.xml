@@ -63,7 +63,7 @@
             app:layout_constraintTop_toBottomOf="@id/slider">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/packageTitle"
+                android:id="@+id/tvPackageTitle"
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -75,36 +75,36 @@
                 tools:text="Mãos na argila!" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/packagePrice"
+                android:id="@+id/tvPackagePrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/outfit_semibold"
                 android:textColor="@color/neutral_darker"
                 android:textSize="@dimen/headline_24"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/packageTitle"
+                app:layout_constraintTop_toTopOf="@+id/tvPackageTitle"
                 tools:text="@string/payment_amount" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/packageDescription"
+                android:id="@+id/tvPackageDescription"
                 style="@style/BodyTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/packageTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvPackageTitle"
                 tools:text="@string/community_description" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/packageVacancy"
+                android:id="@+id/tvPackageVacancy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/outfit_semibold"
                 android:textColor="@color/neutral_dark"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/packageDescription"
+                app:layout_constraintTop_toBottomOf="@id/tvPackageDescription"
                 tools:text="7" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -114,26 +114,26 @@
                 android:fontFamily="@font/outfit_semibold"
                 android:text="@string/available_vacancies"
                 android:textColor="@color/neutral_dark"
-                app:layout_constraintBottom_toBottomOf="@id/packageVacancy"
-                app:layout_constraintStart_toEndOf="@id/packageVacancy" />
+                app:layout_constraintBottom_toBottomOf="@id/tvPackageVacancy"
+                app:layout_constraintStart_toEndOf="@id/tvPackageVacancy" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/peopleAmount"
+                android:id="@+id/tvPeopleAmount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="23dp"
                 android:text="@string/people_amount"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/packageVacancy" />
+                app:layout_constraintTop_toBottomOf="@id/tvPackageVacancy" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/counter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                app:layout_constraintBottom_toBottomOf="@id/peopleAmount"
+                app:layout_constraintBottom_toBottomOf="@id/tvPeopleAmount"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/peopleAmount">
+                app:layout_constraintTop_toTopOf="@+id/tvPeopleAmount">
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/minusButton"
@@ -150,7 +150,7 @@
                     android:src="@drawable/custom_ic_minus" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/peopleAmountNumber"
+                    android:id="@+id/tvPeopleAmountNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/outfit_regular"
@@ -182,7 +182,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/lighter"
                 android:textSize="@dimen/button_14"
-                app:layout_constraintTop_toBottomOf="@id/peopleAmount" />
+                app:layout_constraintTop_toBottomOf="@id/tvPeopleAmount" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/accommodationIcon"
@@ -205,13 +205,11 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvAccommodation"
+                style="@style/SubtitleStyleOne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12.71dp"
-                android:fontFamily="@font/outfit_semibold"
                 android:text="@string/accommodation"
-                android:textColor="@color/neutral_darker"
-                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@id/accommodationIcon"
                 app:layout_constraintStart_toEndOf="@id/accommodationIcon"
                 app:layout_constraintTop_toTopOf="@id/accommodationIcon" />
@@ -246,26 +244,24 @@
                 app:layout_constraintTop_toBottomOf="@id/activitiesIcon" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/activities"
+                android:id="@+id/tvActivities"
+                style="@style/SubtitleStyleOne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12.71dp"
-                android:fontFamily="@font/outfit_semibold"
                 android:text="@string/activities"
-                android:textColor="@color/neutral_darker"
-                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@id/activitiesIcon"
                 app:layout_constraintStart_toEndOf="@id/activitiesIcon"
                 app:layout_constraintTop_toTopOf="@id/activitiesIcon" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/activitiesDesc"
+                android:id="@+id/tvActivitiesDesc"
                 style="@style/BodyTextStyle"
                 android:layout_width="264dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                app:layout_constraintStart_toStartOf="@id/activities"
-                app:layout_constraintTop_toBottomOf="@id/activities"
+                app:layout_constraintStart_toStartOf="@id/tvActivities"
+                app:layout_constraintTop_toBottomOf="@id/tvActivities"
                 tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor" />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -274,7 +270,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="33dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/activitiesDesc"
+                app:layout_constraintTop_toBottomOf="@id/tvActivitiesDesc"
                 app:srcCompat="@drawable/ic_datas" />
 
             <View
@@ -288,26 +284,24 @@
                 app:layout_constraintTop_toBottomOf="@id/datesIcon" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/dates"
+                android:id="@+id/tvDates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12.71dp"
-                android:fontFamily="@font/outfit_semibold"
                 android:text="@string/dates"
-                android:textColor="@color/neutral_darker"
-                android:textSize="18sp"
+                style="@style/SubtitleStyleOne"
                 app:layout_constraintBottom_toBottomOf="@id/datesIcon"
                 app:layout_constraintStart_toEndOf="@id/datesIcon"
                 app:layout_constraintTop_toTopOf="@id/datesIcon" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/datesDesc"
+                android:id="@+id/tvDatesDesc"
                 style="@style/BodyTextStyle"
                 android:layout_width="264dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                app:layout_constraintStart_toStartOf="@id/dates"
-                app:layout_constraintTop_toBottomOf="@id/dates"
+                app:layout_constraintStart_toStartOf="@id/tvDates"
+                app:layout_constraintTop_toBottomOf="@id/tvDates"
                 tools:text="Do dia 21/06 a 23/06\n4 dias e 3 noites de passeio" />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -316,7 +310,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="33dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/datesDesc"
+                app:layout_constraintTop_toBottomOf="@id/tvDatesDesc"
                 app:srcCompat="@drawable/ic_map" />
 
             <View
@@ -330,28 +324,26 @@
                 app:layout_constraintTop_toBottomOf="@id/mapIcon" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/map"
+                android:id="@+id/tvTravelHint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12.71dp"
-                android:fontFamily="@font/outfit_semibold"
                 android:text="@string/travel_tips"
-                android:textColor="@color/neutral_darker"
-                android:textSize="18sp"
+                style="@style/SubtitleStyleOne"
                 app:layout_constraintBottom_toBottomOf="@id/mapIcon"
                 app:layout_constraintStart_toEndOf="@id/mapIcon"
                 app:layout_constraintTop_toTopOf="@id/mapIcon" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/hintDesc"
+                android:id="@+id/tvTravelHintDesc"
                 style="@style/BodyTextStyle"
                 android:layout_width="264dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="52dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@id/map"
-                app:layout_constraintTop_toBottomOf="@id/map"
+                app:layout_constraintStart_toStartOf="@id/tvTravelHint"
+                app:layout_constraintTop_toBottomOf="@id/tvTravelHint"
                 tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

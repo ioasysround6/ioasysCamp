@@ -38,7 +38,7 @@
             app:srcCompat="@drawable/white_back_arrow" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            style="@style/TitleStyle"
+            style="@style/TitleStyleOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -163,7 +163,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvBirth" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/messageErrorBirth"
+                android:id="@+id/tvMessageErrorBirth"
                 style="@style/ErrorMessageStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -181,7 +181,7 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/email"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/messageErrorBirth" />
+                app:layout_constraintTop_toBottomOf="@+id/tvMessageErrorBirth" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
@@ -209,7 +209,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/messageErrorEmail"
+                android:id="@+id/tvMessageErrorEmail"
                 style="@style/ErrorMessageStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -227,7 +227,7 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/password"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/messageErrorEmail" />
+                app:layout_constraintTop_toBottomOf="@+id/tvMessageErrorEmail" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/inputPassword"
@@ -246,7 +246,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/messageErrorPassword"
+                android:id="@+id/tvMessageErrorPassword"
                 style="@style/ErrorMessageStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -275,7 +275,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/messageErrorPassword">
+                app:layout_constraintTop_toBottomOf="@id/tvMessageErrorPassword">
 
                 <com.google.android.material.checkbox.MaterialCheckBox
                     android:id="@+id/checkBox"
@@ -285,17 +285,17 @@
                     android:checked="false"
                     android:fontFamily="@font/outfit_regular"
                     android:paddingStart="@dimen/padding_checkbox"
+                    android:paddingEnd="@dimen/padding_checkbox"
                     android:text="@string/agreed_terms"
                     android:textColor="@color/neutral_dark"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/messageErrorPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMessageErrorPassword"
                     app:useMaterialThemeColors="false" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvTermsOfUse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
                     android:fontFamily="@font/outfit_semibold"
                     android:text="@string/terms_of_use"
                     android:textColor="@color/primary_default"

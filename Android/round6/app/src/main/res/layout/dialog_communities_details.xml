@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginHorizontal="@dimen/app_margin">
 
     <com.google.android.material.card.MaterialCardView
@@ -37,30 +37,30 @@
                 app:srcCompat="@drawable/ic_exit" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/communityName"
+                android:id="@+id/tvCommunityName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/outfit_semibold"
-                tools:text="@string/community_name"
                 android:textColor="@color/neutral_darker"
                 android:textSize="@dimen/headline_20"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/buttonExit" />
+                app:layout_constraintTop_toBottomOf="@id/buttonExit"
+                tools:text="@string/community_name" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/communityDescription"
+                android:id="@+id/tvCommunityDescription"
+                style="@style/BodyTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:paddingHorizontal="@dimen/app_margin"
-                tools:text="@string/community_description"
                 android:textAlignment="center"
-                style="@style/BodyTextStyle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/communityName" />
+                app:layout_constraintTop_toBottomOf="@id/tvCommunityName"
+                tools:text="@string/community_description" />
 
             <ScrollView
                 android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/communityDescription">
+                app:layout_constraintTop_toBottomOf="@id/tvCommunityDescription">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -95,27 +95,25 @@
                         app:srcCompat="@drawable/ic_location" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/locationTitle"
+                        android:id="@+id/tvLocationTitle"
+                        style="@style/SubtitleStyleTwo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:fontFamily="@font/outfit_semibold"
                         android:text="@string/location"
-                        android:textColor="@color/neutral_darker"
-                        android:textSize="@dimen/body_14"
                         app:layout_constraintBottom_toBottomOf="@id/locationIcon"
                         app:layout_constraintStart_toEndOf="@id/locationIcon"
                         app:layout_constraintTop_toTopOf="@id/locationIcon" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/locationDescription"
+                        android:id="@+id/tvLocationDescription"
+                        style="@style/BodyTextStyle"
                         android:layout_width="201dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        style="@style/BodyTextStyle"
-                        tools:text="@string/location_description"
-                        app:layout_constraintStart_toStartOf="@id/locationTitle"
-                        app:layout_constraintTop_toBottomOf="@id/locationTitle" />
+                        app:layout_constraintStart_toStartOf="@id/tvLocationTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvLocationTitle"
+                        tools:text="@string/location_description" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/mainActivitiesIcon"
@@ -123,31 +121,29 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="26dp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/locationDescription"
+                        app:layout_constraintTop_toBottomOf="@id/tvLocationDescription"
                         app:srcCompat="@drawable/ic_main_activities" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/mainActivitiesTitle"
+                        android:id="@+id/tvMainActivitiesTitle"
+                        style="@style/SubtitleStyleTwo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:fontFamily="@font/outfit_semibold"
                         android:text="@string/main_activities"
-                        android:textColor="@color/neutral_darker"
-                        android:textSize="@dimen/body_14"
                         app:layout_constraintBottom_toBottomOf="@id/mainActivitiesIcon"
                         app:layout_constraintStart_toEndOf="@id/mainActivitiesIcon"
                         app:layout_constraintTop_toTopOf="@id/mainActivitiesIcon" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/mainActivitiesDescription"
+                        android:id="@+id/tvMainActivitiesDescription"
+                        style="@style/BodyTextStyle"
                         android:layout_width="201dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        style="@style/BodyTextStyle"
-                        tools:text="@string/main_activities_description"
-                        app:layout_constraintStart_toStartOf="@id/mainActivitiesTitle"
-                        app:layout_constraintTop_toBottomOf="@id/mainActivitiesTitle" />
+                        app:layout_constraintStart_toStartOf="@id/tvMainActivitiesTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvMainActivitiesTitle"
+                        tools:text="@string/main_activities_description" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/curiositiesIcon"
@@ -155,33 +151,31 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="26dp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/mainActivitiesDescription"
+                        app:layout_constraintTop_toBottomOf="@id/tvMainActivitiesDescription"
                         app:srcCompat="@drawable/ic_curiosities" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/curiositiesTitle"
+                        android:id="@+id/tvCuriositiesTitle"
+                        style="@style/SubtitleStyleTwo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:fontFamily="@font/outfit_semibold"
                         android:text="@string/curiosities"
-                        android:textColor="@color/neutral_darker"
-                        android:textSize="@dimen/body_14"
                         app:layout_constraintBottom_toBottomOf="@id/curiositiesIcon"
                         app:layout_constraintStart_toEndOf="@id/curiositiesIcon"
                         app:layout_constraintTop_toTopOf="@id/curiositiesIcon" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/curiositiesDescription"
+                        android:id="@+id/tvCuriositiesDescription"
+                        style="@style/BodyTextStyle"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="32dp"
-                        style="@style/BodyTextStyle"
-                        tools:text="@string/curiosities_description"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="@id/curiositiesTitle"
-                        app:layout_constraintTop_toBottomOf="@id/curiositiesTitle" />
+                        app:layout_constraintStart_toStartOf="@id/tvCuriositiesTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvCuriositiesTitle"
+                        tools:text="@string/curiosities_description" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </ScrollView>
         </androidx.constraintlayout.widget.ConstraintLayout>

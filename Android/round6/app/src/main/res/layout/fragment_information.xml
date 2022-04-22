@@ -40,7 +40,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvTravelerName" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/errorMessageName"
+            android:id="@+id/tvErrorMessageName"
             style="@style/ErrorMessageStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/last_name"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/errorMessageName" />
+            app:layout_constraintTop_toBottomOf="@+id/tvErrorMessageName" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/inputTravelerLastName"
@@ -78,7 +78,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvTravelerLastName" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/errorMessageLastName"
+            android:id="@+id/tvErrorMessageLastName"
             style="@style/ErrorMessageStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/birth"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/errorMessageLastName" />
+            app:layout_constraintTop_toBottomOf="@+id/tvErrorMessageLastName" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/inputTravelerBirthDate"
@@ -116,7 +116,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvTravelerBirthDate" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/errorMessageBirthDate"
+            android:id="@+id/tvErrorMessageBirthDate"
             style="@style/ErrorMessageStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -134,7 +134,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/email"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/errorMessageBirthDate" />
+            app:layout_constraintTop_toBottomOf="@+id/tvErrorMessageBirthDate" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
@@ -163,7 +163,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvTravelerEmail" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/errorMessageEmail"
+            android:id="@+id/tvErrorMessageEmail"
             style="@style/ErrorMessageStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -181,7 +181,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/cpf"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/errorMessageEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/tvErrorMessageEmail" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/inputTravelerCPF"
@@ -201,7 +201,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvTravelerCPF" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/errorMessageCPF"
+            android:id="@+id/tvErrorMessageCPF"
             style="@style/ErrorMessageStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -222,6 +222,6 @@
             android:textAllCaps="false"
             android:textColor="@color/lighter"
             android:textSize="@dimen/button_14"
-            app:layout_constraintTop_toBottomOf="@id/errorMessageCPF" />
+            app:layout_constraintTop_toBottomOf="@id/tvErrorMessageCPF" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

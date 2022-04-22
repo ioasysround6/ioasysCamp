@@ -30,18 +30,18 @@
             android:background="@drawable/gradient_bg" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/packageName"
+            android:id="@+id/tvTourName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:fontFamily="@font/outfit_semibold"
             android:textColor="@color/lighter"
-            app:layout_constraintBottom_toTopOf="@+id/communityName"
+            app:layout_constraintBottom_toTopOf="@+id/tvCommunityName"
             app:layout_constraintStart_toStartOf="parent"
             tools:text="Mãos na argila!" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/communityName"
+            android:id="@+id/tvCommunityName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"

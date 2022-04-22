@@ -28,7 +28,7 @@
             android:background="@drawable/gradient_bg" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/communityName"
+            android:id="@+id/tvCommunityName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"

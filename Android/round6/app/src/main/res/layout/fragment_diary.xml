@@ -19,8 +19,8 @@
         tools:ignore="ImageContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/titleMyDiary"
-        style="@style/TitleStyle"
+        android:id="@+id/tvTitleMyDiary"
+        style="@style/TitleStyleOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/my_diary"
@@ -47,7 +47,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvShare"
-                style="@style/InputLabel"
+                style="@style/BodyTextStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/head_32"
@@ -100,7 +100,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvFelipe"
-                style="@style/NameTileStyle"
+                style="@style/SubtitleStyleTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_12"
@@ -122,7 +122,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTitleFelipe"
-                style="@style/NameTileStyle"
+                style="@style/SubtitleStyleTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_33"
@@ -133,7 +133,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvDescriptionFelipe"
-                style="@style/CityDescriptionDateStyle"
+                style="@style/BodyTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_33"
@@ -189,7 +189,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvPaula"
-                style="@style/NameTileStyle"
+                style="@style/SubtitleStyleTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_12"
@@ -211,7 +211,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTitlePaula"
-                style="@style/NameTileStyle"
+                style="@style/SubtitleStyleTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_33"
@@ -222,7 +222,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvDescriptionPaula"
-                style="@style/CityDescriptionDateStyle"
+                style="@style/BodyTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_33"
@@ -289,7 +289,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvJoao"
-                style="@style/NameTileStyle"
+                style="@style/SubtitleStyleTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_12"
@@ -311,7 +311,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTitleJoao"
-                style="@style/NameTileStyle"
+                style="@style/SubtitleStyleTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_33"
@@ -322,7 +322,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvDescriptionJoao"
-                style="@style/CityDescriptionDateStyle"
+                style="@style/BodyTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_33"

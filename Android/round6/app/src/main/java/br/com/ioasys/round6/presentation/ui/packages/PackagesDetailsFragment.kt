@@ -76,7 +76,7 @@ class PackagesDetailsFragment : Fragment() {
         binding.apply {
             plusButton.setOnClickListener {
                 num++
-                peopleAmountNumber.text = num.toString()
+                tvPeopleAmountNumber.text = num.toString()
             }
 
             minusButton.setOnClickListener {
@@ -84,7 +84,7 @@ class PackagesDetailsFragment : Fragment() {
                 if (num < 0) {
                     num = 0
                 } else {
-                    peopleAmountNumber.text = num.toString()
+                    tvPeopleAmountNumber.text = num.toString()
                 }
             }
         }
@@ -141,14 +141,14 @@ class PackagesDetailsFragment : Fragment() {
 
     private fun setupView() {
         binding.apply {
-            packageTitle.text = tour.tourName
-            packagePrice.text = tour.price
-            packageDescription.text = tour.description
-            packageVacancy.text = tour.vacancies.toString()
+            tvPackageTitle.text = tour.tourName
+            tvPackagePrice.text = tour.price
+            tvPackageDescription.text = tour.description
+            tvPackageVacancy.text = tour.vacancies.toString()
             tvAccommodationDesc.text = tour.accommodation
-            activitiesDesc.text = tour.activities
-            datesDesc.text = tour.travelDate
-            hintDesc.text = tour.hint
+            tvActivitiesDesc.text = tour.activities
+            tvDatesDesc.text = tour.travelDate
+            tvTravelHintDesc.text = tour.hint
         }
     }
 

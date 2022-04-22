@@ -30,8 +30,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/titleCommunities"
-        style="@style/TitleStyle"
+        android:id="@+id/tvTitleCommunities"
+        style="@style/TitleStyleOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/discover_communities"
@@ -41,17 +41,17 @@
         app:layout_constraintTop_toTopOf="@+id/pattern" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/subtitleCommunities"
+        android:id="@+id/tvSubtitleCommunities"
         style="@style/SubTitleCommunitiesStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/partner_community"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleCommunities" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleCommunities" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/map"
+        android:id="@+id/tvTravelHint"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:scaleType="center"
@@ -76,8 +76,8 @@
         android:id="@+id/saveCommunities_02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_165"
-        android:layout_marginEnd="@dimen/margin_25"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="40dp"
         android:clickable="true"
         android:focusable="true"
         android:src="@drawable/save"
@@ -95,6 +95,5 @@
         android:src="@drawable/save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/saveCommunities_02" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

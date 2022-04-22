@@ -53,12 +53,12 @@ class LoginFragment : Fragment() {
                 )
 
                 inputEmail.addTextChangedListener {
-                    messageError.visibility = View.GONE
+                    tvMessageError.visibility = View.GONE
                     inputEmail.setBackgroundResource(R.drawable.input_background)
                 }
 
                 inputPassword.addTextChangedListener {
-                    messageError.visibility = View.GONE
+                    tvMessageError.visibility = View.GONE
                     inputPassword.setBackgroundResource(R.drawable.input_background)
                 }
             }
@@ -121,7 +121,7 @@ class LoginFragment : Fragment() {
                 is ViewState.Error -> {
                     binding.apply {
                         progressBar.visibility = View.GONE
-                        messageError.visibility = View.VISIBLE
+                        tvMessageError.visibility = View.VISIBLE
                         inputEmail.setBackgroundResource(R.drawable.input_background_error)
                         inputPassword.setBackgroundResource(R.drawable.input_background_error)
                     }
