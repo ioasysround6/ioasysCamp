@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import br.com.ioasys.round6.databinding.FragmentCommunitiesBinding
+import br.com.ioasys.round6.presentation.components.CommunitiesDetailsDialog
 
 class CommunitiesFragment : Fragment() {
     private var _binding: FragmentCommunitiesBinding? = null
@@ -23,7 +24,7 @@ class CommunitiesFragment : Fragment() {
 
     private fun setOnClickListener() {
         binding.saveCommunities01.setOnClickListener {
-            Toast.makeText(context, "Teste 01", Toast.LENGTH_LONG).show()
+            CommunitiesDetailsDialog().show(childFragmentManager, javaClass.name)
         }
         binding.saveCommunities02.setOnClickListener {
             Toast.makeText(context, "Teste 02", Toast.LENGTH_LONG).show()
