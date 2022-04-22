@@ -8,11 +8,11 @@ import { RectButton, ScrollView } from 'react-native-gesture-handler';
 import ButtonLarge from '../components/ButtonLarge';
 import { ImageSlider } from '../components/ImageSlider';
 
-import ArrowBackButton from '../assets/ArrowBackButton.svg';
-import CampingIcon from '../assets/CampingIcon.svg';
-import MountainIcon from '../assets/MountainIcon.svg';
-import CalendarIcon from '../assets/CalendarIcon.svg';
-import MapIcon from '../assets/MapIcon.svg';
+import ArrowBackButton from '../assets/SVG/ArrowBackButton.svg';
+import CampingIcon from '../assets/SVG/CampingIcon.svg';
+import MountainIcon from '../assets/SVG/MountainIcon.svg';
+import CalendarIcon from '../assets/SVG/CalendarIcon.svg';
+import MapIcon from '../assets/SVG/MapIcon.svg';
 
 import { StatusBar, StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
@@ -253,25 +253,29 @@ const styles = StyleSheet.create({
   pacoteDescricao: {
     color: colors.neutralDarker,
     fontSize: 24,
+    fontWeight: '600',
+    width: '60%',
   },
   pacotePreco: {
     color: colors.neutralDarker,
     fontSize: 20,
+    fontWeight: '600'
   },
   informacao: {
-    paddingTop: 25,
+    paddingTop: 24,
   },
   informacaoTexto: {
     color: colors.neutralDark,
-    fontSize: 12,
-    textAlign: 'justify'
+    fontSize: 14,
+    fontWeight: '400'
   },
   vagas: {
-    paddingTop: 12,
+    paddingTop: 24,
   },
   vagasTexto: {
     color: colors.neutralDark,
     fontSize: 12,
+    fontWeight: '600'
   },
   quantidade: {
     flexDirection: 'row',
@@ -280,8 +284,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   quantidadeTexto: {
-    fontSize: 12,
+    fontSize: 14,
     color: colors.neutralDark,
+    fontWeight: '400'
   },
   contador: {
     flexDirection: 'row',
@@ -318,10 +323,11 @@ const styles = StyleSheet.create({
   numeroContagem: {
     fontSize: 14,
     color: colors.neutralDark,
+    fontWeight: '400'
   },
   buttonAtivo: {
-    paddingTop: 23,
-    paddingBottom: 12,
+    paddingTop: 30,
+    paddingBottom: 7,
   },
   informacoesPacote: {
     paddingTop: 40,
@@ -336,6 +342,7 @@ const styles = StyleSheet.create({
   informacoesTexto: {
     fontSize: 18,
     color: colors.neutralDarker,
+    fontWeight: '600'
   },
   informacoesPacoteDescricao: {
     width: '100%',
@@ -352,7 +359,8 @@ const styles = StyleSheet.create({
   },
   informacoesPacoteTexto: {
     marginRight: 32,
-    fontSize: 12,
+    fontSize: 14,
+    fontWeight: '400',
     color: colors.neutralDark,
   }
 })

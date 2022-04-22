@@ -3,7 +3,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { colors } from '../styles/colors';
 import { useNavigation } from '@react-navigation/core';
 import { StatusBar, StyleSheet, View, Text,TouchableHighlight, Dimensions} from 'react-native';
-import ArrowBackButton from '../assets/ArrowBackButton';
+import ArrowBackButton from '../assets/SVG/ArrowBackButton';
 import Background from '../assets/SVG/Background';
 
 import { CheckoutData } from '../screens/CheckoutData';
@@ -67,6 +67,7 @@ export default function TopTabRoutes() {
             tabBarLabelStyle: {
               width: '100%', 
               fontSize: 14,
+              fontWeight: '600',
               textTransform: 'capitalize',
               paddingTop: 25,
             },
@@ -115,5 +116,6 @@ const styles = StyleSheet.create({
   headerText: {
     color: colors.neutralLighter,
     fontSize: 24,
+    fontWeight: '600'
   },
 })
