@@ -35,6 +35,7 @@ export default function TabRoutes(){
         tabBarInactiveTintColor: colors.neutralMediumDark,
         tabBarLabelStyle: {
           fontSize: 10,
+          fontWeight: '400',
           paddingTop: 8,
         },
         tabBarStyle: {

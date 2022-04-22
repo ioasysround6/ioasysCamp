@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, StatusBar, ScrollView, FlatList, Image, Dimensions, TouchableOpacity, TouchableHighlight } from 'react-native';
+import { View, Text, StyleSheet, StatusBar, ScrollView, FlatList, Image, Dimensions, TouchableHighlight } from 'react-native';
+import LottieView from 'lottie-react-native';
 
 import api from '../services/api';
 import { buscaTours } from '../services/requisicoes/tours';
@@ -18,6 +19,8 @@ import { colors } from '../styles/colors';
 import CardPackages from '../components/CardPackages';
 import ModalCommunities from '../components/ModalCommunities';
 
+import loadingAnimation from '../assets/loadingAnimation.json';
+
 import LateralHome from '../assets/SVG/LateralHome.svg';
 import ButtonSmall from '../components/ButtonSmall';
 
@@ -35,6 +38,8 @@ export function Home() {
 
   const [titulo, setTitulo] = useState('');
 
+  const [loading, setLoading] = useState(true);
+
   async function busca() {
     const resultado = await buscaTours()
     console.log(resultado);
@@ -44,6 +49,8 @@ export function Home() {
     else {
       alert('Ops pacotes')
     }
+
+    setLoading(false);
   }
 
 
@@ -90,6 +97,26 @@ export function Home() {
 
   const imagesUrl=['https://i.imgur.com/YenN23l.png', 'https://i.imgur.com/q1HkLAG.png', 'https://i.imgur.com/5tRVLuD.png']
 
+  if(loading)
+  return (
+    <View style={styles.boxLoading}>
+      <View style={styles.loadingView}>
+        <View style={styles.lottieViewStyle}>
+          <LottieView
+            source={loadingAnimation}
+            autoPlay
+            loop
+            style={{flex: 1, backgroundColor: 'transparent',}}
+          />
+
+        </View>
+        <View style={{justifyContent: 'flex-end', alignItems:'center'}}>
+          <Text style={styles.textCarregando}>Carregando{'\n'}página</Text>
+        </View>
+      </View>
+    </View>
+  )
+
   return (
     <View style={{backgroundColor: colors.neutralLighter}}>
       <ScrollView>
@@ -119,7 +146,7 @@ export function Home() {
 
             <SwiperFlatList
               autoplay
-              autoplayDelay={2}
+              autoplayDelay={4}
               autoplayLoop
               autoplayLoopKeepAnimation
               disableGesture
@@ -151,7 +178,7 @@ export function Home() {
                   underlayColor={colors.primaryDark}
                   onPress={handleGoCommunityTourism}
                   >
-                  <Text style={styles.textoBotao}>Sabe como</Text>
+                  <Text style={styles.textoBotao}>Saber como</Text>
                 </TouchableHighlight>
               </View>
 
@@ -276,5 +303,30 @@ const styles = StyleSheet.create({
     fontSize: 14, 
     fontWeight: '600', 
     color: colors.neutralLighter
+  },
+
+  boxLoading: {
+    flex: 1, 
+    justifyContent: 'center',
+    alignItems: 'center', 
+    backgroundColor: colors.neutralLight
+  },
+  loadingView: {
+    height: 200, 
+    width: 200, 
+    alignItems: 'center', 
+    justifyContent: 'flex-start'
+  },
+  lottieViewStyle: {
+    height: '100%', 
+    width: '100%', 
+    alignItems: 'center'
+  },
+  textCarregando: {
+    position: 'absolute' , 
+    textAlign: 'center', 
+    fontSize: 14, 
+    fontWeight: '600', 
+    paddingBottom: 34, 
   }
 })
