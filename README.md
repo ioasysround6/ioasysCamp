@@ -23,4 +23,26 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
   <img alt="Cobé" title="Cobé" src="https://i.imgur.com/et9ObCN.png" />
 </h1>
 
+## Autores
+
+- Autor - [Pedro Henrique Abreu](https://github.com/pedroabreudev)
+- linkedin - [https://www.linkedin.com/in/pedroabreu-dev/](https://www.linkedin.com/in/pedroabreu-dev/)
+- Email - [pedroabreu.dev@gmail.com](mailto:pedroabreu.dev@gmail.com)
+<br>
+
+- Autor - [Sara Cavalcante](https://github.com/saracavalcante)
+- linkedin - [https://www.linkedin.com/in/sara-cavalcante-b78a06177/](https://www.linkedin.com/in/sara-cavalcante-b78a06177/)
+- Email - [designersaracavalcante@gmail.com](designersaracavalcante@gmail.com)
+<br>
+
+- Autor - [Vinícius Canaan](https://github.com/ViniciusCanaan)
+- linkedin - [https://www.linkedin.com/in/vinicius-canaan/](https://www.linkedin.com/in/vinicius-canaan/)
+- Email - [vcfreitas1997@gmail.com](vcfreitas1997@gmail.com)
+<br>
+
+- Autor – [Rodrigo Mota Mendes](https://github.com/rodrigomotamendes) 
+- linkedin - [https://www.linkedin.com/in/rodrigo-mota-mendes/](https://www.linkedin.com/in/rodrigo-mota-mendes/) 
+- Email – [rdrmendes@hotmail.com](rdrmendes@hotmail.com)
+<br>
+
 Feito com :orange_heart: pelo Grupo 6 do Camp Ioasys 2022.
