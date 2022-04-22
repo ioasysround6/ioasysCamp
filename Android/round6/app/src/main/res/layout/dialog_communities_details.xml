@@ -97,7 +97,7 @@
                         app:srcCompat="@drawable/ic_location" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/locationTitle"
+                        android:id="@+id/tvLocationTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
@@ -115,8 +115,8 @@
                         android:layout_width="201dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        app:layout_constraintStart_toStartOf="@id/locationTitle"
-                        app:layout_constraintTop_toBottomOf="@id/locationTitle"
+                        app:layout_constraintStart_toStartOf="@id/tvLocationTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvLocationTitle"
                         tools:text="@string/location_description" />
 
                     <androidx.appcompat.widget.AppCompatImageView
@@ -129,7 +129,7 @@
                         app:srcCompat="@drawable/ic_main_activities" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/mainActivitiesTitle"
+                        android:id="@+id/tvMainActivitiesTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
@@ -147,8 +147,8 @@
                         android:layout_width="201dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        app:layout_constraintStart_toStartOf="@id/mainActivitiesTitle"
-                        app:layout_constraintTop_toBottomOf="@id/mainActivitiesTitle"
+                        app:layout_constraintStart_toStartOf="@id/tvMainActivitiesTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvMainActivitiesTitle"
                         tools:text="@string/main_activities_description" />
 
                     <androidx.appcompat.widget.AppCompatImageView
@@ -174,7 +174,7 @@
                         app:layout_constraintTop_toTopOf="@id/curiositiesIcon" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/curiositiesDescription"
+                        android:id="@+id/tvCuriositiesDescription"
                         style="@style/BodyTextStyle"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
