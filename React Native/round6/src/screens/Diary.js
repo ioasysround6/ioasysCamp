@@ -3,6 +3,7 @@ import { colors } from '../styles/colors';
 import { View, Text, Image, FlatList, StyleSheet } from 'react-native';
 import ScreenView from '../components/ScreenView';
 import Header from '../components/Header';
+import Background from '../assets/SVG/Background';
 
 import { buscaDiario } from '../services/requisicoes/diary';
 
@@ -34,7 +35,23 @@ export function Diary() {
   }
 
   return (
-    <ScreenView>
+    <View style={{flex: 1}}>
+    <View style={{position: 'absolute', backgroundColor: colors.primaryDefault, width: '100%', height: 500}}>
+      <View style={{opacity: 0.05}}>
+        <Background style={{width: '100%', height: 240/6, }}/>
+        <Background style={{width: '100%', height: 240/6, }}/>
+        <Background style={{width: '100%', height: 240/6, }}/>
+        <Background style={{width: '100%', height: 240/6, }}/>
+        <Background style={{width: '100%', height: 240/6, }}/>
+        <Background style={{width: '100%', height: 240/6, }}/>
+      </View>
+    </View>
+
+    <View style={{paddingTop: 49, paddingBottom: 52, alignItems: 'center'}}>
+      <Text style={{fontSize: 24, fontWeight: '600', color: colors.neutralLighter}}>Diário de viagem</Text>
+    </View>
+
+    <View style={{flex: 1, paddingHorizontal: 32, backgroundColor: colors.neutralLighter, borderTopLeftRadius: 30, borderTopRightRadius: 30}}>
       <Header />
       <View style={styles.viewTitlePage}>
         <Text style={styles.textTitleContent}>
@@ -44,6 +61,7 @@ export function Diary() {
       <View style={styles.viewButtonPost}>
         <ButtonLarge titulo="Fazer um post" backColor={colors.secondaryDefault} onPress={handleClickNewPost} />
       </View>
+      <View style={{backgroundColor: colors.neutralLight, width: '100%', height: 1}}/>
       <FlatList
         data={diario}
         showsVerticalScrollIndicator={false}
@@ -75,14 +93,16 @@ export function Diary() {
         )}
         keyExtractor={item => item.id}
       />
-    </ScreenView>
+    </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   viewTitlePage: {
     width: '100%',
-    marginBottom: 32
+    marginBottom: 32,
+    marginTop: -50
   },
   textTitleContent: {
     fontSize: 12,
@@ -93,7 +113,8 @@ const styles = StyleSheet.create({
     marginBottom: 32
   },
   containerStories: {
-    flex: 1
+    flex: 1,
+    paddingTop: 24,
   },
   viewUser: {
     flexDirection: 'row',
