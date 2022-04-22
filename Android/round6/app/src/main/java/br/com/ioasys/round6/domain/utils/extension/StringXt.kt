@@ -1,4 +1,4 @@
-package br.com.ioasys.round6.domain.utils.extensions
+package br.com.ioasys.round6.domain.utils.extension
 
 import br.com.ioasys.round6.domain.utils.RegexEnum
 

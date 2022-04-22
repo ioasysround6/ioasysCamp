@@ -31,8 +31,7 @@ class PaymentFragment : Fragment() {
 
     private fun setListeners() {
         binding.finalizePurchaseButton.setOnClickListener {
-            val dialog = SummaryDialog()
-            dialog.show(childFragmentManager, dialog.tag)
+            SummaryDialog().show(childFragmentManager, javaClass.name)
         }
     }
 

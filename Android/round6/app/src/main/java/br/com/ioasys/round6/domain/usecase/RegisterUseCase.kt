@@ -4,9 +4,9 @@ import br.com.ioasys.round6.domain.exception.*
 import br.com.ioasys.round6.domain.model.NewUser
 import br.com.ioasys.round6.domain.repositories.RegisterRepository
 import br.com.ioasys.round6.domain.utils.UseCase
-import br.com.ioasys.round6.domain.utils.extensions.isNotBirthDate
-import br.com.ioasys.round6.domain.utils.extensions.isNotEmail
-import br.com.ioasys.round6.domain.utils.extensions.isNotPassword
+import br.com.ioasys.round6.domain.utils.extension.isNotBirthDate
+import br.com.ioasys.round6.domain.utils.extension.isNotEmail
+import br.com.ioasys.round6.domain.utils.extension.isNotPassword
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 
