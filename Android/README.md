@@ -14,21 +14,24 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-<!-- 
-- [React Native](https://reactnative.dev/)
-- [React Navigation](https://reactnavigation.org/)
-- [React Native Async Storage](https://github.com/react-native-async-storage/async-storage)
-- [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/)
-- [Axios](https://github.com/axios/axios)
-- [React Native Shadow 2](https://github.com/SrBrahma/react-native-shadow-2)
-- [React Native SVG](https://github.com/react-native-svg/react-native-svg)
-- [React Native Swiper Flatlist](https://github.com/gusgard/react-native-swiper-flatlist)
-- [React Native Dropdown](https://github.com/hossein-zare/react-native-dropdown-picker)
--->
+* *Kotlin*
+* *Picasso*
+* *Coil*
+* *Koin*
+* *Arquitetura MVVM*
+* *Coroutines*
+* *Retrofit*
+* *Room*
+* *Flow*
+* *Navigation*
+* *Material Design*
+
 
 ## 💻 Projeto
 
 Aplicativo realizado na 2ª fase do Camp Ioasys 2022.
+
+Cobé é uma agência especializada em turismo comunitário sustentável e social, transformando em rotas turísticas as regiões rurais que trabalham com produção artesanal, afim de promover o desenvolvimento local
 
 ## 🔖 Layout
 
@@ -40,7 +43,7 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 
 <div class="highlight highlight-source-shell">
  <pre>
- git clone https://github.com/ioasys/ioasysCamp.git
+ git clone https://github.com/ioasys/ioasysCamp/tree/master_android
 </pre>
 
 </div>
