@@ -41,8 +41,8 @@ class TourListAdapter(
 
         fun bind(tour: Tour) {
             binding.apply {
-                packageName.text = tour.tourName
-                communityName.text = tour.communityName
+                tvTourName.text = tour.tourName
+                tvCommunityName.text = tour.communityName
 
                 packageImage.load(tour.photo1) {
                     error(R.drawable.image)

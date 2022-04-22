@@ -98,13 +98,11 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/tvLocationTitle"
+                        style="@style/SubtitleStyleTwo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:fontFamily="@font/outfit_semibold"
                         android:text="@string/location"
-                        android:textColor="@color/neutral_darker"
-                        android:textSize="@dimen/body_14"
                         app:layout_constraintBottom_toBottomOf="@id/locationIcon"
                         app:layout_constraintStart_toEndOf="@id/locationIcon"
                         app:layout_constraintTop_toTopOf="@id/locationIcon" />
@@ -130,13 +128,11 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/tvMainActivitiesTitle"
+                        style="@style/SubtitleStyleTwo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:fontFamily="@font/outfit_semibold"
                         android:text="@string/main_activities"
-                        android:textColor="@color/neutral_darker"
-                        android:textSize="@dimen/body_14"
                         app:layout_constraintBottom_toBottomOf="@id/mainActivitiesIcon"
                         app:layout_constraintStart_toEndOf="@id/mainActivitiesIcon"
                         app:layout_constraintTop_toTopOf="@id/mainActivitiesIcon" />
@@ -162,13 +158,11 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/tvCuriositiesTitle"
+                        style="@style/SubtitleStyleTwo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:fontFamily="@font/outfit_semibold"
                         android:text="@string/curiosities"
-                        android:textColor="@color/neutral_darker"
-                        android:textSize="@dimen/body_14"
                         app:layout_constraintBottom_toBottomOf="@id/curiositiesIcon"
                         app:layout_constraintStart_toEndOf="@id/curiositiesIcon"
                         app:layout_constraintTop_toTopOf="@id/curiositiesIcon" />

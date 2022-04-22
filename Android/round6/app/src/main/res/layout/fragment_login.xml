@@ -95,9 +95,9 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/input_background"
                 android:hint="@string/email_hint"
+                android:inputType="textEmailAddress"
                 android:paddingStart="34dp"
                 android:paddingEnd="27dp"
-                android:inputType="textEmailAddress"
                 android:textColorHint="@drawable/input_hint"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -142,7 +142,7 @@
                 app:layout_constraintTop_toTopOf="@+id/inputPassword" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@id/messageError"
+                android:id="@id/tvMessageError"
                 style="@style/ErrorMessageStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -179,7 +179,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/lighter"
                 android:textSize="@dimen/button_14"
-                app:layout_constraintTop_toBottomOf="@+id/messageError" />
+                app:layout_constraintTop_toBottomOf="@+id/tvMessageError" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"

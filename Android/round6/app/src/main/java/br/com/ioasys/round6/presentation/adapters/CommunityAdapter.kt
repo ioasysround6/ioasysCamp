@@ -41,7 +41,7 @@ class CommunityAdapter(
 
         fun bind(community: Community) {
             binding.apply {
-                communityName.text = community.communityName
+                tvCommunityName.text = community.communityName
 
                 communityImage.load(community.photo1) {
                     error(R.drawable.community_image)
