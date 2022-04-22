@@ -36,7 +36,7 @@
                 app:srcCompat="@drawable/ic_exit" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/communityName"
+                android:id="@+id/tvCommunityName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -58,7 +58,7 @@
                 android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/communityName"
+                app:layout_constraintTop_toBottomOf="@id/tvCommunityName"
                 tools:text="@string/community_description" />
 
             <ScrollView
