@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
 import br.com.ioasys.round6.databinding.DialogCommunitiesDetailsBinding
+import br.com.ioasys.round6.domain.model.Community
 
 class CommunitiesDetailsDialog : DialogFragment() {
 
     private lateinit var binding: DialogCommunitiesDetailsBinding
+    private var community: Community? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,6 +23,12 @@ class CommunitiesDetailsDialog : DialogFragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setUpListeners()
+        setupView()
+    }
+    
     override fun onStart() {
         super.onStart()
         dialog?.window?.setLayout(
@@ -29,14 +37,27 @@ class CommunitiesDetailsDialog : DialogFragment() {
         )
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        setUpListeners()
+    private fun setupView() {
+        binding.apply {
+            communityName.text = community?.communityName
+            communityDescription.text = community?.description
+            locationDescription.text = community?.localization
+            mainActivitiesDescription.text = community?.mainActivities
+            curiositiesDescription.text = community?.curiosities
+        }
     }
 
     private fun setUpListeners() {
         binding.buttonExit.setOnClickListener {
             dialog?.dismiss()
+        }
+    }
+
+    companion object {
+        fun newInstance(community: Community? = null): CommunitiesDetailsDialog {
+            return CommunitiesDetailsDialog().apply {
+                this.community = community
+            }
         }
     }
 }
