@@ -28,6 +28,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Aplicativo realizado na 2ª fase do Camp Ioasys 2022.
 
+Cobé é uma agência especializada em turismo comunitário sustentável e social, transformando em rotas turísticas as regiões rurais que trabalham com produção artesanal, afim de promover o desenvolvimento local.
+
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/sBjLdJp7q4T7itZwj5Wf5Z/Round-6---Compartilhado?node-id=2%3A12).
