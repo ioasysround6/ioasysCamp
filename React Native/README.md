@@ -5,9 +5,7 @@
 <br>
 
 <p align="center">
-<!--    <img src="assets/gofinances.gif" width="400"> -->
-  
-  Colocar o gif do app
+   <img src="round6/src/assets/gravacao_cobe.gif" width="300">
  </p>
 
 ## ✨ Tecnologias
@@ -23,6 +21,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React Native SVG](https://github.com/react-native-svg/react-native-svg)
 - [React Native Swiper Flatlist](https://github.com/gusgard/react-native-swiper-flatlist)
 - [React Native Dropdown](https://github.com/hossein-zare/react-native-dropdown-picker)
+- [Lottie for React Native](https://github.com/lottie-react-native/lottie-react-native)
 
 
 ## 💻 Projeto
@@ -31,7 +30,7 @@ Aplicativo realizado na 2ª fase do Camp Ioasys 2022.
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/sBjLdJp7q4T7itZwj5Wf5Z/Round-6---Compartilhado?node-id=2%3A12).
+Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/sBjLdJp7q4T7itZwj5Wf5Z/).
 
 <h2>🔥 Para Clonar o repositório</h2>
 
@@ -39,7 +38,7 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 
 <div class="highlight highlight-source-shell">
  <pre>
- git clone https://github.com/ioasys/ioasysCamp.git
+ git clone https://github.com/ioasys/ioasysCamp/tree/master_reactnative
 </pre>
 
 </div>
@@ -63,4 +62,4 @@ yarn android
 </pre>
 </div>
 
-Feito com :orange_heart: pelo Grupo 6! do Camp Ioasys 2022.
+Feito com :orange_heart: pelo Grupo 6 do Camp Ioasys 2022.
