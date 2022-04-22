@@ -107,7 +107,7 @@ export function Home() {
             <Banner image={BackImage} title="Turismo comunitário" />
           </View>
           <Text style={styles.titleAreaPackages}>Pacotes de turismo</Text>
-          <View style={{ flexDirection: 'row' }}>
+          <View style={{ flexDirection: 'row', height: 200 }}>
             <FlatList
               horizontal={true}
               data={tours}
@@ -123,7 +123,7 @@ export function Home() {
             />
           </View>
           <Text style={[styles.titleAreaPackages, { marginTop: 40, marginBottom: 20 }]}>Comunidades parceiras</Text>
-          <View style={{ flexDirection: 'row', marginBottom: 20 }}>
+          <View style={{ flexDirection: 'row', marginBottom: 20, height: 180 }}>
             <FlatList
               horizontal={true}
               data={communities}
