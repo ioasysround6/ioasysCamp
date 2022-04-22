@@ -30,7 +30,7 @@ Aplicativo realizado na 2ª fase do Camp Ioasys 2022.
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/sBjLdJp7q4T7itZwj5Wf5Z/).
+Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/sBjLdJp7q4T7itZwj5Wf5Z/Round-6---Compartilhado?node-id=2%3A12).
 
 <h2>🔥 Para Clonar o repositório</h2>
 
