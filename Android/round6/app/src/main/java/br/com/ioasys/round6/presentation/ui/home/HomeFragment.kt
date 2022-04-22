@@ -158,7 +158,7 @@ class HomeFragment : Fragment(), TourClickListener, CommunityClickListener {
     }
 
     override fun onCommunityClickListener(community: Community) {
-        CommunitiesDetailsDialog().show(childFragmentManager, javaClass.name)
+        CommunitiesDetailsDialog.newInstance(community).show(childFragmentManager, "communities")
     }
 
     override fun onDestroyView() {

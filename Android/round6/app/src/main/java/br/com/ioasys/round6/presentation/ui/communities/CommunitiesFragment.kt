@@ -20,13 +20,13 @@ class CommunitiesFragment : Fragment() {
 
     private fun setOnClickListener() {
         binding.saveCommunities01.setOnClickListener {
-            CommunitiesDetailsDialog().show(childFragmentManager, javaClass.name)
+            Toast.makeText(context, "Função Indisponível no momento!", Toast.LENGTH_LONG).show()
         }
         binding.saveCommunities02.setOnClickListener {
-            Toast.makeText(context, "Teste 02", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Função Indisponível no momento!", Toast.LENGTH_LONG).show()
         }
         binding.saveCommunities03.setOnClickListener {
-            Toast.makeText(context, "Teste 03", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Função Indisponível no momento!", Toast.LENGTH_LONG).show()
         }
     }
 
