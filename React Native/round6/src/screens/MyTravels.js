@@ -17,7 +17,7 @@ export function MyTravels(){
   }
 
   function handleGoWhatsapp(){
-    Linking.openURL(`https://api.whatsapp.com/send?phone=556140040001&text=Ol%C3%A1%20Gostaria%20de%20saber%20mais!`);
+    Linking.openURL(`https://api.whatsapp.com/send?phone=5585997549596&text=Ol%C3%A1!%20Recentemente%20fiz%20uma%20viagem%20e%20gostaria%20de%20falar%20sobre.`);
   }
 
   return (
