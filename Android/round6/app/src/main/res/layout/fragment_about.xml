@@ -40,8 +40,8 @@
             app:srcCompat="@drawable/white_back_arrow" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/title"
-            style="@style/TitleStyle"
+            android:id="@+id/tvTitle"
+            style="@style/TitleStyleOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
             android:background="@drawable/background_white_style"
-            app:layout_constraintTop_toBottomOf="@id/title">
+            app:layout_constraintTop_toBottomOf="@id/tvTitle">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -68,13 +68,13 @@
                     android:id="@+id/tourismImageOne"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
-                    android:scaleType="centerCrop"
+                    android:layout_marginTop="@dimen/margin_40"
                     android:adjustViewBounds="true"
-                    app:shapeAppearanceOverlay="@style/roundedImageView"
+                    android:scaleType="centerCrop"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/roundedImageView"
                     app:srcCompat="@drawable/communitytourismone" />
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -87,8 +87,8 @@
                     app:srcCompat="@drawable/ic_binoculars" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tourismSubtitleOne"
-                    style="@style/SubtitleStyle"
+                    android:id="@+id/tvTourismSubtitleOne"
+                    style="@style/SubtitleStyleOne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -98,14 +98,14 @@
                     app:layout_constraintTop_toTopOf="@id/tourismIconOne" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tourismDescOne"
+                    android:id="@+id/tvTourismDescOne"
                     style="@style/BodyTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="@string/tourism_description_paragraph_one"
                     app:layout_constraintStart_toStartOf="@id/tourismIconOne"
-                    app:layout_constraintTop_toBottomOf="@id/tourismSubtitleOne" />
+                    app:layout_constraintTop_toBottomOf="@id/tvTourismSubtitleOne" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/tourismIconTwo"
@@ -113,12 +113,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tourismDescOne"
+                    app:layout_constraintTop_toBottomOf="@id/tvTourismDescOne"
                     app:srcCompat="@drawable/ic_direction" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tourismSubtitleTwo"
-                    style="@style/SubtitleStyle"
+                    android:id="@+id/tvTourismSubtitleTwo"
+                    style="@style/SubtitleStyleOne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -128,7 +128,7 @@
                     app:layout_constraintTop_toTopOf="@id/tourismIconTwo" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tourismDescTwo"
+                    android:id="@+id/tvTourismDescTwo"
                     style="@style/BodyTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -138,26 +138,26 @@
                     app:layout_constraintTop_toBottomOf="@id/tourismIconTwo" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/appCompatTextView"
+                    android:id="@+id/tvTourismDescThree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
                     android:text="@string/tourism_description_paragraph_three"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tourismDescTwo" />
+                    app:layout_constraintTop_toBottomOf="@id/tvTourismDescTwo" />
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/tourismImageTwo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_40"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    app:shapeAppearanceOverlay="@style/roundedImageView"
-                    android:layout_marginTop="40dp"
                     android:src="@drawable/communitytourismimagetwo"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/appCompatTextView" />
+                    app:layout_constraintTop_toBottomOf="@id/tvTourismDescThree"
+                    app:shapeAppearanceOverlay="@style/roundedImageView" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/tourismIconThree"
@@ -169,8 +169,8 @@
                     app:srcCompat="@drawable/ic_growth" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tourismSubtitleThree"
-                    style="@style/SubtitleStyle"
+                    android:id="@+id/tvTourismSubtitleThree"
+                    style="@style/SubtitleStyleOne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -180,27 +180,27 @@
                     app:layout_constraintTop_toTopOf="@id/tourismIconThree" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tourismDescFour"
+                    android:id="@+id/tvTourismDescFour"
                     style="@style/BodyTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="@string/tourism_description_paragraph_four"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tourismSubtitleThree" />
+                    app:layout_constraintTop_toBottomOf="@id/tvTourismSubtitleThree" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tourismDescFive"
+                    android:id="@+id/tvTourismDescFive"
                     style="@style/BodyTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
                     android:text="@string/tourism_description_paragraph_five"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tourismDescFour" />
+                    app:layout_constraintTop_toBottomOf="@id/tvTourismDescFour" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tourismDescSix"
+                    android:id="@+id/tvTourismDescSix"
                     style="@style/BodyTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -209,7 +209,7 @@
                     android:text="@string/tourism_description_paragraph_six"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tourismDescFive" />
+                    app:layout_constraintTop_toBottomOf="@id/tvTourismDescFive" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

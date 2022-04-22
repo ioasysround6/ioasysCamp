@@ -90,11 +90,11 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/gradient_bg_slider"/>
+                        android:background="@drawable/gradient_bg_slider" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/homeTitle"
-                        style="@style/TitleStyle"
+                        android:id="@+id/tvHomeTitle"
+                        style="@style/TitleStyleOne"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="97dp"
@@ -105,7 +105,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/homeSubtitle"
+                        android:id="@+id/tvHomeSubtitle"
                         android:layout_width="179dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/outfit_regular"
@@ -114,7 +114,7 @@
                         android:textColor="@color/lighter"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/homeTitle" />
+                        app:layout_constraintTop_toBottomOf="@id/tvHomeTitle" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/howButton"
@@ -128,13 +128,13 @@
                         android:textAllCaps="false"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/homeSubtitle" />
+                        app:layout_constraintTop_toBottomOf="@id/tvHomeSubtitle" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTitleTourPackage"
-                style="@style/TitleRecyclerViewHome"
+                style="@style/TitleStyleTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/app_margin"
@@ -158,8 +158,8 @@
                 tools:listitem="@layout/package_item" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/communitiesTitle"
-                style="@style/TitleRecyclerViewHome"
+                android:id="@+id/tvCommunitiesTitle"
+                style="@style/TitleStyleTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/app_margin"
@@ -180,7 +180,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/communitiesTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvCommunitiesTitle"
                 tools:itemCount="1"
                 tools:listitem="@layout/community_item" />
         </androidx.constraintlayout.widget.ConstraintLayout>

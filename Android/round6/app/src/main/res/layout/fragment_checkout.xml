@@ -34,8 +34,8 @@
         app:srcCompat="@drawable/white_back_arrow" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/titleCheckout"
-        style="@style/TitleStyle"
+        android:id="@+id/tvTitleCheckout"
+        style="@style/TitleStyleOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/checkout"
@@ -51,7 +51,7 @@
         android:layout_marginTop="52dp"
         android:background="@drawable/background_white_style"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titleCheckout">
+        app:layout_constraintTop_toBottomOf="@id/tvTitleCheckout">
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"

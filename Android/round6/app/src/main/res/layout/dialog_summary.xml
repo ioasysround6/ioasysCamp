@@ -35,13 +35,11 @@
                 app:srcCompat="@drawable/ic_exit" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/summaryTitle"
+                android:id="@+id/tvSummaryTitle"
+                style="@style/TitleStyleTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/outfit_semibold"
                 android:text="@string/purchase_summary"
-                android:textColor="@color/neutral_darker"
-                android:textSize="@dimen/headline_20"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/buttonExit" />
@@ -54,7 +52,7 @@
                 android:layout_marginTop="52dp"
                 android:src="@drawable/ic_accommodation"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/summaryTitle" />
+                app:layout_constraintTop_toBottomOf="@id/tvSummaryTitle" />
 
             <View
                 android:id="@+id/dividerDecoration"
@@ -71,16 +69,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="13dp"
-                android:fontFamily="@font/outfit_semibold"
                 android:text="@string/package_name"
-                android:textColor="@color/neutral_darker"
-                android:textSize="14sp"
+                style="@style/SubtitleStyleTwo"
                 app:layout_constraintBottom_toBottomOf="@id/packageIcon"
                 app:layout_constraintStart_toEndOf="@+id/packageIcon"
                 app:layout_constraintTop_toTopOf="@id/packageIcon" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/packageDesc"
+                android:id="@+id/tvPackageDesc"
                 style="@style/BodyTextStyle"
                 android:layout_width="264dp"
                 android:layout_height="wrap_content"
@@ -97,17 +93,15 @@
                 android:layout_marginTop="17dp"
                 android:src="@drawable/ic_card"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/packageDesc" />
+                app:layout_constraintTop_toBottomOf="@id/tvPackageDesc" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/paymentForm"
+                android:id="@+id/tvPaymentForm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="13dp"
-                android:fontFamily="@font/outfit_semibold"
                 android:text="@string/payment_form"
-                android:textColor="@color/neutral_darker"
-                android:textSize="14sp"
+                style="@style/SubtitleStyleTwo"
                 app:layout_constraintBottom_toBottomOf="@id/iconPayment"
                 app:layout_constraintStart_toEndOf="@+id/iconPayment"
                 app:layout_constraintTop_toTopOf="@id/iconPayment" />
@@ -123,17 +117,17 @@
                 app:layout_constraintTop_toBottomOf="@id/iconPayment" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/paymentDesc"
+                android:id="@+id/tvPaymentDesc"
                 style="@style/BodyTextStyle"
                 android:layout_width="264dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="@string/payment_form_description"
-                app:layout_constraintStart_toStartOf="@id/paymentForm"
-                app:layout_constraintTop_toBottomOf="@id/paymentForm" />
+                app:layout_constraintStart_toStartOf="@id/tvPaymentForm"
+                app:layout_constraintTop_toBottomOf="@id/tvPaymentForm" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/changePayment"
+                android:id="@+id/tvChangePayment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
@@ -144,8 +138,8 @@
                 android:text="@string/change_payment_method"
                 android:textColor="@color/primary_default"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@id/paymentDesc"
-                app:layout_constraintTop_toBottomOf="@id/paymentDesc" />
+                app:layout_constraintStart_toStartOf="@id/tvPaymentDesc"
+                app:layout_constraintTop_toBottomOf="@id/tvPaymentDesc" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider"
@@ -155,11 +149,11 @@
                 android:layout_marginTop="59dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/changePayment" />
+                app:layout_constraintTop_toBottomOf="@id/tvChangePayment" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/totalPayment"
-                style="@style/SubtitleStyle"
+                style="@style/SubtitleStyleOne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/app_margin"
@@ -169,8 +163,8 @@
                 app:layout_constraintTop_toBottomOf="@id/divider" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/paymentAmount"
-                style="@style/SubtitleStyle"
+                android:id="@+id/tvPaymentAmount"
+                style="@style/SubtitleStyleOne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/app_margin"
@@ -180,14 +174,14 @@
                 app:layout_constraintTop_toTopOf="@id/totalPayment" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/paymentDetails"
+                android:id="@+id/tvPaymentDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/app_margin"
                 android:fontFamily="@font/outfit_regular"
                 android:text="@string/interest_free"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/paymentAmount" />
+                app:layout_constraintTop_toBottomOf="@id/tvPaymentAmount" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSingIn"
@@ -198,12 +192,12 @@
                 android:layout_marginBottom="32dp"
                 android:background="@drawable/button_hover_secondary"
                 android:padding="17.5dp"
-                android:text="Confirmar compra"
+                android:text="@string/confirm_buy"
                 android:textAllCaps="false"
                 android:textColor="@color/lighter"
                 android:textSize="@dimen/button_14"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/paymentDetails" />
+                app:layout_constraintTop_toBottomOf="@id/tvPaymentDetails" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>

@@ -74,17 +74,17 @@ class RegisterFragment : Fragment() {
                 }
 
                 inputBirth.addTextChangedListener {
-                    messageErrorBirth.visibility = View.GONE
+                    tvMessageErrorBirth.visibility = View.GONE
                     inputBirth.setBackgroundResource(R.drawable.input_background)
                 }
 
                 inputEmail.addTextChangedListener {
-                    messageErrorEmail.visibility = View.GONE
+                    tvMessageErrorEmail.visibility = View.GONE
                     inputEmail.setBackgroundResource(R.drawable.input_background)
                 }
 
                 inputPassword.addTextChangedListener {
-                    messageErrorPassword.visibility = View.GONE
+                    tvMessageErrorPassword.visibility = View.GONE
                     inputPassword.setBackgroundResource(R.drawable.input_background)
                 }
             }
@@ -163,19 +163,19 @@ class RegisterFragment : Fragment() {
 
     private fun invalidBirthDate(error: Boolean) {
         binding.apply {
-            messageErrorBirth.visibility = if (error) View.VISIBLE else View.GONE
+            tvMessageErrorBirth.visibility = if (error) View.VISIBLE else View.GONE
         }
     }
 
     private fun invalidEmail(error: Boolean) {
         binding.apply {
-            messageErrorEmail.visibility = if (error) View.VISIBLE else View.GONE
+            tvMessageErrorEmail.visibility = if (error) View.VISIBLE else View.GONE
         }
     }
 
     private fun invalidPassword(error: Boolean) {
         binding.apply {
-            messageErrorPassword.visibility = if (error) View.VISIBLE else View.GONE
+            tvMessageErrorPassword.visibility = if (error) View.VISIBLE else View.GONE
         }
     }
 
