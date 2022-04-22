@@ -12,10 +12,6 @@ class CommunitiesFragment : Fragment() {
     private var _binding: FragmentCommunitiesBinding? = null
     private val binding: FragmentCommunitiesBinding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setOnClickListener()
