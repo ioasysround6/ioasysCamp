@@ -49,7 +49,7 @@
                 tools:text="@string/community_name" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/communityDescription"
+                android:id="@+id/tvCommunityDescription"
                 style="@style/BodyTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/communityDescription">
+                app:layout_constraintTop_toBottomOf="@id/tvCommunityDescription">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -110,7 +110,7 @@
                         app:layout_constraintTop_toTopOf="@id/locationIcon" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/locationDescription"
+                        android:id="@+id/tvLocationDescription"
                         style="@style/BodyTextStyle"
                         android:layout_width="201dp"
                         android:layout_height="wrap_content"
@@ -125,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="26dp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/locationDescription"
+                        app:layout_constraintTop_toBottomOf="@id/tvLocationDescription"
                         app:srcCompat="@drawable/ic_main_activities" />
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -142,7 +142,7 @@
                         app:layout_constraintTop_toTopOf="@id/mainActivitiesIcon" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/mainActivitiesDescription"
+                        android:id="@+id/tvMainActivitiesDescription"
                         style="@style/BodyTextStyle"
                         android:layout_width="201dp"
                         android:layout_height="wrap_content"
@@ -157,11 +157,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="26dp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/mainActivitiesDescription"
+                        app:layout_constraintTop_toBottomOf="@id/tvMainActivitiesDescription"
                         app:srcCompat="@drawable/ic_curiosities" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/curiositiesTitle"
+                        android:id="@+id/tvCuriositiesTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
@@ -181,8 +181,8 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="32dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="@id/curiositiesTitle"
-                        app:layout_constraintTop_toBottomOf="@id/curiositiesTitle"
+                        app:layout_constraintStart_toStartOf="@id/tvCuriositiesTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvCuriositiesTitle"
                         tools:text="@string/curiosities_description" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </ScrollView>

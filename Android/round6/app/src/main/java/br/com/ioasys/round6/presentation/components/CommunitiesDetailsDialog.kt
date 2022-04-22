@@ -42,9 +42,9 @@ class CommunitiesDetailsDialog : DialogFragment() {
         binding.apply {
             communityName.text = community?.communityName
             Picasso.get().load(community?.photo2).into(communityImage)
-            communityDescription.text = community?.description
-            locationDescription.text = community?.localization
-            mainActivitiesDescription.text = community?.mainActivities
+            tvCommunityDescription.text = community?.description
+            tvLocationDescription.text = community?.localization
+            tvMainActivitiesDescription.text = community?.mainActivities
             curiositiesDescription.text = community?.curiosities
         }
     }
