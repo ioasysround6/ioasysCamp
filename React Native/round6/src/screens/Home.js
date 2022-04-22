@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, StatusBar, ScrollView, FlatList, } from 'react-native';
+import { View, Text, StyleSheet, StatusBar, ScrollView, FlatList, Image, Dimensions, TouchableOpacity, TouchableHighlight } from 'react-native';
 
 import api from '../services/api';
 import { buscaTours } from '../services/requisicoes/tours';
 import { buscaCommunities } from '../services/requisicoes/communities';
+
+import { SwiperFlatList } from 'react-native-swiper-flatlist';
 
 import PersonIcon from '../../src/assets/PersonIcon.png';
 
@@ -17,6 +19,9 @@ import CardPackages from '../components/CardPackages';
 import ModalCommunities from '../components/ModalCommunities';
 
 import LateralHome from '../assets/SVG/LateralHome.svg';
+import ButtonSmall from '../components/ButtonSmall';
+
+var width = Dimensions.get('window').width;
 
 export function Home() {
 
@@ -79,6 +84,12 @@ export function Home() {
     navigation.navigate("MyAccount")
   }
 
+  function handleGoCommunityTourism(){
+    navigation.navigate('CommunityTourism')
+}
+
+  const imagesUrl=['https://i.imgur.com/YenN23l.png', 'https://i.imgur.com/q1HkLAG.png', 'https://i.imgur.com/5tRVLuD.png']
+
   return (
     <View style={{backgroundColor: colors.neutralLighter}}>
       <ScrollView>
@@ -104,10 +115,51 @@ export function Home() {
             </View>
 
           <View style={styles.AreaBanner}>
-            <Banner image={BackImage} title="Turismo comunitário" />
+            {/* <Banner image={BackImage} title="Turismo comunitário" /> */}
+
+            <SwiperFlatList
+              autoplay
+              autoplayDelay={2}
+              autoplayLoop
+              autoplayLoopKeepAnimation
+              disableGesture
+              index={0}
+              paginationStyleItemActive={styles.dotActive}
+              paginationStyleItemInactive={styles.dotInactive}
+              showPagination
+              data={imagesUrl}
+              renderItem={({ item }) => (
+                <View style={styles.imagewrapper}>
+                  <Image 
+                    style={styles.image} 
+                    source={{uri: item}}
+                  />
+                </View>
+              )}
+            />
+
+            <View style={styles.boxTurismo}>
+              <View style={{alignItems: 'center', marginTop: 97}}>
+                <Text style={styles.textoTurismo}>Turismo comunitário</Text>
+                <Text style={styles.textoAtividade}>essa atividade pode ajudar a {'\n'}erradicar a pobreza</Text>
+              </View>
+
+              <View style={{width: '100%', height: 48, marginTop: 40}}>
+                <TouchableHighlight 
+                  style={styles.botaoSaberBox}
+                  activeOpacity={0.6}
+                  underlayColor={colors.primaryDark}
+                  onPress={handleGoCommunityTourism}
+                  >
+                  <Text style={styles.textoBotao}>Sabe como</Text>
+                </TouchableHighlight>
+              </View>
+
+            </View>
           </View>
+
           <Text style={styles.titleAreaPackages}>Pacotes de turismo</Text>
-          <View style={{ flexDirection: 'row' }}>
+          <View style={{ flexDirection: 'row', height: 200 }}>
             <FlatList
               horizontal={true}
               data={tours}
@@ -123,7 +175,7 @@ export function Home() {
             />
           </View>
           <Text style={[styles.titleAreaPackages, { marginTop: 40, marginBottom: 20 }]}>Comunidades parceiras</Text>
-          <View style={{ flexDirection: 'row', marginBottom: 20 }}>
+          <View style={{ flexDirection: 'row', marginBottom: 20, height: 180 }}>
             <FlatList
               horizontal={true}
               data={communities}
@@ -157,7 +209,7 @@ export function Home() {
 
 const styles = StyleSheet.create({
   AreaBanner: {
-    marginTop: 32,
+    marginTop: 22,
     marginBottom: 40,
   },
   titleAreaPackages: {
@@ -169,5 +221,60 @@ const styles = StyleSheet.create({
   scroll: {
     backgroundColor: '#1dd',
     // flexDirection: 'row',
+  },
+
+  dotActive: {
+    width: 10,
+    height: 4,
+    marginLeft: 4,
+    marginRight: 4,
+    backgroundColor: colors.neutralLighter
+  },
+  dotInactive: {
+    width: 6,
+    height: 4,
+    marginLeft: 4,
+    marginRight: 4,
+    backgroundColor: '#rgba(252, 252, 252, 0.4)',
+    borderColor: '#rgba(252, 252, 252, 0.4)',
+    borderWidth: 1
+  },
+  imagewrapper: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  image: {
+    borderRadius: 20,
+    width: width - 64,
+    height: 300,
+  },
+  boxTurismo: {
+    position: 'absolute',
+    width: '100%', 
+    height: '100%'
+  },
+  textoTurismo: {
+    fontSize: 24, 
+    fontWeight: '600', 
+    color: colors.neutralLight
+  },
+  textoAtividade: {
+    textAlign: 'center', 
+    fontSize: 14, 
+    fontWeight: '400', 
+    color: colors.neutralLighter
+  },
+  botaoSaberBox: {
+    flex: 1, 
+    marginHorizontal: 78, 
+    backgroundColor: colors.primaryDefault, 
+    borderRadius: 12, 
+    alignItems: 'center', 
+    justifyContent: 'center'
+  },
+  textoBotao: {
+    fontSize: 14, 
+    fontWeight: '600', 
+    color: colors.neutralLighter
   }
 })
