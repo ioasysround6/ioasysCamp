@@ -65,7 +65,7 @@ export function CheckoutPay(){
   }
 
   function handleGoWhatsapp(){
-    Linking.openURL(`https://api.whatsapp.com/send?phone=556140040001&text=Ol%C3%A1%20Gostaria%20de%20saber%20mais!`);
+    Linking.openURL(`https://api.whatsapp.com/send?phone=5585997549596&text=Ol%C3%A1!%20Realizei%20minha%20compra%2C%20obrigado!`);
   }
 
   return(
