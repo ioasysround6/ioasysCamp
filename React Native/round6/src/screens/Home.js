@@ -209,7 +209,7 @@ export function Home() {
 
 const styles = StyleSheet.create({
   AreaBanner: {
-    marginTop: 32,
+    marginTop: 22,
     marginBottom: 40,
   },
   titleAreaPackages: {
