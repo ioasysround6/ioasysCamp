@@ -13,6 +13,8 @@ import androidx.navigation.fragment.findNavController
 import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.FragmentRegisterBinding
 import br.com.ioasys.round6.domain.exception.*
+import br.com.ioasys.round6.presentation.utils.Constants
+import br.com.ioasys.round6.presentation.utils.extension.openExternalUrl
 import br.com.ioasys.round6.presentation.viewmodels.RegisterViewModel
 import br.com.ioasys.round6.utils.ViewState
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -47,6 +49,10 @@ class RegisterFragment : Fragment() {
         binding.passwordToggle.setOnClickListener {
             isShowPass = !isShowPass
             showPassword(isShowPass)
+        }
+
+        binding.tvContact.setOnClickListener {
+            openExternalUrl(Constants.EXTERNAL_URL)
         }
 
         binding.btnRegister.setOnClickListener {

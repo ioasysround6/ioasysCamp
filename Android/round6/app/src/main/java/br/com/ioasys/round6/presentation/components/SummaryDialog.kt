@@ -6,20 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
-import br.com.ioasys.round6.databinding.DialogConfirmationBinding
-import br.com.ioasys.round6.presentation.utils.Constants
-import br.com.ioasys.round6.presentation.utils.extension.openExternalUrl
+import br.com.ioasys.round6.databinding.DialogSummaryBinding
 
-class ConfirmationDialog : DialogFragment() {
+class SummaryDialog : DialogFragment() {
 
-    private lateinit var binding: DialogConfirmationBinding
+    private lateinit var binding: DialogSummaryBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DialogConfirmationBinding.inflate(inflater, container, false)
+        binding = DialogSummaryBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -37,14 +35,12 @@ class ConfirmationDialog : DialogFragment() {
     }
 
     private fun setUpListeners() {
-        binding.apply {
-            buttonExit.setOnClickListener {
-                dialog?.dismiss()
-            }
+        binding.btnSingIn.setOnClickListener {
+            ConfirmationDialog().show(childFragmentManager, javaClass.name)
+        }
 
-            buttonRedirect.setOnClickListener {
-                openExternalUrl(Constants.EXTERNAL_URL)
-            }
+        binding.buttonExit.setOnClickListener {
+            dismiss()
         }
     }
 }

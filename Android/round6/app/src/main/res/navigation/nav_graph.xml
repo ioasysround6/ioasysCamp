@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_accountFragment"
             app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_communitiesDetailsDialog"
+            app:destination="@id/communitiesDetailsDialog" />
     </fragment>
 
     <fragment
@@ -31,11 +34,7 @@
         android:id="@+id/communitiesFragment"
         android:name="br.com.ioasys.round6.presentation.ui.communities.CommunitiesFragment"
         android:label="fragment_communities"
-        tools:layout="@layout/fragment_communities" >
-        <action
-            android:id="@+id/action_communitiesFragment_to_communitiesDetailsDialog"
-            app:destination="@id/communitiesDetailsDialog" />
-    </fragment>
+        tools:layout="@layout/fragment_communities" />
 
     <fragment
         android:id="@+id/tripsFragment"
@@ -66,7 +65,11 @@
         android:id="@+id/checkoutFragment"
         android:name="br.com.ioasys.round6.presentation.ui.checkout.CheckoutFragment"
         android:label="fragment_checkout"
-        tools:layout="@layout/fragment_checkout" />
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_summaryDialog"
+            app:destination="@id/summaryDialog" />
+    </fragment>
     <dialog
         android:id="@+id/communitiesDetailsDialog"
         android:name="br.com.ioasys.round6.presentation.components.CommunitiesDetailsDialog"
@@ -76,4 +79,16 @@
         android:name="br.com.ioasys.round6.presentation.ui.account.AccountFragment"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" />
+    <dialog
+        android:id="@+id/confirmationDialog"
+        android:name="br.com.ioasys.round6.presentation.components.ConfirmationDialog"
+        android:label="ConfirmationDialog" />
+    <dialog
+        android:id="@+id/summaryDialog"
+        android:name="br.com.ioasys.round6.presentation.components.SummaryDialog"
+        android:label="SummaryDialog" >
+        <action
+            android:id="@+id/action_summaryDialog_to_confirmationDialog"
+            app:destination="@id/confirmationDialog" />
+    </dialog>
 </navigation>

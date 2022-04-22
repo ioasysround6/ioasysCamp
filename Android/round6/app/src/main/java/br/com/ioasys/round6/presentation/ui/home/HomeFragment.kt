@@ -15,17 +15,19 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.FragmentHomeBinding
+import br.com.ioasys.round6.domain.model.Community
 import br.com.ioasys.round6.domain.model.Tour
 import br.com.ioasys.round6.presentation.adapters.CommunityAdapter
 import br.com.ioasys.round6.presentation.adapters.SliderViewPagerAdapter
-import br.com.ioasys.round6.presentation.adapters.TourClickListener
 import br.com.ioasys.round6.presentation.adapters.TourListAdapter
+import br.com.ioasys.round6.presentation.listeners.CommunityClickListener
+import br.com.ioasys.round6.presentation.listeners.TourClickListener
 import br.com.ioasys.round6.presentation.viewmodels.HomeViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class HomeFragment : Fragment(), TourClickListener {
+class HomeFragment : Fragment(), TourClickListener, CommunityClickListener {
     private val homeViewModel: HomeViewModel by viewModel()
 
     private lateinit var tourListAdapter: TourListAdapter
@@ -35,12 +37,12 @@ class HomeFragment : Fragment(), TourClickListener {
     private lateinit var sliderViewViewPagerAdapter: SliderViewPagerAdapter
 
     private val mImageList = listOf(
-        "https://i.imgur.com/EKE6lmt.png",
-        "https://i.imgur.com/0WbJLsJ.jpg",
-        "https://i.imgur.com/VzfYJsl.png"
+        "https://i.imgur.com/3yucTHb.jpg",
+        "https://i.imgur.com/lj1xdBX.jpg",
+        "https://i.imgur.com/FHEKseg.jpg"
     )
 
-    private var dots: Array<TextView?> = arrayOfNulls<TextView>(mImageList.size)
+    private var dots: Array<TextView?> = arrayOfNulls(mImageList.size)
 
     private var _binding: FragmentHomeBinding? = null
     private val binding: FragmentHomeBinding get() = _binding!!
@@ -152,6 +154,10 @@ class HomeFragment : Fragment(), TourClickListener {
     override fun onTourClickListener(tour: Tour) {
         val action = HomeFragmentDirections.actionHomeFragmentToPackagesDetailsFragment(tour)
         findNavController().navigate(action)
+    }
+
+    override fun onCommunityClickListener(community: Community) {
+        TODO("Not yet implemented")
     }
 
     override fun onDestroyView() {

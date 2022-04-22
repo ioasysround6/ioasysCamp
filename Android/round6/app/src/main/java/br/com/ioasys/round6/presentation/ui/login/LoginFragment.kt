@@ -83,6 +83,11 @@ class LoginFragment : Fragment() {
         binding.tvAccount.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
+
+        binding.tvSkip.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_nav_graph)
+        }
+
     }
 
     private fun showPassword(isShow: Boolean) {
