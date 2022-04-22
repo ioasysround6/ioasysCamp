@@ -1,3 +1,162 @@
 <resources>
-    <string name="app_name">round6</string>
+    <string name="app_name">Cobé</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Pular</string>
+    <string name="email">E-mail</string>
+    <string name="email_hint">exemplo@email.com</string>
+    <string name="password">Senha</string>
+    <string name="password_hint">senha</string>
+    <string name="error_text">Esqueci a minha senha</string>
+    <string name="create_account">Criar conta</string>
+    <string name="create_acc_message">Não possui uma conta ainda?</string>
+    <string name="sing_in">Entrar na minha conta</string>
+    <string name="sing_in_with">Acessar com:</string>
+    <string name="name">Nome</string>
+    <string name="invalid_password">Usuário e/ou senha inválidos.</string>
+    <string name="invalid_user">Usuário inválido</string>
+    <string name="home">Home</string>
+    <string name="communities">Comunidades</string>
+    <string name="diary">Diário</string>
+    <string name="trips">Minhas viagens</string>
+    <string name="register">Cadastro:</string>
+    <string name="name_hint">Maria Fernanda</string>
+    <string name="last_name">Sobrenome</string>
+    <string name="birth">Data de Nascimento</string>
+    <string name="birth_hint">1999–01–01</string>
+    <string name="lastName_hint">Sales Souza</string>
+    <string name="confirm_registration">Confirmar cadastro</string>
+    <string name="register_message">Está com dificuldades para realizar o cadastro?</string>
+    <string name="contact">Entre em contato</string>
+    <string name="agreed_terms">Concordo com os</string>
+    <string name="confirmation_message">Fique de olho no seu e-mail, vamos enviar as informações sobre sua viagem por lá! Qualquer dúvida fique a vontade para chamar a gente pelo Whats App:</string>
+    <string name="booking_message">Sua compra foi efetuada com sucesso!</string>
+    <string name="button_whatsapp_message">Redirecionar para WhatsApp</string>
+    <!-- Checkout Fragment -->
+    <string name="checkout">Checkout</string>
+    <string name="cpf_hint">000.000.000–00</string>
+    <string name="payment_form">Forma de pagamento</string>
+    <string name="card_number_hint">0000 0000 0000 0000</string>
+    <string name="card_code_hint">000</string>
+    <string name="traveler_one">Viajante 1</string>
+    <string name="cpf">CPF</string>
+    <string name="traveler_two">Viajante 2</string>
+    <string name="payment_slip">Boleto</string>
+    <string name="pix">PIX</string>
+    <string name="credit_card">Cartão de crédito</string>
+    <string name="split_the_purchase">Parcelar a compra</string>
+    <string name="in_cash">À vista</string>
+    <string name="card_number">Número do cartão</string>
+    <string name="card_name">Nome impresso no cartão</string>
+    <string name="code">Código</string>
+    <string name="validity">Validade</string>
+    <string name="finalize_purchase">Finalizar compra</string>
+    <string name="total_payable">Total a pagar</string>
+    <string name="payment_amount">R$ 600,00</string>
+    <string name="payment_text">Em até 3x sem juros no cartão de crédito</string>
+    <string name="card_validity">01/27</string>
+    <string name="message_error_password">A senha deve conter no mínimo 8 caracteres, uma letra maiúscula, um número e um caracter especial</string>
+    <string name="message_error_email">Esse não é um formato válido de e-mail</string>
+    <string name="message_error_birth_date">Esse não é um formato válido de data</string>
+    <string name="message_error_last_name">Esse campo é obrigatório</string>
+    <string name="message_error_name">Esse campo é obrigatório</string>
+    <string name="message_error_cpf">CPF inválido</string>
+    <string name="message_error_card_code">Cartão de crédito inválido</string>
+    <string name="message_error_payment">Selecionar forma de pagamento</string>
+    <string name="items">Items</string>
+    <string-array name="dropdownItens">
+        <item>À vista</item>
+        <item>2x sem juros</item>
+        <item>3x sem juros</item>
+    </string-array>
+    <!-- Home Fragment -->
+    <string name="tour_package">Pacotes de turismo</string>
+    <string name="partner_communities">Comunidades Parceiras</string>
+    <string name="how_its_possible">Saber como</string>
+    <string name="activity_help_eradicate_poverty">essa atividade pode ajudar a\n erradicar a pobreza</string>
+    <string name="community_tourism">Turismo comunitário</string>
+    <!-- About Fragment -->
+    <string name="tourism_description_paragraph_one">O turismo de base comunitária diferentemente do turismo tradicional tem como foco a experiência do viajante no local de destino. A viagem é toda planejada para que a pessoa participe do dia a dia da comunidade local, realizando as mesmas atividades que os moradores realizam, além de ter a oportunidade de conhecer os costumes da região.</string>
+    <string name="tourism_description_paragraph_two">Geralmente o turista fica hospedado na casa de um morador da comunidade, faz as refeições junto com a família e participa da rotina de atividades com essa família. Ele pode aprender e ajudar com o plantio, a cozinha, trabalhando com peças de artesanado tradicionais na comunidade, entre várias outras atividades.</string>
+    <string name="tourism_description_paragraph_three">A ideia é colocar as comunidades locais como protagonistas e promover um estilo de viagem sustentável, com respeito à natureza, às populações e à cultura.</string>
+    <string name="tourism_description_paragraph_four">O turismo de base comunitárioa serve como uma alternativa de renda para populações dessas comunidades, uma oportunidade de valorização da cultura local e uma forma de integrar os jovens ao modo de vida local.</string>
+    <string name="tourism_description_paragraph_five">O incentivo ao turimo de base comunitária pode ajudar na meta de erradicação da pobreza. Isso porque esse estilo de viagem ajuda a movimentar a economia local, dá maior visibilidade para essas comunidades e proporciona maior interesse pela cultura dessas pessoas.</string>
+    <string name="tourism_description_paragraph_six">E tudo isso ajuda a desconstruir a visão de que as pessoas dessas comunidades precisariam mudar para a capital em busca de oportunidades melhores, uma vez que elas conseguem se desenvolver e manter uma condição digna de vida dentro da sua cultura.</string>
+    <string name="what_is">O que é?</string>
+    <string name="how">Como acontece?</string>
+    <string name="how_generate_development">Como gera desenvolvimento?</string>
+    <string name="purchase_summary">Resumo da compra</string>
+    <string name="package_name">Pacote Mãos na Argila!</string>
+    <string name="package_description">Pacote de turismo para a comunidade Mato Serrado na cidade de Crato no Ceará na data de 21/06 a 23/06</string>
+    <string name="payment_form_description">Cartão de crédito com final de 4444, parcelado em 3x sem juros</string>
+    <string name="change_payment_method">Alterar forma de pagamento</string>
+    <string name="interest_free">3x sem juros</string>
+    <string name="available_vacancies">vagas disponíveis</string>
+    <string name="people_amount">Quantidade de pessoas</string>
+    <string name="accommodation">Hospedagem</string>
+    <string name="activities">Atividades</string>
+    <string name="dates">Datas</string>
+    <string name="travel_tips">Dicas de viagem</string>
+    <string name="community_name">Mãos na argila!</string>
+    <string name="community_description">Conheça de perto uma das comunidades tradicionais produtoras de artesanato de argila, Mato Serrado. Localizada em Crato, a 8 horas de Fortaleza, é uma comunidade centenária e um local fantástico repleto de figuras icônicas no artesanato cearense!</string>
+    <string name="buy_package">Comprar pacote</string>
+    <!-- Communities Details -->
+    <string name="curiosities">Curiosidades</string>
+    <string name="main_activities">Principais atividades</string>
+    <string name="location_description">Moita Redonda fica localizada em Cascavel, a 60 minutos de Fortaleza no estado do Ceará</string>
+    <string name="location">Localização</string>
+    <string name="curiosities_description">O museu Argilas Vivas é um ponto turístico da comunidade, onde você pode conhecer projetos locais da associação de produtores de artesanato de barro do Ceará. A comunidade também possui uma escola de música que utiliza instrumentos musicais feitos com argila</string>
+    <string name="main_activities_description">Cerca de 60% dos moradores de Mato vivem exclusivamente da fabricação artesanal de peças de Argila. Você encontra desde pequenos utensílios (Vasos, panelas e filtros) até Carrancas de 2 metros de altura</string>
+
+    <!-- Trips Fragment -->
+    <string name="my_trips">Minhas Viagens</string>
+    <string name="doubt">Está com alguma dúvida?</string>
+    <string name="contact_mytrips">Entre em contato</string>
+    <string name="title_card01_my_trips">Mãos na argila!</string>
+    <string name="description_card01_my_trips">Passeio de 4 dias e 3 noites na comunidade \nde artesanato cearense Mato Serrado</string>
+    <string name="date_card01_my_trips">Data: 21/06/22 a 23/06/22</string>
+    <string name="title_card02_my_trips">Sobre as águas</string>
+    <string name="description_card02_my_trips">Passeio de 4 dias e 3 noites no Barco Hotel \nnas ilhas de Anavilhanas</string>
+    <string name="date_card02_my_trips">Data: 15/10/21 a 19/10/21</string>
+    <string name="viewmore_card_my_trips">Ver detalhes</string>
+
+    <!-- Diary Fragment -->
+    <string name="my_diary">Diário de viagem</string>
+    <string name="share_travels">Compartilher com a gente um pouquinho da sua experiência em nossos pacotes de turismo aqui no nosso feed!</string>
+    <string name="post">Fazer um post</string>
+
+    <string name="felipe">Felipe dos Santos</string>
+    <string name="city_felipe">Rio de Janeiro, RJ</string>
+    <string name="title_felipe">Experiência incrível!!</string>
+    <string name="description_felipe">Fiz o passeio para Serra do Paraíso na semana passada com um amigo! Cada um ficou na casa de uma família por lá e foi simplesmente INCRÍVEL! Ajudamos na colheita da estação, participamos dos eventos da comunidade e todos foram muito receptivos com a gente. Fizemos muitoas amizades por lá!</string>
+    <string name="date_felipe">01/11/2021</string>
+
+
+    <string name="paula">Paula Silveira</string>
+    <string name="city_paula">Uberlândia, MG</string>
+    <string name="title_paula">Façam o passeio de barco para Anavilhanas</string>
+    <string name="description_paula">Gentee, só façam esse passeio!! Nunca vi uma viagem igual a essa na minha vida. O barco passa em várias comunidades que ficam no Rio Negro. Pudemos participar de atividades de marcenaria em Araçari, fiz um banquinho de madeira lindo que trouxe comigo! Foi demais</string>
+    <string name="date_paula">15/10/2021</string>
+
+
+    <string name="joao">João Carlos Silva</string>
+    <string name="city_joao">Porto Alegre, RS</string>
+    <string name="title_joao">Superou todas as expectativas!</string>
+    <string name="description_joao">Foi a primeira vez que fiz uma viagem com o conceito de base comunitária.Fui com um grupo de amigos para a comunidade do Mato Serrado no Ceará e foi muito boa a experiência, muito melhor do que eu imaginava. Acho que fazer viagem de turismo tradicional até vai ficar sem graça daqui pra frente! Kkkkkkk</string>
+    <string name="date_joao">15/10/2021</string>
+
+
+    <!-- Communities Fragment -->
+    <string name="discover_communities">Conheça as comunidades</string>
+    <string name="partner_community">Selecione abaixo uma comunidade parceira</string>
+    <string name="people_amount_number">0</string>
+    <string name="terms_of_use">Termos de uso</string>
+    <string name="service_by_whatsApp">Atendimento por WhatsApp</string>
+    <string name="about_cobe">Sobre a Cobé</string>
+    <string name="personal_information">Informações pessoais</string>
+    <string name="payment_information">Informações de pagamento</string>
+    <string name="my_account">Minha conta</string>
+    <string name="log_out_of_my_account">Sair da minha conta</string>
+    <string name="confirm_buy">Confirmar compra</string>
+
+
 </resources>

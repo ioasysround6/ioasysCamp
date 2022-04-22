@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/app_margin">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="561dp"
+        android:background="@color/lighter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/buttonExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/pressed_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_exit" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCommunityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/outfit_semibold"
+                android:textColor="@color/neutral_darker"
+                android:textSize="@dimen/headline_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/buttonExit"
+                tools:text="@string/community_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCommunityDescription"
+                style="@style/BodyTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="@dimen/app_margin"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCommunityName"
+                tools:text="@string/community_description" />
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/app_margin"
+                android:scrollbarThumbVertical="@color/primary_default"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCommunityDescription">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/communityImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/roundedImageView"
+                        tools:srcCompat="@drawable/image_ex" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/locationIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="34dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/communityImage"
+                        app:srcCompat="@drawable/ic_location" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLocationTitle"
+                        style="@style/SubtitleStyleTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="@string/location"
+                        app:layout_constraintBottom_toBottomOf="@id/locationIcon"
+                        app:layout_constraintStart_toEndOf="@id/locationIcon"
+                        app:layout_constraintTop_toTopOf="@id/locationIcon" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLocationDescription"
+                        style="@style/BodyTextStyle"
+                        android:layout_width="201dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintStart_toStartOf="@id/tvLocationTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvLocationTitle"
+                        tools:text="@string/location_description" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/mainActivitiesIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvLocationDescription"
+                        app:srcCompat="@drawable/ic_main_activities" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMainActivitiesTitle"
+                        style="@style/SubtitleStyleTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="@string/main_activities"
+                        app:layout_constraintBottom_toBottomOf="@id/mainActivitiesIcon"
+                        app:layout_constraintStart_toEndOf="@id/mainActivitiesIcon"
+                        app:layout_constraintTop_toTopOf="@id/mainActivitiesIcon" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMainActivitiesDescription"
+                        style="@style/BodyTextStyle"
+                        android:layout_width="201dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintStart_toStartOf="@id/tvMainActivitiesTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvMainActivitiesTitle"
+                        tools:text="@string/main_activities_description" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/curiositiesIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvMainActivitiesDescription"
+                        app:srcCompat="@drawable/ic_curiosities" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCuriositiesTitle"
+                        style="@style/SubtitleStyleTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="@string/curiosities"
+                        app:layout_constraintBottom_toBottomOf="@id/curiositiesIcon"
+                        app:layout_constraintStart_toEndOf="@id/curiositiesIcon"
+                        app:layout_constraintTop_toTopOf="@id/curiositiesIcon" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCuriositiesDescription"
+                        style="@style/BodyTextStyle"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="32dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/tvCuriositiesTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvCuriositiesTitle"
+                        tools:text="@string/curiosities_description" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

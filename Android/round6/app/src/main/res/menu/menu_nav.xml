@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/communitiesFragment"
+        android:icon="@drawable/communities"
+        android:title="@string/communities" />
+
+    <item
+        android:id="@+id/diaryFragment"
+        android:icon="@drawable/diary"
+        android:title="@string/diary" />
+
+    <item
+        android:id="@+id/tripsFragment"
+        android:icon="@drawable/trips"
+        android:title="@string/trips" />
+</menu>
