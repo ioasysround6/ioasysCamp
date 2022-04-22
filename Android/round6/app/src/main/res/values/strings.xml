@@ -28,8 +28,8 @@
     <string name="register_message">Está com dificuldades para realizar o cadastro?</string>
     <string name="contact">Entre em contato</string>
     <string name="agreed_terms">Concordo com os</string>
-    <string name="confirmation_message">Fique de olho no seu e-mail, vamos enviar as informações sobre sua viagem por lá! Qualquer dúvida fique a vontade para chamar a gente pelo WhatsApp:</string>
-    <string name="booking_message">Sua reserva foi efetuada com sucesso!</string>
+    <string name="confirmation_message">Fique de olho no seu e-mail, vamos enviar as informações sobre sua viagem por lá! Qualquer dúvida fique a vontade para chamar a gente pelo Whats App:</string>
+    <string name="booking_message">Sua compra foi efetuada com sucesso!</string>
     <string name="button_whatsapp_message">Redirecionar para WhatsApp</string>
     <!-- Checkout Fragment -->
     <string name="checkout">Checkout</string>

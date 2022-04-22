@@ -34,7 +34,11 @@
         android:id="@+id/communitiesFragment"
         android:name="br.com.ioasys.round6.presentation.ui.communities.CommunitiesFragment"
         android:label="fragment_communities"
-        tools:layout="@layout/fragment_communities" />
+        tools:layout="@layout/fragment_communities" >
+        <action
+            android:id="@+id/action_communitiesFragment_to_communitiesDetailsDialog"
+            app:destination="@id/communitiesDetailsDialog" />
+    </fragment>
 
     <fragment
         android:id="@+id/tripsFragment"

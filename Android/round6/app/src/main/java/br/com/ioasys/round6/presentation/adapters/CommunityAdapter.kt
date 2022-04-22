@@ -8,13 +8,15 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.ioasys.round6.R
 import br.com.ioasys.round6.databinding.CommunityItemBinding
 import br.com.ioasys.round6.domain.model.Community
+import br.com.ioasys.round6.presentation.listeners.CommunityClickListener
 import coil.load
 
-class CommunityAdapter :
-    ListAdapter<Community, CommunityAdapter.CommunityViewHolder>(DIFF_CALLBACK) {
+class CommunityAdapter(
+    private val onCommunityClickListener: CommunityClickListener
+) : ListAdapter<Community, CommunityAdapter.CommunityViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommunityViewHolder {
-        return CommunityViewHolder.create(parent)
+        return CommunityViewHolder.create(parent, onCommunityClickListener)
     }
 
     override fun onBindViewHolder(holder: CommunityViewHolder, position: Int) {
@@ -33,7 +35,8 @@ class CommunityAdapter :
     }
 
     class CommunityViewHolder(
-        private val binding: CommunityItemBinding
+        private val binding: CommunityItemBinding,
+        private val onCommunityClickListener: CommunityClickListener
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(community: Community) {
@@ -43,17 +46,24 @@ class CommunityAdapter :
                 communityImage.load(community.photo1) {
                     error(R.drawable.community_image)
                 }
+
+                root.setOnClickListener {
+                    onCommunityClickListener.onCommunityClickListener(community)
+                }
             }
         }
 
         companion object {
-            fun create(parent: ViewGroup): CommunityViewHolder {
+            fun create(
+                parent: ViewGroup,
+                onCommunityClickListener: CommunityClickListener
+            ): CommunityViewHolder {
                 val binding = CommunityItemBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent, false
                 )
 
-                return CommunityViewHolder(binding)
+                return CommunityViewHolder(binding, onCommunityClickListener)
             }
         }
     }
