@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginHorizontal="@dimen/app_margin">
 
     <com.google.android.material.card.MaterialCardView
@@ -41,25 +41,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/outfit_semibold"
-                tools:text="@string/community_name"
                 android:textColor="@color/neutral_darker"
                 android:textSize="@dimen/headline_20"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/buttonExit" />
+                app:layout_constraintTop_toBottomOf="@id/buttonExit"
+                tools:text="@string/community_name" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/communityDescription"
+                style="@style/BodyTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:paddingHorizontal="@dimen/app_margin"
-                tools:text="@string/community_description"
                 android:textAlignment="center"
-                style="@style/BodyTextStyle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/communityName" />
+                app:layout_constraintTop_toBottomOf="@id/communityName"
+                tools:text="@string/community_description" />
 
             <ScrollView
                 android:layout_width="wrap_content"
@@ -75,14 +75,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp">
 
-                    <androidx.appcompat.widget.AppCompatImageView
+                    <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/communityImage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/image_ex" />
+                        app:shapeAppearanceOverlay="@style/roundedImageView"
+                        tools:srcCompat="@drawable/image_ex" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/locationIcon"
@@ -108,13 +111,13 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/locationDescription"
+                        style="@style/BodyTextStyle"
                         android:layout_width="201dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        style="@style/BodyTextStyle"
-                        tools:text="@string/location_description"
                         app:layout_constraintStart_toStartOf="@id/locationTitle"
-                        app:layout_constraintTop_toBottomOf="@id/locationTitle" />
+                        app:layout_constraintTop_toBottomOf="@id/locationTitle"
+                        tools:text="@string/location_description" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/mainActivitiesIcon"
@@ -140,13 +143,13 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/mainActivitiesDescription"
+                        style="@style/BodyTextStyle"
                         android:layout_width="201dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        style="@style/BodyTextStyle"
-                        tools:text="@string/main_activities_description"
                         app:layout_constraintStart_toStartOf="@id/mainActivitiesTitle"
-                        app:layout_constraintTop_toBottomOf="@id/mainActivitiesTitle" />
+                        app:layout_constraintTop_toBottomOf="@id/mainActivitiesTitle"
+                        tools:text="@string/main_activities_description" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/curiositiesIcon"
@@ -172,15 +175,15 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/curiositiesDescription"
+                        style="@style/BodyTextStyle"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="32dp"
-                        style="@style/BodyTextStyle"
-                        tools:text="@string/curiosities_description"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/curiositiesTitle"
-                        app:layout_constraintTop_toBottomOf="@id/curiositiesTitle" />
+                        app:layout_constraintTop_toBottomOf="@id/curiositiesTitle"
+                        tools:text="@string/curiosities_description" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </ScrollView>
         </androidx.constraintlayout.widget.ConstraintLayout>

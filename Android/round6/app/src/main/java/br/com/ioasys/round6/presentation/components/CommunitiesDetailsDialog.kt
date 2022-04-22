@@ -8,9 +8,7 @@ import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
 import br.com.ioasys.round6.databinding.DialogCommunitiesDetailsBinding
 import br.com.ioasys.round6.domain.model.Community
-import coil.Coil
 import com.squareup.picasso.Picasso
-import org.koin.core.Koin
 
 class CommunitiesDetailsDialog : DialogFragment() {
 
