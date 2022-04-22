@@ -72,6 +72,12 @@
         <item name="fontFamily">@font/outfit_semibold</item>
     </style>
 
+    <style name="SmallTextStyle">
+        <item name="android:textSize">@dimen/body_12</item>
+        <item name="android:textColor">@color/neutral_dark</item>
+        <item name="fontFamily">@font/outfit_regular</item>
+    </style>
+
     <style name="SmallButtonHome">
         <item name="android:textSize">@dimen/headline_14</item>
         <item name="android:textColor">@color/lighter</item>
