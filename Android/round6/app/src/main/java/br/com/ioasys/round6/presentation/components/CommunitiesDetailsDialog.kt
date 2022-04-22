@@ -8,6 +8,9 @@ import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
 import br.com.ioasys.round6.databinding.DialogCommunitiesDetailsBinding
 import br.com.ioasys.round6.domain.model.Community
+import coil.Coil
+import com.squareup.picasso.Picasso
+import org.koin.core.Koin
 
 class CommunitiesDetailsDialog : DialogFragment() {
 
@@ -28,7 +31,7 @@ class CommunitiesDetailsDialog : DialogFragment() {
         setUpListeners()
         setupView()
     }
-    
+
     override fun onStart() {
         super.onStart()
         dialog?.window?.setLayout(
@@ -40,6 +43,7 @@ class CommunitiesDetailsDialog : DialogFragment() {
     private fun setupView() {
         binding.apply {
             communityName.text = community?.communityName
+            Picasso.get().load(community?.photo2).into(communityImage)
             communityDescription.text = community?.description
             locationDescription.text = community?.localization
             mainActivitiesDescription.text = community?.mainActivities
